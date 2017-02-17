@@ -2,17 +2,17 @@
 
 This application is built using Bootstrap, Leaflet, D3, MetricsGraphics, and React.
 
-The deployed draft app can be viewed at http://http://plotandscatter.com:3001.
+The deployed draft app can be viewed at http://plotandscatter.com:3001.
 
 *NB. These instructions have not yet been tested for Windows or Linux.*
 
 ## To run the project locally
 
 1. Clone the repository.
-2. In the root project folder, run: `npm install`.
+2. In the root project folder, run `npm install`.
 3. Once npm finishes, run `npm run dev`.
 
-View the app at http://localhost:3000/ in your browser.
+View the app at http://localhost:3000 in your browser.
 
 ## For deployed instances only – not necessary for local dev
 
@@ -33,6 +33,7 @@ View the app at http://localhost:3000/ in your browser.
     tippecanoe -o ./vector-tiles/econregions.mbtiles ./geo-json/EconRegions_geo.json --no-polygon-splitting
     tippecanoe -o ./vector-tiles/regdistricts.mbtiles ./geo-json/RegDistricts_geo.json --no-polygon-splitting
     ```
+
 #### Serve vector tiles 
 
 * From the same folder (`src/data/boundaries`), run the following command:

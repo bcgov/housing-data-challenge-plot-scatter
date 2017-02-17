@@ -1,0 +1,52 @@
+{
+  "name": "ps-bcic-data-viz",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve-vector-tiles": "docker run -v $(pwd):/data -p 8080:80 klokantech/tileserver-gl --config ./src/data/boundaries/vector-tiles/tileserver-gl-config.json",
+    "webpack-compile-vendors": "./node_modules/webpack/bin/webpack.js --config=webpack.dll.js",
+    "webpack-watch": "./node_modules/webpack/bin/webpack.js -w",
+    "express-server": "node ./server",
+    "dev": "concurrently --kill-others \"npm run webpack-watch\" \"npm run express-server\"",
+    "docker": "concurrently --kill-others \"npm run serve-vector-tiles\" \"npm run webpack-watch\" \"npm run express-server\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plot-and-scatter/ps-bcic-data-viz.git"
+  },
+  "author": "Plot + Scatter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plot-and-scatter/ps-bcic-data-viz/issues"
+  },
+  "homepage": "https://github.com/plot-and-scatter/ps-bcic-data-viz#readme",
+  "dependencies": {
+    "babel-loader": "~6.2.10",
+    "babel-plugin-transform-class-properties": "~6.22.0",
+    "babel-plugin-transform-runtime": "~6.22.0",
+    "babel-polyfill": "~6.22.0",
+    "babel-preset-es2015": "~6.22.0",
+    "babel-preset-react": "~6.22.0",
+    "babel-preset-stage-0": "~6.22.0",
+    "babel-register": "~6.22.0",
+    "babel-runtime": "^6.22.0",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.1",
+    "leaflet.vectorgrid": "^1.2.0",
+    "react": "~15.4.2",
+    "react-dom": "~15.4.2",
+    "whatwg-fetch": "^2.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.10.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^5.0.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1"
+  }
+}

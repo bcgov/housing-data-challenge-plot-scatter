@@ -1,0 +1,438 @@
+Geo_Code,CSD_Name,CD_Name,CSD_type,Couple-only Median family income ($),"Household total income Under $5,000","Household total income $10,000 to $14,999","Household total income $100,000 to $124,999","Household total income $125,000 to $149,999","Household total income $15,000 to $19,999","Household total income $150,000 and over","Household total income $20,000 to $29,999","Household total income $30,000 to $39,999","Household total income $40,000 to $49,999","Household total income $5,000 to $9,999","Household total income $50,000 to $59,999","Household total $60,000 to $79,999","Household total income $80,000 to $99,999",% of owner households spending 30% or more of household total income on shelter costs,% of owner households with a mortgage,Couple-only economic families,Couple-with-children economic families,Lone-parent economic families,Economic families Median family income ($),Private households Median household total income ($),Individuals Median income ($),Not in economic family Median total income ($),Median value of dwellings ($),Spending 30% or more of household total income on shelter costs, Spending less than 30% of household total income on shelter costs,Spending 30% to less than 100% of household total income on shelter costs,Median monthly shelter costs for owned dwellings ($),Median monthly shelter costs for rented dwellings ($), % of tenant households in subsidized housing,% of tenant households spending 30% or more of household total income on shelter costs
+5901003,Elkford,East Kootenay,District municipality,116551,0,15,240,145,0,200,80,20,35,0,20,65,135,9.1,61.6,290,365,60,119873,110546,40130,50921,270091,105,880,80,793,872,0,15.2
+5901006,Sparwood,East Kootenay,District municipality,100783,35,95,225,135,75,335,75,65,150,20,80,140,160,6.1,49.4,520,520,70,106071,85778,34675,33578,274984,240,1340,175,499,743,9.5,39.3
+5901012,Fernie,East Kootenay,City,86355,90,30,285,145,60,255,170,175,130,45,105,180,315,21.8,66.3,640,530,70,92177,80358,34402,26746,424185,505,1480,390,1179,735,17.9,34.6
+5901022,Cranbrook,East Kootenay,City,67177,255,285,785,455,505,445,755,685,760,125,825,1335,925,19.1,61,2560,2135,750,71489,57700,29311,27232,279633,2095,6030,1675,940,744,21.2,48.4
+5901028,Kimberley,East Kootenay,City,63977,45,90,335,95,130,70,300,390,325,30,265,455,415,16.4,56,1110,630,215,67411,57940,29328,31328,276035,690,2260,560,792,751,17.5,45.7
+5901035,East Kootenay C,East Kootenay,Regional district electoral area,79291,65,20,330,145,80,290,70,170,215,20,180,290,390,11.4,48.3,965,720,115,83726,80663,34753,35565,400686,260,1870,180,589,697,0,18.4
+5901039,Invermere,East Kootenay,District municipality,87222,0,0,155,95,60,120,130,125,60,0,115,145,140,15.6,58.6,370,340,85,88564,70917,37042,32351,399764,270,905,210,1081,1099,24.3,39.2
+5901046,East Kootenay F,East Kootenay,Regional district electoral area,76200,0,0,175,75,0,95,60,60,100,0,130,200,150,24.1,51.7,455,360,0,85234,74207,34431,41572,551706,225,815,210,752,803,0,8.6
+5901801,Tobacco Plains 2,East Kootenay,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5901803,Kootenay 1,East Kootenay,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null
+5901804,Columbia Lake 3,East Kootenay,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5901806,Shuswap,East Kootenay,Indian reserve,67170,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,35,35,10,57642,47902,26799,26072,0,0,0,0,0,0,0,0
+5903004,Creston,Central Kootenay,Town,59231,60,70,205,100,365,35,330,275,240,20,170,415,175,11.7,45.9,685,485,225,65435,46077,23349,23778,269104,565,1890,500,493,756,30.2,59.5
+5903013,Central Kootenay B,Central Kootenay,Regional district electoral area,57889,45,50,230,65,110,125,220,305,75,0,110,220,145,12.8,31.8,975,320,105,69207,50513,24325,20388,348241,280,1445,160,417,604,0,42.5
+5903015,Nelson,Central Kootenay,City,68746,105,240,320,175,280,335,605,565,485,85,310,655,455,20.7,52.2,1055,980,560,67222,48077,29284,26351,349879,1400,3220,1155,717,801,15.8,47.1
+5903023,Kaslo,Central Kootenay,Village,50379,0,0,75,0,0,0,90,95,40,0,20,35,15,24.2,37.3,75,75,70,44341,38451,25995,25626,199907,155,315,150,348,484,61.5,51.9
+5903032,New Denver,Central Kootenay,Village,43184,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,19,64.3,100,35,0,43213,43124,24013,23937,299055,55,180,55,1000,574,0,0
+5903041,Central Kootenay E,Central Kootenay,Regional district electoral area,53519,100,135,110,55,65,65,180,230,195,0,150,180,215,21.7,46.6,535,385,175,59662,46112,25067,20989,349874,400,1205,325,467,825,10.9,46.7
+5903043,Central Kootenay F,Central Kootenay,Regional district electoral area,72907,0,20,175,150,60,165,135,135,265,35,100,210,215,24.3,51.8,560,530,65,85460,66893,33988,37801,401238,405,1265,370,663,866,0,26.5
+5903045,Castlegar,Central Kootenay,City,60083,50,95,335,170,290,255,345,445,260,55,235,425,380,15.2,57.4,1070,760,340,71199,54279,28172,29764,274954,705,2645,575,866,632,16.1,42.7
+5903050,Nakusp,Central Kootenay,Village,47341,0,55,30,0,45,25,155,110,90,0,45,95,55,21.6,57.3,215,130,60,49710,39148,23276,20550,250237,165,555,145,521,631,20.9,25.6
+5903052,Central Kootenay H,Central Kootenay,Regional district electoral area,55213,95,90,95,35,250,0,145,210,210,150,175,325,210,28.9,51,805,340,150,57868,41420,22632,16873,300121,625,1345,440,507,524,5.2,48.3
+5903058,Central Kootenay J,Central Kootenay,Regional district electoral area,86580,10,0,140,95,40,85,45,145,135,0,125,165,210,9.7,50.9,430,340,75,84970,73289,36649,38275,297373,155,1050,125,557,1041,0,41.7
+5903807,Creston 1,Central Kootenay,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5905005,Fruitvale,Kootenay Boundary,Village,68999,45,70,130,70,35,75,80,35,50,20,25,140,55,9.6,45.3,285,240,45,93108,63666,32908,24780,240278,150,685,95,558,528,15.6,50
+5905009,Montrose,Kootenay Boundary,Village,78702,0,0,50,35,0,65,30,20,25,0,30,70,60,12.3,42.7,170,125,0,96781,78435,35754,28692,269836,50,385,40,452,0,0,0
+5905014,Trail,Kootenay Boundary,City,66511,35,250,315,150,235,205,405,530,285,130,280,455,390,16.1,49.3,1050,695,345,69119,48085,29199,29244,200551,930,2740,870,576,608,16.6,53.6
+5905018,Warfield,Kootenay Boundary,Village,80217,0,0,60,65,0,65,80,35,65,20,65,125,140,8.8,51.6,285,165,100,87897,67958,33411,28412,250319,85,685,50,652,654,0,18.5
+5905023,Rossland,Kootenay Boundary,City,78541,45,20,165,160,65,185,135,145,115,0,80,170,155,17,49.4,385,530,95,96046,72610,34775,26399,299936,300,1150,245,754,701,0,40
+5905026,Kootenay Boundary A,Kootenay Boundary,Regional district electoral area,82448,0,0,55,85,65,65,30,65,25,0,65,70,150,10.1,51.3,295,265,60,82624,77644,32816,28865,299657,85,600,60,668,662,0,27.8
+5905032,Grand Forks,Kootenay Boundary,City,59551,65,35,95,45,265,80,275,205,135,35,140,315,150,18.9,45.5,700,310,135,61280,42380,24490,20317,240503,485,1350,415,570,720,12.2,54.3
+5905037,Midway,Kootenay Boundary,Village,44621,25,30,0,0,0,0,45,40,35,0,50,0,30,34,40.8,125,50,0,51288,37122,18990,15328,219892,100,205,75,456,683,0,0
+5907005,Osoyoos,Okanagan-Similkameen,Town,57847,45,45,120,145,130,80,260,350,285,40,220,340,195,17.6,39,1020,340,120,62025,49560,25294,28423,375982,540,1690,480,484,776,0,53.7
+5907024,Princeton,Okanagan-Similkameen,Town,64769,20,15,75,60,300,110,195,155,80,0,105,170,90,10.9,39.1,570,155,60,65018,39406,24464,19272,250439,350,1035,330,418,552,0,62.7
+5907035,Summerland,Okanagan-Similkameen,District municipality,59182,45,155,380,240,330,395,550,630,405,85,355,565,605,18.6,45.7,1810,1130,355,72158,56380,28317,28316,399691,1065,3545,945,541,907,12.9,44.5
+5907041,Penticton,Okanagan-Similkameen,City,54075,465,475,900,580,1485,640,2100,1940,1790,335,1330,1900,1280,19.9,52.9,4475,2755,1525,61003,43998,24628,22956,349192,4920,10250,4090,738,826,18.5,54.4
+5907047,Okanagan-Similkameen D,Okanagan-Similkameen,Regional district electoral area,52225,55,0,175,175,85,260,445,325,130,0,135,435,195,19.9,52.1,1225,555,55,70120,61773,25419,25449,399428,490,1820,430,694,742,16.1,40
+5907051,Okanagan-Similkameen F,Okanagan-Similkameen,Regional district electoral area,73839,0,0,75,75,20,155,70,85,60,0,35,100,80,16.7,55.6,265,310,95,81716,80408,33035,28210,518734,120,585,100,982,1009,0,30
+5907801,Lower Similkameen 2,Okanagan-Similkameen,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5907802,Osoyoos 1,Okanagan-Similkameen,Indian reserve,45443,10,15,0,15,20,0,65,35,40,0,25,35,10,0,0,75,35,35,46543,37405,22188,26293,0,0,0,0,0,0,0,0
+5907803,Penticton 1,Okanagan-Similkameen,Indian reserve,49385,25,30,20,0,50,15,150,155,75,25,80,85,50,0,0,300,95,95,44998,36887,20054,22935,0,0,0,0,0,0,0,0
+5907805,Chopaka 7 & 8,Okanagan-Similkameen,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5907807,Chuchuwayha 2,Okanagan-Similkameen,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5907809,Ashnola 10,Okanagan-Similkameen,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909009,Hope,Fraser Valley,District municipality,55232,65,125,110,85,195,115,360,345,255,105,340,270,270,18,45.8,870,515,300,55200,44138,20578,19949,285658,670,1955,570,485,701,6.5,50
+5909014,Fraser Valley A,Fraser Valley,Regional district electoral area,41413,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,10,16.7,105,20,0,41820,41220,17898,19972,110048,50,175,45,294,649,37.5,43.8
+5909020,Chilliwack,Fraser Valley,City,61668,880,1095,2760,1605,2130,1820,2820,3335,2780,445,2565,4665,3565,22.4,62.3,8465,9370,3240,69480,56513,27092,22234,341274,8895,21025,7605,1064,800,13.7,51.1
+5909027,Harrison Hot Springs,Fraser Valley,Village,63160,0,0,65,45,40,20,60,80,100,0,60,85,70,25.7,57.5,250,175,40,64996,50670,26663,21288,349743,205,460,175,966,832,0,52.4
+5909032,Kent,Fraser Valley,District municipality,72148,100,100,165,80,145,100,185,170,175,90,115,380,250,21.2,55.3,715,485,155,71560,57348,26019,19932,324838,575,1375,385,838,650,29,67.1
+5909034,Fraser Valley D,Fraser Valley,Regional district electoral area,73049,0,0,75,0,0,15,0,100,10,0,60,100,75,22.8,49.5,165,180,0,72114,71879,28398,56719,429930,110,365,90,565,758,0,0
+5909036,Fraser Valley E,Fraser Valley,Regional district electoral area,53089,60,0,110,40,70,105,180,165,150,40,140,245,130,24.3,46.4,525,335,100,61150,53045,25021,28062,376164,330,1030,230,478,1002,0,25
+5909052,Abbotsford,Fraser Valley,City,64981,1195,1450,4900,2860,2230,4435,3940,4630,4475,680,3600,6680,5380,24,64,11850,17065,4270,75807,62350,26428,26443,393600,12695,32675,10540,1204,801,9.4,39.2
+5909056,Mission,Fraser Valley,District municipality,64698,215,370,1430,950,650,910,1130,1145,1015,270,925,1890,1885,30.5,70.3,3125,4695,1550,78975,65411,27750,25549,399607,4225,8485,3575,1453,751,16,44.1
+5909060,Fraser Valley F,Fraser Valley,Regional district electoral area,73217,0,0,30,10,20,0,20,30,35,0,60,215,55,14.6,56.1,230,125,20,73594,73391,33048,25491,500500,75,410,70,653,1770,0,14.3
+5909804,Chawathil 4,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909807,Ohamil 1,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909812,Schkam 2,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909819,Kahmoose 4,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909821,Kwawkwawapilt 6,Fraser Valley,Indian reserve,55894,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,25,Null,Null,0,0,115,10,0,53993,35093,21719,18023,0,0,0,0,0,0,0,0
+5909824,Skwah 4,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909826,Skway 5,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909827,Soowahlie 14,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909830,Tzeachten 13,Fraser Valley,Indian reserve,51684,30,10,25,0,55,10,55,120,110,15,70,135,45,0,0,385,55,25,51645,44834,22328,27110,0,0,0,0,0,0,0,0
+5909832,Seabird Island,Fraser Valley,Indian reserve,32694,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,0,0,35,55,45,40150,33806,16565,15115,0,0,0,0,0,0,0,0
+5909837,Cheam 1,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909839,Chehalis 5,Fraser Valley,Indian reserve,46867,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,20,Null,Null,0,0,35,75,50,45087,39160,15276,15105,0,0,0,0,0,0,0,0
+5909841,Stullawheets 8,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909845,Skookumchuck 4,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909875,Q'alatkÅÒ7em,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909877,Upper Sumas 6,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909878,Matsqui Main 2,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909879,Holachten 8,Fraser Valley,Indian reserve,42184,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,35,20,20,42666,38180,19372,20698,0,0,0,0,0,0,0,0
+5909880,Lakahahmen 11,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909881,Skweahm 10,Fraser Valley,Indian reserve,52627,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,25,Null,Null,0,0,45,35,0,54970,52079,23434,21798,0,0,0,0,0,0,0,0
+5909882,Squawkum Creek 3,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5909884,Skowkale,Fraser Valley,Indian reserve,44964,15,10,15,0,30,10,60,45,50,0,35,45,25,0,0,175,65,25,48303,42884,20817,21410,0,0,0,0,0,0,0,0
+5909885,Squiaala,Fraser Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5915001,Langley,Greater Vancouver,District municipality,75293,890,695,4790,3355,1375,5165,2175,3055,2680,510,2790,5385,4385,24.8,64.2,10280,14625,3555,88986,76847,33749,32721,501361,9915,26425,8020,1381,1001,8.1,40.7
+5915002,Langley,Greater Vancouver,City,67361,460,485,885,540,930,545,1030,1250,1245,230,845,1550,1315,27,67.6,2605,2575,1155,71930,50231,29267,26393,300696,3910,7390,3120,1162,853,28,48.7
+5915004,Surrey,Greater Vancouver,City,71791,4505,4140,16085,10995,6180,17910,11495,12920,13030,2855,12185,22375,18165,27.3,66.4,32240,66530,15650,78283,67702,26799,28831,500746,45755,106400,37180,1391,794,11.3,37.7
+5915007,White Rock,Greater Vancouver,City,74329,245,380,905,430,625,905,1140,935,845,180,730,1630,905,24.9,51.5,2670,1485,690,79174,56946,32789,34859,450494,3090,6765,2485,850,891,10,45.1
+5915011,Delta,Greater Vancouver,District municipality,80877,575,610,4355,3270,1250,5840,2045,2400,2440,490,2410,4930,4140,20.3,57.3,9145,14690,3005,94007,80874,33188,32391,562181,8135,26450,6755,1196,864,13.7,37.2
+5915015,Richmond,Greater Vancouver,City,66491,3220,2205,6250,4020,3145,7250,6265,6270,5535,1700,5400,9440,7270,32,54.9,14330,28380,7680,69553,60479,23694,28927,601945,23990,43570,17770,1047,1101,15.3,47.5
+5915020,Greater Vancouver A,Greater Vancouver,Regional district electoral area,71845,755,240,425,215,275,640,570,375,260,435,215,335,305,41.3,54.2,915,1790,575,52194,36089,16738,7759,753578,2725,2250,1325,1293,1226,14.9,68.6
+5915022,Vancouver,Greater Vancouver,City,77862,14115,12250,21650,13935,16550,30270,23885,23065,23490,6855,19445,33690,25370,28.9,52.3,55510,63485,21345,77515,56113,27815,27845,752016,99450,164140,74475,1119,1004,14,46
+5915025,Burnaby,Greater Vancouver,City,67466,4960,2820,7705,4895,4925,8245,8085,8135,7990,2055,6790,11420,8820,29.1,54,18785,29410,8705,71511,56136,25463,25715,600941,30550,55920,22495,1030,966,15.2,46.2
+5915029,New Westminster,Greater Vancouver,City,77582,1365,1225,2420,1655,1865,2335,2765,2955,3125,705,2635,4410,3120,27,66.3,6750,7005,2410,78026,54664,31391,31176,400729,10520,19995,8365,1338,830,14.7,44.1
+5915034,Coquitlam,Greater Vancouver,City,74436,1670,1215,5000,3270,1970,6090,3535,3715,3615,1120,3335,6000,5010,27.5,62.1,9760,18975,4835,82067,67787,29112,30585,599465,14875,30515,11420,1310,949,11.3,48.2
+5915036,Belcarra,Greater Vancouver,Village,139462,0,0,20,45,0,105,10,0,15,0,0,20,35,26,51,140,85,0,140217,139673,58693,46986,1393995,65,200,60,1306,687,0,0
+5915038,Anmore,Greater Vancouver,Village,152609,0,0,30,30,0,310,0,30,20,0,50,55,80,27,71.6,165,385,25,160038,145286,47120,40873,1102094,160,465,145,1949,1604,0,0
+5915039,Port Coquitlam,Greater Vancouver,City,83751,480,500,2475,1655,630,2460,1385,1460,1815,470,1715,2795,2805,25.7,70.3,4715,8175,2420,85722,72563,33623,37001,489678,6105,14465,5010,1426,913,19.9,43.9
+5915043,Port Moody,Greater Vancouver,City,87199,375,210,1530,1150,390,2095,635,805,970,230,875,1825,1535,25.1,67.9,3155,4890,1235,93142,79918,38151,41068,539932,3615,8995,2795,1529,1281,11.3,40.7
+5915046,North Vancouver,Greater Vancouver,District municipality,86780,575,595,3400,2695,1070,7215,1805,1835,1785,440,2080,3750,3310,25.2,53.5,7545,12920,2990,103206,87322,36832,35365,850744,8630,21835,7080,1195,1203,15.9,42
+5915051,North Vancouver,Greater Vancouver,City,79040,860,770,2275,1190,1225,2320,1945,2210,2340,405,1770,3275,2210,26.9,60.4,5080,5130,2260,79132,59373,34515,35837,599985,7800,14870,6245,1209,1017,10.8,43.4
+5915055,West Vancouver,Greater Vancouver,District municipality,106478,460,385,1250,1150,925,5095,1115,1220,1195,305,955,1610,1410,26,38.9,4945,5615,1295,115425,84345,36574,36102,1299894,5430,11540,4045,988,1284,11.6,54.5
+5915065,Lions Bay,Greater Vancouver,Village,101589,0,0,95,80,0,115,0,20,25,0,25,35,95,21.8,52.3,235,185,0,109563,106970,43651,40266,1001342,110,390,95,1446,773,0,23.1
+5915070,Pitt Meadows,Greater Vancouver,City,79036,185,130,850,650,335,705,390,585,505,90,520,980,790,28,69.5,1710,2530,720,86076,73065,34549,33300,459965,1950,4675,1590,1411,922,16.4,34.9
+5915075,Maple Ridge,Greater Vancouver,District municipality,70609,685,690,3535,2205,1405,3040,1745,2055,2225,430,2140,4415,3465,27.1,70.7,6830,10585,3225,84155,71078,32412,27058,449365,8510,19285,7080,1500,868,15.7,45.1
+5915801,Semiahmoo,Greater Vancouver,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5915802,Tsawwassen,Greater Vancouver,Indian reserve,107456,10,15,25,0,0,65,25,10,45,20,15,20,15,0,0,105,65,45,79905,56945,29689,18664,0,0,0,0,0,0,0,0
+5915803,Musqueam 2,Greater Vancouver,Indian reserve,78812,40,15,55,35,35,115,50,45,45,30,20,45,25,0,0,130,185,100,74441,58935,21197,16037,0,0,0,0,0,0,0,0
+5915806,Burrard Inlet 3,Greater Vancouver,Indian reserve,99289,0,0,90,30,0,90,65,90,40,40,55,115,95,0,0,210,125,110,93058,69201,38405,52355,0,0,0,0,0,0,0,0
+5915807,Mission 1,Greater Vancouver,Indian reserve,43778,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,0,0,25,65,45,42515,36881,12644,4077,0,0,0,0,0,0,0,0
+5915808,Capilano 5,Greater Vancouver,Indian reserve,37234,110,110,65,20,165,45,145,160,140,70,90,100,75,0,0,225,230,195,34729,32752,18504,27036,0,0,0,0,0,0,0,0
+5915811,Seymour Creek 2,Greater Vancouver,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5915816,McMillan Island 6,Greater Vancouver,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5915825,Matsqui 4,Greater Vancouver,Indian reserve,42027,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,25,Null,Null,0,0,140,0,0,42056,37060,19575,28289,0,0,0,0,0,0,0,0
+5915830,Katzie 1,Greater Vancouver,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5917005,North Saanich,Capital,District municipality,93631,80,35,515,375,90,970,310,340,265,35,350,575,570,16.4,43.1,2050,1260,240,99487,89835,36154,32221,728626,810,3645,685,709,848,14.7,33
+5917010,Sidney,Capital,Town,72080,65,85,440,185,315,255,660,620,550,120,435,985,615,24.5,49.2,1840,840,425,72392,55687,30947,32988,450051,1600,3725,1410,750,1081,4.8,52.6
+5917015,Central Saanich,Capital,District municipality,81353,55,110,840,495,280,925,465,475,635,50,500,890,860,18.7,51,2295,1895,500,94809,77324,38409,33092,558248,1485,4960,1295,956,921,16.8,40.6
+5917021,Saanich,Capital,District municipality,80132,1135,1180,4870,3290,2025,5385,3330,3765,4100,670,3640,6585,5415,21.7,51.9,13135,12495,4375,85402,68393,34013,29772,598306,12605,32575,10385,935,948,15.8,44.8
+5917027,Capital F,Capital,Regional district electoral area,66160,235,140,340,310,295,175,515,470,405,100,505,675,495,28.6,42.3,1650,890,410,62384,53523,27284,28311,525275,1515,2995,1135,602,774,10.5,56.2
+5917029,Capital G,Capital,Regional district electoral area,59086,60,80,155,75,235,125,335,235,260,30,350,325,260,16.4,34.7,1120,295,110,59654,52025,26200,27096,449363,510,1970,410,408,836,10.2,51.7
+5917030,Oak Bay,Capital,District municipality,101330,155,135,910,630,340,1650,645,545,485,175,545,855,700,17.2,40,2410,2020,530,110112,80388,39977,31478,776697,1965,5790,1585,771,906,12.5,50.9
+5917034,Victoria,Capital,City,72912,1660,2725,2730,1540,3135,1965,4825,5365,4540,1165,3530,5885,3895,25.2,56.6,10010,4695,3195,69929,45827,30177,28002,456218,16945,25925,13920,1025,865,13.1,49.4
+5917040,Esquimalt,Capital,District municipality,69681,185,510,765,285,425,315,870,735,915,90,720,1405,815,24.1,62.1,1990,1340,745,70499,52956,31720,28482,449490,2780,5215,2410,1132,874,13,45.3
+5917041,Colwood,Capital,City,80203,90,50,875,590,215,615,220,335,455,155,470,935,1090,20.6,67.1,1905,2230,500,90498,82703,37689,34722,500696,1355,4730,1140,1343,1002,22.3,28.9
+5917042,Metchosin,Capital,District municipality,85038,25,15,215,185,125,250,75,85,125,0,110,320,250,23.9,52.3,680,600,60,93762,80834,37274,27418,673069,400,1315,320,980,949,10.2,20.7
+5917044,Langford,Capital,City,77615,325,300,1365,910,505,1020,665,815,1105,150,1100,1765,1655,27.9,74.4,3250,3655,1280,81889,69820,35078,32395,466608,3760,7895,2955,1516,1097,10.3,45.9
+5917047,View Royal,Capital,Town,79212,65,90,515,285,195,480,205,290,310,75,350,585,500,21.3,62.7,1235,1080,355,90002,74519,37038,31000,527487,1010,2935,810,1215,1003,13.6,36.5
+5917049,Highlands,Capital,District municipality,89885,0,0,150,60,0,175,0,35,45,0,45,75,145,17.4,64.2,310,295,35,108531,96805,42325,50523,641398,135,640,105,1508,1057,0,0
+5917052,Sooke,Capital,District municipality,67823,130,125,525,350,210,310,360,380,445,55,390,745,485,27,69.8,1380,1445,475,76911,64867,31015,25370,409991,1405,3065,1210,1393,950,16.3,50.9
+5917054,Capital H (Part 1),Capital,Regional district electoral area,76648,55,45,255,110,75,120,175,125,120,50,195,300,210,24.1,62.5,725,480,85,77508,67985,30071,28154,501256,495,1310,360,1094,1273,0,46.3
+5917801,Cole Bay 3,Capital,Indian reserve,0,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,0,0,0,30,25,37185,32395,11109,3039,0,0,0,0,0,0,0,0
+5917802,Union Bay 4,Capital,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5917803,East Saanich 2,Capital,Indian reserve,61305,20,45,45,10,55,10,105,110,125,10,100,160,70,0,0,330,90,80,57469,45107,24818,32916,0,0,0,0,0,0,0,0
+5917804,South Saanich 1,Capital,Indian reserve,41492,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,20,Null,Null,0,0,20,75,55,47757,41564,14839,15257,0,0,0,0,0,0,0,0
+5917812,New Songhees 1A,Capital,Indian reserve,56633,0,35,35,0,45,0,125,110,100,10,130,160,70,0,0,220,115,120,56602,47155,26161,30093,0,0,0,0,0,0,0,0
+5917815,Gordon River 2,Capital,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5917819,T'Sou-ke,Capital,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5919008,North Cowichan,Cowichan Valley,District municipality,67029,230,450,1220,550,620,740,1375,1360,1120,260,1035,1740,1345,18.9,53.7,4135,2960,1215,71413,55979,28309,22837,375920,3290,8635,2790,791,730,16,57.7
+5919012,Duncan,Cowichan Valley,City,44103,95,180,110,35,235,55,460,285,280,60,220,215,155,24.8,50,505,330,250,49846,35703,22189,22841,274441,980,1400,735,460,794,14.6,62.3
+5919013,Cowichan Valley D,Cowichan Valley,Regional district electoral area,69669,25,70,190,50,20,70,45,150,140,10,65,240,185,18.8,59.6,495,360,75,78528,68917,34329,34352,400745,250,995,185,965,572,0,29
+5919015,Cowichan Valley G,Cowichan Valley,Regional district electoral area,68167,0,45,85,30,25,55,85,185,115,10,60,180,100,22.5,43.9,460,210,40,65895,51925,26170,24394,400926,255,725,220,492,783,0,56.5
+5919016,Lake Cowichan,Cowichan Valley,Town,51197,25,95,75,50,130,25,155,155,100,20,140,200,120,20,52.5,425,270,165,54225,44170,20749,18732,299052,365,930,320,682,672,25.4,57.6
+5919017,Cowichan Valley H,Cowichan Valley,Regional district electoral area,59042,0,90,45,55,15,50,130,125,85,0,95,165,130,23.5,51.8,405,220,85,64773,55972,26978,22829,420019,210,765,130,789,657,0,10.3
+5919021,Ladysmith,Cowichan Valley,Town,66988,40,30,325,280,170,180,370,405,415,85,315,465,340,18.3,55.2,1285,855,295,71775,54413,30009,25519,340923,815,2595,700,835,853,22.1,45
+5919035,Cowichan Valley I,Cowichan Valley,Regional district electoral area,50190,50,0,25,10,20,20,100,90,45,0,40,75,30,29.8,56.8,230,100,30,41548,35197,22436,20837,399886,175,395,55,700,783,0,0
+5919043,Cowichan Valley A,Cowichan Valley,Regional district electoral area,79032,35,0,180,205,70,190,180,210,85,20,105,270,210,16.2,50.2,655,540,80,85653,74378,32585,27754,479635,310,1430,260,580,751,9.4,37.5
+5919046,Cowichan Valley B,Cowichan Valley,Regional district electoral area,82094,80,40,300,295,75,405,225,190,205,70,200,475,510,22.6,70.5,1045,1060,300,84237,78731,34294,25550,424956,725,2210,600,1375,1096,0,45.6
+5919049,Cowichan Valley C,Cowichan Valley,Regional district electoral area,78365,55,45,225,190,45,175,220,145,165,0,145,370,325,17.6,49.6,1020,465,105,80810,71108,33355,29890,450411,380,1635,300,644,991,0,35.5
+5919051,Cowichan Valley E,Cowichan Valley,Regional district electoral area,66261,25,70,195,75,70,100,130,145,120,10,85,195,305,22,60.6,465,550,70,85177,74475,30456,27273,380737,375,1100,325,1029,803,22.2,47.2
+5919801,Halalt 2,Cowichan Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5919802,Squaw-hay-one 11,Cowichan Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5919803,Tsussie 6,Cowichan Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5919804,Chemainus 13,Cowichan Valley,Indian reserve,19956,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,0,0,20,70,40,38397,38346,10904,8873,0,0,0,0,0,0,0,0
+5919809,Kuper Island 7,Cowichan Valley,Indian reserve,4045,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,0,0,20,50,30,23349,19645,7122,1701,0,0,0,0,0,0,0,0
+5919814,Malachan 11,Cowichan Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5919815,Malahat 11,Cowichan Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5919816,Oyster Bay 12,Cowichan Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5919822,Cowichan,Cowichan Valley,Indian reserve,32119,20,30,20,10,45,0,80,70,65,15,45,65,30,0,0,50,225,120,40724,39182,12620,14439,0,0,0,0,0,0,0,0
+5921007,Nanaimo,Nanaimo,City,63818,1065,1660,2775,1700,2245,2070,3715,3735,3875,870,3330,5205,3960,24.6,58.9,11070,8110,3795,66532,52744,27620,23892,348460,11725,24325,9965,948,849,13.8,52.7
+5921008,Lantzville,Nanaimo,District municipality,71289,15,25,145,95,65,205,90,120,175,0,115,280,135,21.2,53.4,555,470,105,77216,69426,34461,31724,448884,335,1120,320,826,1003,0,44.4
+5921010,Nanaimo A,Nanaimo,Regional district electoral area,61527,65,80,295,175,120,135,355,265,210,70,265,480,405,22,57.8,1040,720,250,68718,61420,26984,25687,379927,730,2125,610,893,1002,0,50.7
+5921014,Nanaimo B,Nanaimo,Regional district electoral area,64772,40,110,170,80,125,130,225,260,205,90,185,235,215,19.3,39.9,905,260,90,67299,48133,27169,23567,359015,440,1625,370,399,800,10,40
+5921016,Nanaimo C,Nanaimo,Regional district electoral area,74867,0,25,125,70,80,120,55,90,50,0,115,140,145,18.9,53.8,380,355,80,84779,70906,32027,19477,450250,230,785,210,664,851,0,39.4
+5921018,Parksville,Nanaimo,City,59777,110,110,375,170,370,160,815,680,700,45,735,885,530,18.9,47.1,2205,940,435,59942,50261,27942,26889,341293,1470,4215,1295,684,804,11.9,50.2
+5921023,Qualicum Beach,Nanaimo,Town,66353,70,75,300,150,240,280,385,580,440,100,335,770,400,12.9,34.6,2120,540,225,66818,55445,28740,30732,400736,715,3395,520,467,1012,8.1,55.3
+5921030,Nanaimo E,Nanaimo,Regional district electoral area,70075,95,55,225,175,120,355,180,225,250,20,180,350,355,17.6,43.4,1385,450,130,79526,68463,32076,28787,501531,525,2015,435,633,999,10.6,51.1
+5921032,Nanaimo F,Nanaimo,Regional district electoral area,60340,95,145,265,125,190,100,340,390,480,50,245,465,355,23.6,62,985,805,295,61400,48519,26123,22664,397358,1025,2165,890,782,764,0,57.7
+5921034,Nanaimo G,Nanaimo,Regional district electoral area,62540,75,70,250,180,95,265,265,400,355,50,245,470,435,19.1,43.7,1630,685,105,70730,60726,28871,26442,400068,705,2435,580,599,1160,0,60.8
+5921036,Nanaimo H,Nanaimo,Regional district electoral area,61783,55,75,140,55,80,75,230,230,185,35,80,250,155,15.3,46,780,275,55,61533,47404,24729,23918,400588,385,1250,295,467,946,7.6,56.1
+5921804,Nanaimo Town 1,Nanaimo,Indian reserve,38975,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,15,40,30,36847,35408,15084,15304,0,0,0,0,0,0,0,0
+5921805,Nanoose,Nanaimo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5921806,Qualicum,Nanaimo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5921807,Nanaimo River,Nanaimo,Indian reserve,23993,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,15,25,20,27170,24001,9550,15552,0,0,0,0,0,0,0,0
+5923008,Port Alberni,Alberni-Clayoquot,City,62170,170,505,510,360,630,140,990,1000,885,250,670,1170,660,16.8,48.3,2390,1575,970,58035,44819,24888,23441,235388,2160,5780,1850,539,660,14.2,48.9
+5923033,Alberni-Clayoquot B,Alberni-Clayoquot,Regional district electoral area,51334,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,30,Null,Null,19.4,32.3,40,70,0,68315,50405,25188,22832,320270,40,130,35,376,0,0,0
+5923035,Alberni-Clayoquot D,Alberni-Clayoquot,Regional district electoral area,77402,0,0,80,55,25,105,85,45,105,0,65,70,70,19.3,39.3,310,155,30,92943,53737,29448,39991,500684,190,580,140,458,728,0,66.7
+5923037,Alberni-Clayoquot E,Alberni-Clayoquot,Regional district electoral area,56315,15,45,100,80,20,45,125,175,115,30,140,140,150,14.2,42.2,405,365,55,67577,55151,26461,26409,299093,215,955,180,403,665,0,48.3
+5923039,Alberni-Clayoquot F,Alberni-Clayoquot,Regional district electoral area,52166,45,0,40,30,25,40,110,100,120,0,120,140,65,24.6,48.9,385,170,95,53198,50292,26544,29270,276081,225,575,210,473,722,0,52.6
+5923801,Ahahswinis 1,Alberni-Clayoquot,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5923803,Anacla 12,Alberni-Clayoquot,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5923807,Ittatsoo 1,Alberni-Clayoquot,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5923808,Marktosis 15,Alberni-Clayoquot,Indian reserve,25801,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,20,Null,Null,0,0,15,70,30,55924,54828,16589,19575,0,0,0,0,0,0,0,0
+5923813,Opitsat 1,Alberni-Clayoquot,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5923816,Tsahaheh 1,Alberni-Clayoquot,Indian reserve,33916,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,0,0,15,70,50,37944,33888,17622,13021,0,0,0,0,0,0,0,0
+5923823,Esowista 3,Alberni-Clayoquot,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5923824,Refuge Cove 6,Alberni-Clayoquot,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5924029,Zeballos,Strathcona,Village,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,174873,Null,Null,Null,865,0,0,Null
+5924034,Campbell River,Strathcona,City,66749,355,530,1210,680,950,825,1195,1505,1315,220,1035,2020,1590,18.3,56.1,4355,3305,1420,69484,56362,28329,25933,280082,3485,9915,2925,841,790,14.6,48.4
+5924039,Sayward,Strathcona,Village,56356,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,10,30,60,25,0,46209,60554,30703,60588,200004,25,145,20,333,1001,0,0
+5924042,Strathcona D (Oyster Bay - Buttle Lake),Strathcona,Regional district electoral area,74815,70,20,185,85,75,140,80,185,140,25,160,320,200,20.3,52,725,445,85,71473,64265,31887,33151,320198,355,1335,265,686,879,0,26.2
+5924052,Strathcona B,Strathcona,Regional district electoral area,49787,0,35,15,0,25,30,100,55,40,0,90,90,40,8,44,170,115,40,41460,50173,26303,34996,300534,65,485,55,430,633,0,17.6
+5924054,Strathcona C,Strathcona,Regional district electoral area,63724,15,45,30,85,55,50,115,120,150,45,115,220,115,16.4,40.7,500,145,75,59807,54417,27771,32519,324044,245,900,215,344,651,0,41.2
+5924804,Campbell River 11,Strathcona,Indian reserve,69115,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,25,50,30,60247,48783,22519,16319,0,0,0,0,0,0,0,0
+5924806,Houpsitas 6,Strathcona,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5924812,Quinsam 12,Strathcona,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5924817,Cape Mudge 10,Strathcona,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5924820,Tork 7,Strathcona,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5924835,Tsa Xana 18,Strathcona,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5924836,Ehatis 11,Strathcona,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5924840,Homalco 9,Strathcona,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5926005,Comox,Comox Valley,Town,71004,50,135,520,310,345,385,540,615,575,50,575,1000,855,13.2,51.2,2085,1420,500,76068,61029,32193,32173,349086,1210,4760,1095,707,864,17,45.1
+5926010,Courtenay,Comox Valley,City,63631,195,555,825,305,825,410,1235,1410,1040,170,1030,1650,1250,17.2,54.1,3315,2165,1200,65179,50168,26383,24510,300382,3055,7815,2595,736,810,12.2,53.1
+5926014,Cumberland,Comox Valley,Village,59974,30,60,105,35,45,25,130,185,140,100,165,250,140,31.4,70.9,380,365,185,58096,51809,27130,24041,324447,505,895,365,1189,982,29.4,56.9
+5926021,Comox Valley A,Comox Valley,Regional district electoral area,58184,35,130,260,135,220,185,335,445,365,45,275,475,305,16.1,43,1370,600,215,61632,50650,26107,26183,401146,595,2570,515,523,650,7.6,34.1
+5926022,Comox Valley B (Lazo North),Comox Valley,Regional district electoral area,63854,40,80,290,195,165,215,290,250,310,50,230,460,350,17,50.3,1175,730,230,70068,62178,28347,25638,411285,600,2200,435,625,914,0,52.1
+5926024,Comox Valley C (Puntledge - Black Creek),Comox Valley,Regional district electoral area,66534,50,50,295,235,155,200,300,315,280,45,310,665,490,16.7,53.9,1325,1000,240,75354,64166,29966,28946,394721,660,2605,575,687,873,7.3,41.1
+5926801,Comox 1,Comox Valley,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5927008,Powell River,Powell River,City,57857,100,295,565,260,325,235,510,820,710,145,620,740,580,15.3,48.8,1930,1265,565,63937,50850,27362,26158,260024,1370,4500,1155,573,662,10.8,52.1
+5927012,Powell River B,Powell River,Regional district electoral area,59751,0,45,55,35,60,15,45,85,50,0,100,110,65,9.2,40.4,295,145,25,61088,55909,24325,36948,300827,105,555,80,394,925,0,36.4
+5927018,Powell River D,Powell River,Regional district electoral area,43443,15,0,25,0,30,10,125,50,100,0,30,55,35,8.2,34.7,250,60,0,45077,34803,19530,20495,174746,60,460,45,275,524,0,44.4
+5927020,Powell River E,Powell River,Regional district electoral area,58994,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,25,25,25,50,0,32668,28160,16585,13775,210776,70,175,35,161,151,0,41.7
+5927802,Sliammon 1,Powell River,Indian reserve,41880,25,25,10,0,35,10,35,25,25,40,20,20,10,0,0,70,55,55,34824,23370,15110,9146,0,0,0,0,0,0,0,0
+5929005,Gibsons,Sunshine Coast,Town,69105,80,45,175,90,145,150,210,175,210,35,235,270,185,24.8,53.2,605,365,210,65666,54088,28826,35675,400465,645,1365,530,869,916,10.8,48.3
+5929011,Sechelt,Sunshine Coast,District municipality,65052,120,105,335,185,195,350,485,480,430,40,470,515,595,20.5,47,1545,855,305,69814,56830,29560,28794,399711,1095,3120,925,604,1032,16.1,51
+5929018,Sunshine Coast A,Sunshine Coast,Regional district electoral area,54253,40,0,100,45,25,25,190,180,220,0,150,220,180,19.8,37.4,675,140,110,56164,50132,29716,32477,421583,335,1070,255,354,1149,0,47.5
+5929022,Sunshine Coast B,Sunshine Coast,Regional district electoral area,65107,0,0,110,45,30,105,60,85,125,20,125,195,100,24.5,47.2,385,325,55,74494,61632,32783,24351,499876,270,800,245,682,681,0,33.3
+5929024,Sunshine Coast D,Sunshine Coast,Regional district electoral area,53652,55,75,85,50,45,100,105,130,190,60,90,185,195,19.1,54.1,410,360,120,69082,53539,24606,17147,500316,390,975,295,918,850,0,60.3
+5929026,Sunshine Coast E,Sunshine Coast,Regional district electoral area,72556,25,20,135,110,100,95,105,120,130,0,115,255,220,19.3,53.4,520,465,80,77105,65116,27838,22600,424581,275,1150,230,773,1027,0,22.7
+5929028,Sunshine Coast F,Sunshine Coast,Regional district electoral area,68517,40,0,80,50,30,75,130,60,105,0,40,175,75,16.4,52.3,350,185,55,68262,63311,31934,30732,448795,185,685,145,717,928,0,34.8
+5929803,Sechelt (Part),Sunshine Coast,Indian government district,53323,10,20,15,0,40,0,50,45,50,15,20,45,25,0,0,90,60,45,46952,34952,20046,20600,0,0,0,0,0,0,0,0
+5931006,Squamish,Squamish-Lillooet,District municipality,78922,185,270,830,445,290,760,355,610,640,95,340,845,855,29.7,74.3,1725,2285,525,87387,72751,33799,25925,495859,2350,4115,2040,1584,974,11.8,54.2
+5931020,Whistler,Squamish-Lillooet,District municipality,80134,175,65,420,200,170,445,225,450,320,45,285,555,555,40.4,67.7,1150,870,115,84152,65757,32432,30511,550642,1730,2155,1360,1492,1298,15.4,51.8
+5931026,Lillooet,Squamish-Lillooet,District municipality,57748,20,65,75,15,120,65,145,125,60,45,115,120,95,18.8,43.6,290,205,135,61969,41560,20634,18621,200420,255,805,220,471,609,36.2,42.6
+5931032,Squamish-Lillooet A,Squamish-Lillooet,Regional district electoral area,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,63.2,Null,Null,Null,Null,Null,Null,Null,125302,Null,Null,Null,453,0,0,Null
+5931034,Squamish-Lillooet B,Squamish-Lillooet,Regional district electoral area,107667,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,16.7,25,100,15,35,68836,55685,20221,0,376086,45,85,10,275,870,0,0
+5931801,Cheakamus 11,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931806,Seaichem 16,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931807,Stawamus 24,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931808,Waiwakum 14,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931812,Nesuch 3,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931813,Bridge River 1,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931814,Cayoosh Creek 1,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931815,Chilhil 6,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931816,Fountain  1,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931821,Lillooet 1,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931823,McCartney's Flat 4,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931829,Pavilion 1,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931831,Slosh 1,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931842,Fountain  1B,Squamish-Lillooet,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5931843,Mount Currie,Squamish-Lillooet,Indian reserve,28705,55,30,15,10,35,0,50,55,25,25,25,35,15,0,0,55,145,90,31965,28699,12814,4627,0,0,0,0,0,0,0,0
+5931844,Nequatque,Squamish-Lillooet,Indian reserve,35979,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,15,25,30,37882,34383,15874,15127,0,0,0,0,0,0,0,0
+5933006,Merritt,Thompson-Nicola,City,65536,80,85,275,180,145,160,245,405,260,35,170,550,315,17.5,56.6,875,690,350,69171,61890,30662,30943,259100,595,2275,475,913,701,15.4,30
+5933008,Thompson-Nicola M,Thompson-Nicola,Regional district electoral area,82566,25,35,85,45,20,50,95,95,80,0,30,85,145,20.8,55.7,315,190,45,82933,61223,29434,25956,250787,180,610,145,817,502,0,29.6
+5933019,Ashcroft,Thompson-Nicola,Village,51781,10,0,65,35,80,20,85,100,115,0,70,65,100,12.5,42,285,115,45,62547,47109,26505,29190,200328,120,635,105,361,615,0,28.1
+5933024,Cache Creek,Thompson-Nicola,Village,46916,0,30,20,0,45,25,45,50,80,0,65,55,35,8.6,46.9,195,80,55,50290,46889,25328,32719,179521,75,410,60,379,544,0,46.7
+5933035,Logan Lake,Thompson-Nicola,District municipality,48022,0,0,85,75,20,35,100,260,135,20,55,110,80,8,48.4,455,180,50,55553,48094,23770,28403,224979,80,900,70,409,610,0,11.1
+5933039,Thompson-Nicola J (Copper Desert Country),Thompson-Nicola,Regional district electoral area,58995,0,0,55,70,15,70,30,125,30,0,90,105,45,15.9,58.9,320,140,35,66608,62489,30048,51214,348969,110,505,95,725,1426,0,50
+5933042,Kamloops,Thompson-Nicola,City,69657,900,1290,3665,2485,1865,3045,2825,3805,2680,435,2905,5255,3880,18.1,60.2,10185,9715,3555,77718,62598,31380,25890,349099,8965,25905,7430,1052,833,14.4,47
+5933044,Thompson-Nicola P (Rivers and the Peaks),Thompson-Nicola,Regional district electoral area,70104,20,15,260,120,60,95,135,115,165,35,105,290,105,19.9,58.2,675,420,115,72088,67152,30404,37868,422872,280,1175,235,845,1100,0,16.7
+5933045,Sun Peaks Mountain,Thompson-Nicola,Village,75335,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,25,Null,Null,33.3,60,35,35,0,53940,46331,28489,26973,518293,65,105,55,1342,1053,0,40
+5933054,Chase,Thompson-Nicola,Village,58958,0,25,40,25,130,35,155,175,105,35,180,205,80,21.4,48.6,425,225,60,59034,45567,24218,21754,275119,290,905,265,521,501,7.1,33.9
+5933067,Clearwater,Thompson-Nicola,District municipality,64634,0,20,70,15,50,75,110,165,80,40,80,215,100,18.7,54.4,405,280,65,64655,56672,25240,24236,290190,200,805,180,784,694,9.7,30
+5933068,Thompson-Nicola A (Wells Gray Country),Thompson-Nicola,Regional district electoral area,58220,0,20,50,20,15,0,60,95,135,15,55,85,90,10.9,41.7,300,120,30,54458,48328,24385,34964,200018,90,555,80,306,728,0,55.6
+5933801,Coldwater 1,Thompson-Nicola,Indian reserve,42360,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,10,40,30,38357,35410,15686,15124,0,0,0,0,0,0,0,0
+5933802,Douglas Lake 3,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933805,Joeyaska 2,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933806,Nicola Lake 1,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933807,Nicola Mameet 1,Thompson-Nicola,Indian reserve,49304,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,25,65,40,29875,27698,14390,11600,0,0,0,0,0,0,0,0
+5933808,Nooaitch 10,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933809,Paul's Basin 2,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933812,Bonaparte 3,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933814,Canoe Creek 1,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933817,Skeetchestn,Thompson-Nicola,Indian reserve,45982,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,0,0,15,30,15,47034,38008,19724,18028,0,0,0,0,0,0,0,0
+5933825,Inklyuhkinatko 2,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933829,Klahkamich 17,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933832,Klickkumcheen 18,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933833,Inkluckcheen,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933836,Lower Hat Creek 2,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933838,Neskonlith,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933844,Ashcroft 4,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933849,Siska Flat,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933851,Nicomen 1,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933853,Nuuautin 2,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933859,Shackan 11,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933872,Marble Canyon 3,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933873,Stryen 9,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933877,Whispering Pines 4,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933880,Kamloops 1,Thompson-Nicola,Indian reserve,93978,55,40,170,45,45,150,85,100,90,40,85,125,95,0,0,450,245,115,83598,63185,32829,26775,0,0,0,0,0,0,0,0
+5933884,Sahhaltkum 4,Thompson-Nicola,Indian reserve,25189,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,15,40,30,39334,34457,17437,10933,0,0,0,0,0,0,0,0
+5933887,North Thompson 1,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5933896,Nekliptum  1,Thompson-Nicola,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5935010,Kelowna,Central Okanagan,City,67777,1010,1470,4795,2760,3100,4195,4990,5505,4685,760,4135,6855,5410,24.7,58.5,14820,12325,4350,74697,57948,29832,26668,415710,15900,33415,13235,1064,1001,10.1,51.1
+5935012,Central Okanagan,Central Okanagan,Regional district electoral area,72191,115,30,180,135,50,165,90,120,130,0,105,290,115,23.1,56.4,575,520,60,78103,69064,32416,25506,474730,470,985,330,964,829,0,77.6
+5935016,Lake Country,Central Okanagan,District municipality,72387,175,155,550,275,155,280,440,380,385,50,250,720,675,25.1,63.4,1505,1475,345,76782,66676,29102,21944,449131,1265,3010,970,1238,1038,11.1,48.5
+5935018,Peachland,Central Okanagan,District municipality,65736,50,40,250,110,95,150,225,255,225,80,165,385,270,27.1,52.3,1070,485,130,68728,60590,28691,23942,449797,670,1640,485,858,767,31.7,41.3
+5935020,Central Okanagan J,Central Okanagan,Regional district electoral area,68933,0,0,115,25,15,95,75,75,105,30,90,110,85,27.2,54.1,455,170,10,71803,64103,27752,30522,424688,240,600,210,971,1085,0,66.7
+5935029,West Kelowna,Central Okanagan,District municipality,69110,275,330,1115,845,345,1330,755,920,1195,165,1035,2090,1405,23.8,58.5,4265,3815,995,77042,68261,30704,31818,448732,3150,8580,2500,1072,1080,6.6,43.9
+5935802,Tsinstikeptum  9,Central Okanagan,Indian reserve,56122,60,95,95,60,265,55,310,450,360,55,240,495,260,0,0,1100,445,270,54257,44127,23597,28708,0,0,0,0,0,0,0,0
+5935803,Tsinstikeptum 10,Central Okanagan,Indian reserve,49630,20,30,25,0,0,15,40,85,50,0,50,80,55,0,0,180,145,50,60465,52597,21004,25672,0,0,0,0,0,0,0,0
+5937010,Coldstream,North Okanagan,District municipality,74245,35,15,410,360,85,435,210,355,285,45,365,600,590,16.3,54.7,1415,1365,270,85361,78417,33765,32406,473121,725,2980,620,936,1005,0,43.8
+5937014,Vernon,North Okanagan,City,64069,385,640,1200,805,1235,925,2150,1750,1615,290,1365,2285,1770,21.7,54.6,4965,3550,1755,64439,50644,26862,24936,348871,5040,11340,4215,831,828,14.2,53.3
+5937017,North Okanagan B,North Okanagan,Regional district electoral area,85490,20,0,220,70,45,55,100,90,170,25,80,155,175,15.2,53.2,465,345,130,76243,71488,27519,30862,448828,275,880,250,811,708,35.4,58.3
+5937021,North Okanagan C,North Okanagan,Regional district electoral area,63477,45,0,185,105,35,210,120,100,100,0,90,250,125,21.2,54.7,535,520,75,83281,73083,34616,37879,500372,365,1015,265,1064,1018,0,54.5
+5937022,North Okanagan D,North Okanagan,Regional district electoral area,42461,45,35,60,40,85,80,75,175,130,20,40,195,110,20.7,49.7,475,310,85,61011,46908,25071,19271,375859,235,795,195,594,703,0,40.9
+5937024,Spallumcheen,North Okanagan,District municipality,66893,50,75,95,120,70,125,190,270,150,35,125,365,280,23.4,45.2,805,540,195,66950,60691,24283,24205,449174,380,1315,335,532,919,0,15.8
+5937028,Armstrong,North Okanagan,City,57752,85,70,145,110,155,65,245,190,245,15,175,310,195,25.9,54.1,655,500,195,67209,50005,25190,21543,348227,610,1370,470,803,870,22.1,50.6
+5937033,Enderby,North Okanagan,City,58960,15,20,60,10,220,0,145,270,155,10,120,185,205,17.2,49.8,565,240,125,58959,40954,22922,20086,299588,355,1060,320,679,709,12.3,45
+5937041,North Okanagan F,North Okanagan,Regional district electoral area,45679,20,50,70,45,90,125,220,200,180,15,140,250,160,20.5,51.3,585,430,90,58155,51141,21705,35098,389182,360,1020,330,559,881,0,50
+5937801,Okanagan (Part) 1,North Okanagan,Indian reserve,50021,30,50,30,30,80,20,125,220,155,25,190,180,100,0,0,645,140,75,49134,45656,22426,28102,0,0,0,0,0,0,0,0
+5937802,Enderby 2,North Okanagan,Indian reserve,46809,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,0,0,20,45,30,43618,30077,17326,15537,0,0,0,0,0,0,0,0
+5937803,Priest's Valley 6,North Okanagan,Indian reserve,46047,0,0,0,0,35,0,0,65,65,0,40,55,0,0,0,160,30,30,43937,40818,20950,20276,0,0,0,0,0,0,0,0
+5939019,Revelstoke,Columbia-Shuswap,City,67904,90,95,365,190,175,145,280,330,335,0,270,410,385,19,57.4,980,785,255,73515,57724,29053,30838,379087,745,2320,645,898,751,10.4,40
+5939023,Columbia-Shuswap B,Columbia-Shuswap,Regional district electoral area,49694,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,25,Null,Null,24.4,52.4,90,75,0,58535,53283,27661,41330,500480,60,175,60,472,743,0,0
+5939032,Salmon Arm,Columbia-Shuswap,City,55767,175,280,585,355,560,385,970,770,855,85,655,945,725,18,50.8,2465,1820,660,62719,49334,25050,22819,349207,1860,5275,1620,653,765,21.6,50.4
+5939037,Columbia-Shuswap C,Columbia-Shuswap,Regional district electoral area,54387,120,80,225,85,180,155,345,460,485,0,375,560,315,17.8,47.6,1760,685,145,58230,50550,24666,24413,380072,695,2620,575,518,933,27.5,47.8
+5939039,Columbia-Shuswap D,Columbia-Shuswap,Regional district electoral area,43748,25,65,85,55,110,50,215,130,250,80,125,285,150,28.8,60.8,600,470,95,55706,44150,20503,17557,348276,475,1025,390,908,715,0,46
+5939043,Columbia-Shuswap E,Columbia-Shuswap,Regional district electoral area,39800,0,60,25,10,30,0,115,90,50,0,40,90,35,30.4,62,200,160,0,49548,36477,15578,19211,399948,195,390,145,650,555,0,46.2
+5939803,North Bay 5,Columbia-Shuswap,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5939804,Okanagan (Part) 1,Columbia-Shuswap,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5939805,Quaaout 1,Columbia-Shuswap,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5939806,Salmon River 1,Columbia-Shuswap,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5939808,Switsemalph 3,Columbia-Shuswap,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5939811,Switsemalph,Columbia-Shuswap,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941009,Williams Lake,Cariboo,City,64629,125,255,465,240,245,230,510,500,350,75,425,600,510,12.6,51.7,1220,1115,550,68469,55251,26999,23651,224291,995,3525,840,630,693,14.6,37.9
+5941010,Cariboo D,Cariboo,Regional district electoral area,73486,15,25,180,75,45,90,70,100,65,0,130,215,215,14.5,58.7,430,380,85,88063,73380,35370,37314,200472,180,970,155,821,851,0,28
+5941012,Cariboo E,Cariboo,Regional district electoral area,71818,45,30,195,105,95,110,130,115,125,45,140,270,270,12.8,58.4,650,530,100,78252,70539,31024,27432,229619,230,1395,170,627,775,0,31.8
+5941013,Quesnel,Cariboo,City,68606,160,220,295,270,360,195,480,495,265,120,445,590,435,14,51.8,1160,1000,560,66039,50864,24937,24629,174477,1130,3190,915,556,637,10.7,48.2
+5941014,Cariboo F,Cariboo,Regional district electoral area,56643,25,0,200,115,65,135,195,200,265,0,100,310,205,13.5,48.9,765,550,105,71873,60458,29685,29472,286338,240,1470,205,536,672,0,19.4
+5941015,Cariboo G,Cariboo,Regional district electoral area,65747,50,45,310,80,100,120,195,195,315,0,95,395,220,12.8,53.9,935,530,75,72382,62841,29423,28259,250285,295,1775,220,641,717,0,24.4
+5941016,Cariboo H,Cariboo,Regional district electoral area,37847,25,145,75,0,40,0,70,90,35,0,85,100,40,20.3,45.5,250,150,45,44838,34011,17251,17699,200699,185,515,145,409,690,0,70.6
+5941017,Cariboo L,Cariboo,Regional district electoral area,38350,40,55,100,65,165,60,385,300,135,0,195,210,165,14.5,41.8,965,420,45,50721,38902,21084,21665,274894,300,1535,270,368,665,0,36.7
+5941019,Cariboo A,Cariboo,Regional district electoral area,66747,0,100,320,150,135,165,195,275,220,35,230,310,370,9.8,50.6,900,780,230,76948,62919,29302,23738,200681,300,2165,230,541,660,15.9,27
+5941021,Cariboo B,Cariboo,Regional district electoral area,60630,70,20,245,140,110,70,135,195,135,40,160,230,165,12.4,59.2,605,455,100,76049,59939,29964,33347,200120,255,1400,185,681,651,0,42.4
+5941025,Wells,Cariboo,District municipality,43744,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,18.2,40,40,45,0,58359,44904,23788,16813,169127,15,100,20,380,669,0,0
+5941026,Cariboo C,Cariboo,Regional district electoral area,70154,0,10,20,25,0,0,15,30,35,0,80,65,95,4.2,54.9,185,170,0,64354,57182,26410,38827,149813,45,395,25,526,603,0,37.5
+5941027,Cariboo I,Cariboo,Regional district electoral area,62107,25,45,70,25,25,35,50,70,65,0,30,85,95,18.8,49,285,150,50,71767,58378,24367,18031,224679,115,475,85,452,623,0,0
+5941039,Cariboo J,Cariboo,Regional district electoral area,32840,45,0,0,0,25,0,65,50,35,0,0,20,10,21.6,34.2,100,35,20,30922,29528,16448,18231,200136,65,185,30,218,408,0,30.8
+5941801,Alkali Lake 1,Cariboo,Indian reserve,47620,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,0,0,15,40,40,35569,30320,14638,15558,0,0,0,0,0,0,0,0
+5941802,Canim Lake 1,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941805,Deep Creek 2,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941806,Dog Creek 1,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941808,Lohbiee 3,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941809,Quesnel 1,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941812,Williams Lake 1,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941821,Anahim's Flat 1,Cariboo,Indian reserve,0,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,10,45,35,36113,31666,11431,4808,0,0,0,0,0,0,0,0
+5941828,Chilco Lake 1,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941837,Nazco 20,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941839,Redstone Flat 1,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941840,Squinas 2,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941841,Stone 1,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941850,Toosey 1,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941880,Ulkatcho 14A,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5941882,Alexandria,Cariboo,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5943008,Alert Bay,Mount Waddington,Village,49071,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,25,Null,Null,0,51.7,75,30,0,54327,48994,32094,33088,234726,0,205,0,571,539,0,0
+5943012,Port McNeill,Mount Waddington,Town,79696,65,15,145,95,15,110,80,95,85,0,75,150,95,15.9,63.8,360,340,40,85195,68059,37381,23409,249876,200,825,125,1067,667,3.8,28.3
+5943023,Port Hardy,Mount Waddington,District municipality,87254,30,45,275,130,135,25,195,160,150,20,140,260,180,14.7,68.3,470,435,195,74372,60247,30275,28491,179957,325,1430,275,859,626,12.1,29.3
+5943027,Mount Waddington B,Mount Waddington,Regional district electoral area,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,149828,Null,Null,Null,473,395,60,Null
+5943033,Mount Waddington D,Mount Waddington,Regional district electoral area,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,87.5,Null,Null,Null,Null,Null,Null,Null,120068,Null,Null,Null,755,0,0,Null
+5943037,Mount Waddington A,Mount Waddington,Regional district electoral area,44464,20,30,30,0,110,0,95,40,40,40,40,45,25,36.5,46.5,120,65,40,45516,26630,18675,18621,250652,190,330,130,505,559,11.1,38.9
+5943804,Fort Rupert 1,Mount Waddington,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5943806,Tsulquate 4,Mount Waddington,Indian reserve,25225,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,15,50,30,34809,33111,14423,5547,0,0,0,0,0,0,0,0
+5943808,Gwayasdums 1,Mount Waddington,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5943813,Quaee 7,Mount Waddington,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5943815,Kippase 2,Mount Waddington,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5943816,Quatsino Subdivision 18,Mount Waddington,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5943837,Alert Bay,Mount Waddington,Indian reserve,32396,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,35,50,40,37844,25625,15803,15125,0,0,0,0,0,0,0,0
+5945012,Central Coast D,Central Coast,Regional district electoral area,82822,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,11.5,19.2,85,45,0,82581,68436,37448,33484,174896,15,145,15,329,660,0,0
+5945801,Bella Bella 1,Central Coast,Indian reserve,41237,35,15,20,0,25,10,50,45,30,20,45,30,25,0,0,70,120,60,42415,35750,15126,13587,0,0,0,0,0,0,0,0
+5945802,Bella Coola 1,Central Coast,Indian reserve,27130,30,25,10,0,30,0,40,25,25,20,20,30,10,0,0,25,95,70,27463,25929,12300,9958,0,0,0,0,0,0,0,0
+5945803,Katit 1,Central Coast,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5947012,Prince Rupert,Skeena-Queen Charlotte,City,71686,185,135,520,290,340,345,505,555,465,140,340,615,545,16.1,58.6,1170,1485,725,70497,54375,28432,29099,179737,1210,3765,985,953,662,15.5,36.6
+5947803,Masset 1,Skeena-Queen Charlotte,Indian reserve,43744,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,20,Null,Null,0,0,35,85,50,38921,29841,14203,7528,0,0,0,0,0,0,0,0
+5947804,Skidegate 1,Skeena-Queen Charlotte,Indian reserve,41443,35,10,10,0,20,10,45,50,25,30,15,25,25,0,0,55,85,50,40301,32277,17867,15538,0,0,0,0,0,0,0,0
+5947807,Dolphin Island 1,Skeena-Queen Charlotte,Indian reserve,37814,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,15,60,25,30870,28745,10241,8330,0,0,0,0,0,0,0,0
+5949005,Kitimat,Kitimat-Stikine,District municipality,71445,115,145,330,365,125,400,210,250,345,110,320,455,480,10.9,50.2,1150,980,375,84615,65998,34038,37289,134687,585,3040,440,608,600,14.4,33.5
+5949011,Terrace,Kitimat-Stikine,City,70447,80,185,515,275,280,385,550,460,400,70,315,570,450,10.8,50.5,1150,1345,575,75844,58592,30071,27707,200371,930,3590,800,683,700,28.7,43.9
+5949013,Kitimat-Stikine C (Part 1),Kitimat-Stikine,Regional district electoral area,54407,0,15,90,55,80,140,60,125,110,0,190,160,60,7.2,48.8,430,300,50,68363,58444,32697,29593,200615,120,960,100,633,734,0,24.5
+5949018,Kitimat-Stikine E,Kitimat-Stikine,Regional district electoral area,68507,90,75,145,100,105,100,155,200,110,35,120,200,240,10.6,54.9,445,455,195,74203,55236,27662,28515,145140,345,1330,225,580,811,5.6,47.8
+5949022,Hazelton,Kitimat-Stikine,Village,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,72.7,Null,Null,Null,Null,Null,Null,Null,160353,Null,Null,Null,1162,748,0,Null
+5949024,New Hazelton,Kitimat-Stikine,District municipality,59526,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,20,Null,Null,18.2,63.6,50,85,40,60017,50285,22561,22080,119980,65,175,55,865,656,0,37.5
+5949028,Kitimat-Stikine B,Kitimat-Stikine,Regional district electoral area,63387,25,60,45,15,20,20,55,100,100,15,20,120,75,15.3,41.1,250,165,30,52192,48645,25822,19894,150032,105,545,85,409,600,0,26.3
+5949802,Kitasoo 1,Kitimat-Stikine,Indian reserve,40192,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,15,40,10,41216,36672,14805,15808,0,0,0,0,0,0,0,0
+5949803,Kitamaat 2,Kitimat-Stikine,Indian reserve,44714,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,0,0,15,55,45,48605,39591,15441,15146,0,0,0,0,0,0,0,0
+5949807,Kulspai 6,Kitimat-Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5949810,Coryatsaqua (Moricetown) 2,Kitimat-Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5949811,Hagwilget 1,Kitimat-Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5949812,Gitanmaax 1,Kitimat-Stikine,Indian reserve,30064,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,20,Null,Null,0,0,30,85,40,38773,33379,14382,15115,0,0,0,0,0,0,0,0
+5949813,Kispiox 1,Kitimat-Stikine,Indian reserve,27324,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,0,0,25,60,40,26455,18151,9824,9393,0,0,0,0,0,0,0,0
+5949816,Gitwangak 1,Kitimat-Stikine,Indian reserve,32522,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,25,65,35,23390,21894,8286,6386,0,0,0,0,0,0,0,0
+5949817,Moricetown 1,Kitimat-Stikine,Indian reserve,32918,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,10,25,20,39601,32153,15790,8115,0,0,0,0,0,0,0,0
+5949818,Sik-e-dakh 2,Kitimat-Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5949819,Babine 17,Kitimat-Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5949832,Iskut 6,Kitimat-Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5949843,Guhthe Tah 12,Kitimat-Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5949844,Kitselas 1,Kitimat-Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5949845,Dease Lake 9,Kitimat-Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5951007,Vanderhoof,Bulkley-Nechako,District municipality,65997,45,45,175,140,170,145,130,125,105,45,125,250,200,10.7,58.9,450,550,195,74393,63520,29632,25216,200132,345,1355,285,759,649,13.6,48.3
+5951009,Fraser Lake,Bulkley-Nechako,Village,66905,0,0,40,15,40,40,45,40,20,0,30,110,75,0,39.4,120,145,50,75135,68948,26896,22567,149771,45,415,35,389,682,15.4,34.6
+5951013,Fort St. James,Bulkley-Nechako,District municipality,63181,15,15,85,10,75,15,70,55,75,0,45,135,60,11.4,62.2,195,200,60,63061,55625,27145,21022,159007,160,500,155,803,689,13.3,48.9
+5951015,Bulkley-Nechako C,Bulkley-Nechako,Regional district electoral area,56270,10,0,75,80,30,65,70,30,35,0,40,85,65,9.3,43.9,190,220,30,92412,69615,31702,27426,199840,55,520,50,452,696,0,0
+5951022,Burns Lake,Bulkley-Nechako,Village,60543,35,60,65,45,50,35,70,90,45,15,90,115,75,15.2,63.3,200,195,105,60780,53615,24348,24439,150204,170,595,145,884,603,35.6,29.7
+5951028,Bulkley-Nechako B,Bulkley-Nechako,Regional district electoral area,53335,0,0,55,60,20,50,55,105,70,45,75,105,115,9.4,54.7,275,295,40,63201,59738,30881,27140,179981,90,640,75,704,576,31.6,36.8
+5951031,Bulkley-Nechako E,Bulkley-Nechako,Regional district electoral area,66827,0,0,85,25,65,0,70,70,25,0,50,115,70,9.2,41.4,265,155,50,72701,61101,27905,33191,250812,75,445,75,375,552,0,50
+5951032,Granisle,Bulkley-Nechako,Village,40294,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,0,32.3,85,0,0,41598,38590,20484,23183,79096,20,155,20,395,0,0,0
+5951034,Houston,Bulkley-Nechako,District municipality,97233,50,70,190,90,30,115,125,45,100,10,65,180,190,8.6,66.3,315,420,55,97568,71224,29999,28417,149990,215,1050,165,880,621,22.1,35.9
+5951038,Telkwa,Bulkley-Nechako,Village,62708,0,0,35,40,0,50,30,45,50,0,90,90,65,16.3,67.8,115,230,30,74470,63715,32710,42219,200291,85,405,80,1079,982,0,0
+5951043,Smithers,Bulkley-Nechako,Town,72298,35,30,265,125,185,135,305,180,125,0,145,330,320,10.2,56.6,560,595,225,81422,65291,30586,24631,250622,365,1825,330,848,623,14.4,38.8
+5951051,Bulkley-Nechako A,Bulkley-Nechako,Regional district electoral area,74965,10,0,270,175,60,165,285,130,185,20,150,335,235,12.7,50.6,705,725,140,77731,72741,30497,33636,300574,230,1590,215,573,666,0,14.3
+5951053,Bulkley-Nechako G,Bulkley-Nechako,Regional district electoral area,85306,0,25,95,0,0,40,55,40,25,0,0,35,50,6.2,43.1,175,95,0,91224,67501,28171,22748,150087,45,335,50,324,697,0,0
+5951801,Ye Koo Che 3,Bulkley-Nechako,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5951802,Nautley (Fort Fraser) 1,Bulkley-Nechako,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5951803,Nak'azdli (Necoslie 1),Bulkley-Nechako,Indian reserve,39798,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,15,Null,Null,0,0,10,60,55,39222,31449,15136,15561,0,0,0,0,0,0,0,0
+5951805,Binche 2 (Pinchie 2),Bulkley-Nechako,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5951807,Stellaquo (Stella) 1,Bulkley-Nechako,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5951809,Stony Creek 1,Bulkley-Nechako,Indian reserve,16012,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,10,40,30,26846,16095,8196,4132,0,0,0,0,0,0,0,0
+5951810,Tache 1,Bulkley-Nechako,Indian reserve,38022,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,15,45,30,29140,26358,8870,7614,0,0,0,0,0,0,0,0
+5951815,Burns Lake 18,Bulkley-Nechako,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5951818,Cheslatta 1,Bulkley-Nechako,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5951827,Woyenne 27,Bulkley-Nechako,Indian reserve,0,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,0,0,10,30,15,42117,35906,13106,7889,0,0,0,0,0,0,0,0
+5951828,Babine  6,Bulkley-Nechako,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5951829,Babine 25,Bulkley-Nechako,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5951848,North Tacla Lake,Bulkley-Nechako,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5953007,Valemount,Fraser-Fort George,Village,57148,0,10,40,0,65,0,50,80,55,0,45,40,80,12.9,43.5,175,90,25,62555,45489,20963,20426,179376,95,380,90,673,673,16,42.3
+5953012,McBride,Fraser-Fort George,Village,18548,0,40,0,0,55,0,0,35,25,0,0,40,20,30.6,50,55,55,20,43515,31120,18848,17186,149949,90,165,70,505,605,0,42.9
+5953019,Fraser-Fort George H,Fraser-Fort George,Regional district electoral area,40557,40,0,45,0,50,25,40,125,140,0,90,70,60,9.1,42,270,225,20,46909,45034,23820,35936,174999,55,510,45,360,748,0,0
+5953023,Prince George,Fraser-Fort George,City,73903,750,1060,3010,1910,1670,2655,2655,2340,2455,560,2200,4475,3515,14.6,62.4,7525,8245,3590,77528,63653,31192,26221,229925,6830,22335,5675,986,749,12.6,43.8
+5953033,Mackenzie,Fraser-Fort George,District municipality,66360,25,20,230,100,75,45,175,215,110,0,205,175,165,12.4,66,385,400,185,73076,57094,31160,38204,125269,255,1310,220,765,701,8.5,29.6
+5953038,Fraser-Fort George A,Fraser-Fort George,Regional district electoral area,70226,60,35,130,165,40,95,65,100,35,0,85,175,230,15.2,57.3,590,440,55,82982,80982,33168,25450,250861,170,935,135,845,767,0,0
+5953042,Fraser-Fort George C,Fraser-Fort George,Regional district electoral area,85638,0,0,155,80,15,190,25,65,85,0,55,250,305,8.7,62.4,535,500,25,92751,85884,36984,36200,300232,110,1130,100,1083,276,0,0
+5953044,Fraser-Fort George D,Fraser-Fort George,Regional district electoral area,68045,110,40,145,150,35,170,100,90,80,0,140,345,230,14.5,64.8,615,565,80,79423,70900,34261,27063,250664,255,1285,165,969,604,0,52.9
+5953048,Fraser-Fort George F,Fraser-Fort George,Regional district electoral area,53655,15,15,20,35,40,0,45,65,105,0,55,70,65,14.6,54.2,175,125,40,55422,48658,32779,40598,224636,100,440,85,695,602,0,0
+5953802,McLeod Lake 1,Fraser-Fort George,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5955003,Tumbler Ridge,Peace River,District municipality,92667,10,0,140,100,30,135,110,70,65,0,105,130,230,9.6,71.2,320,400,110,92631,85808,40586,32552,200271,160,980,130,1069,1002,11.1,23.6
+5955010,Chetwynd,Peace River,District municipality,78747,15,0,135,75,20,115,45,95,60,0,115,130,180,9,69.2,230,305,130,88040,78110,35798,39701,214510,145,905,105,1009,785,0,22.1
+5955014,Dawson Creek,Peace River,City,67125,160,200,410,330,280,465,445,415,405,115,435,590,605,16.8,63.2,1130,1250,570,80194,58416,33490,28148,249891,1195,3640,940,1015,849,18.9,39.1
+5955021,Peace River D,Peace River,Regional district electoral area,70133,30,0,190,265,60,260,190,175,165,45,65,310,270,13,60.3,785,655,105,84763,74948,34494,33778,299480,260,1420,190,935,1198,0,33.3
+5955025,Hudson's Hope,Peace River,District municipality,82341,0,0,40,40,75,50,45,20,45,0,0,35,50,11.7,38.3,135,75,75,83947,60583,26747,16012,249995,110,310,110,342,801,0,66.7
+5955030,Taylor,Peace River,District municipality,80816,0,0,115,45,30,40,45,50,35,0,10,70,70,15.3,78.8,160,230,65,89060,80614,31746,31058,210658,135,400,130,1136,887,0,60.9
+5955034,Fort St. John,Peace River,City,96289,285,140,1020,730,340,1205,420,555,455,120,570,755,890,19.2,74.1,1800,2305,715,97889,81298,39549,35633,292071,1920,5550,1475,1344,936,9.8,35.8
+5955040,Peace River B,Peace River,Regional district electoral area,69931,35,0,290,140,0,265,75,65,110,0,105,310,185,15.6,68.6,590,740,65,93437,88610,38273,39759,329811,200,1060,165,1243,550,0,0
+5955042,Peace River C,Peace River,Regional district electoral area,106564,100,0,325,210,60,510,70,75,100,45,155,260,410,14,57,750,950,120,105395,94017,42221,42845,360310,370,1875,235,1033,1109,0,34
+5955801,East Moberly Lake 169,Peace River,Indian reserve,42627,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,0,0,10,35,30,49879,44851,20893,20117,0,0,0,0,0,0,0,0
+5955802,West Moberly Lake 168A,Peace River,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5955803,Blueberry River 205,Peace River,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5955807,Fort Ware 1,Peace River,Indian reserve,18624,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,0,0,10,30,15,25393,23896,11394,11488,0,0,0,0,0,0,0,0
+5955808,Halfway River 168,Peace River,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5955812,Ingenika Point,Peace River,Indian settlement,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5957803,Five Mile Point  3,Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5957813,Lower Post,Stikine,Indian settlement,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5957814,Liard River 3,Stikine,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null
+5959007,Northern Rockies,Northern Rockies,Regional municipality,91294,35,0,250,195,75,365,90,170,140,0,115,290,250,7.5,64.1,520,685,140,96268,86470,40002,38273,250359,210,1780,165,1153,851,3.8,19.2
+5959806,Fort Nelson 2,Northern Rockies,Indian reserve,26598,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,10,Null,Null,0,0,15,65,30,52624,45298,17374,18816,0,0,0,0,0,0,0,0
+5959810,Prophet River 4,Northern Rockies,Indian reserve,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,Null,Null,Null,Null,0,Null,Null,Null,0,0,0,Null

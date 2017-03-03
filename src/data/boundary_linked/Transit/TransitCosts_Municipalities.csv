@@ -1,0 +1,121 @@
+Geo_Code,CD_Name,CSD_Name,Users,Covered Area,System,Zones,Sing_Adult_Fare_Price,Monthly_Adult_Fare_Price
+5901003,East Kootenay,Elkford,440,Elk-Valley,BC Transit,,2,42
+5901006,East Kootenay,Sparwood,170,Elk-Valley,BC Transit,,2,42
+5901012,East Kootenay,Fernie,80,Elk-Valley,BC Transit,,2,42
+5901022,East Kootenay,Cranbrook,100,Cranbrook,BC Transit,,2.25,50
+5901039,East Kootenay,Invermere,20,Columbia Valley,BC Transit,,2,42
+5903015,Central Kootenay,Nelson,180,West Kootenay,BC Transit,,2,50
+5903045,Central Kootenay,Castlegar,55,West Kootenay,BC Transit,,2,50
+5905014,Kootenay Boundary,Trail,40,West Kootenay,BC Transit,,2,50
+5905018,Kootenay Boundary,Warfield,65,West Kootenay,BC Transit,,2,50
+5905023,Kootenay Boundary,Rossland,15,West Kootenay,BC Transit,,2,50
+5907035,Okanagan-Similkameen,Summerland,15,Summerland,BC Transit,,2,50
+5907041,Okanagan-Similkameen,Penticton,160,Penticton,BC Transit,,2,45
+5909020,Fraser Valley,Chilliwack,475,Chilliwack,BC Transit,,2,44
+5909052,Fraser Valley,Abbotsford,1135,Central Fraser Valley,BC Transit,,2.25,52
+5909056,Fraser Valley,Mission,785,Central Fraser Valley,BC Transit,,2.25,52
+5915001,Greater Vancouver,Langley,1740,Metro Vancouver,TransLink,3,5.5,170
+5915002,Greater Vancouver,Langley,570,Metro Vancouver,TransLink,3,5.5,170
+5915004,Greater Vancouver,Surrey,27040,Metro Vancouver,TransLink,3,5.5,170
+5915007,Greater Vancouver,White Rock,670,Metro Vancouver,TransLink,3,5.5,170
+5915011,Greater Vancouver,Delta,4870,Metro Vancouver,TransLink,3,5.5,170
+5915015,Greater Vancouver,Richmond,15125,Metro Vancouver,TransLink,2,4,124
+5915022,Greater Vancouver,Vancouver,88290,Metro Vancouver,TransLink,1,2.75,91
+5915025,Greater Vancouver,Burnaby,29240,Metro Vancouver,TransLink,2,4,124
+5915029,Greater Vancouver,New Westminster,9725,Metro Vancouver,TransLink,2,4,124
+5915034,Greater Vancouver,Coquitlam,10215,Metro Vancouver,TransLink,3,5.5,170
+5915038,Greater Vancouver,Anmore,125,Metro Vancouver,TransLink,3,5.5,170
+5915039,Greater Vancouver,Port Coquitlam,3620,Metro Vancouver,TransLink,3,5.5,170
+5915043,Greater Vancouver,Port Moody,2620,Metro Vancouver,TransLink,3,5.5,170
+5915046,Greater Vancouver,North Vancouver,5765,Metro Vancouver,TransLink,2,4,124
+5915051,Greater Vancouver,North Vancouver,5860,Metro Vancouver,TransLink,2,4,124
+5915055,Greater Vancouver,West Vancouver,1950,Metro Vancouver,TransLink,2,4,124
+5915065,Greater Vancouver,Lions Bay,100,Metro Vancouver,TransLink,2,4,124
+5915070,Greater Vancouver,Pitt Meadows,1195,Metro Vancouver,TransLink,3,5.5,170
+5915075,Greater Vancouver,Maple Ridge,3475,Metro Vancouver,TransLink,3,5.5,170
+5915803,Greater Vancouver,Musqueam 2,70,Metro Vancouver,TransLink,1,2.75,91
+5915806,Greater Vancouver,Burrard Inlet 3,75,Metro Vancouver,TransLink,2,4,124
+5915807,Greater Vancouver,Mission 1,55,Metro Vancouver,TransLink,2,4,124
+5915808,Greater Vancouver,Capilano 5,300,Metro Vancouver,TransLink,2,4,124
+5915830,Greater Vancouver,Katzie 1,10,Metro Vancouver,TransLink,3,5.5,170
+5917005,Capital,North Saanich,295,Victoria,BC Transit,,2.5,85
+5917010,Capital,Sidney,320,Victoria,BC Transit,,2.5,85
+5917015,Capital,Central Saanich,455,Victoria,BC Transit,,2.5,85
+5917021,Capital,Saanich,6455,Victoria,BC Transit,,2.5,85
+5917027,Capital,Capital F,160,Salt Spring Island,BC Transit,,2.25,50
+5917030,Capital,Oak Bay,725,Victoria,BC Transit,,2.5,85
+5917034,Capital,Victoria,5565,Victoria,BC Transit,,2.5,85
+5917040,Capital,Esquimalt,1340,Victoria,BC Transit,,2.5,85
+5917041,Capital,Colwood,585,Victoria,BC Transit,,2.5,85
+5917042,Capital,Metchosin,50,Victoria,BC Transit,,2.5,85
+5917044,Capital,Langford,985,Victoria,BC Transit,,2.5,85
+5917047,Capital,View Royal,630,Victoria,BC Transit,,2.5,85
+5917049,Capital,Highlands,20,Victoria,BC Transit,,2.5,85
+5917052,Capital,Sooke,470,Victoria,BC Transit,,2.5,85
+5917801,Capital,Cole Bay 3,10,Victoria,BC Transit,,2.5,85
+5917803,Capital,East Saanich 2,35,Victoria,BC Transit,,2.5,85
+5917804,Capital,South Saanich 1,15,Victoria,BC Transit,,2.5,85
+5917812,Capital,New Songhees 1A,75,Victoria,BC Transit,,2.5,85
+5919008,Cowichan Valley,North Cowichan,270,Cowichan Valley,BC Transit,,2,48
+5919012,Cowichan Valley,Duncan,40,Cowichan Valley,BC Transit,,2,48
+5919013,Cowichan Valley,Cowichan Valley D,25,Cowichan Valley,BC Transit,,2,48
+5919043,Cowichan Valley,Cowichan Valley A,35,Cowichan Valley,BC Transit,,2,48
+5919046,Cowichan Valley,Cowichan Valley B,65,Cowichan Valley,BC Transit,,2,48
+5919049,Cowichan Valley,Cowichan Valley C,45,Cowichan Valley,BC Transit,,2,48
+5919051,Cowichan Valley,Cowichan Valley E,20,Cowichan Valley,BC Transit,,2,48
+5921007,Nanaimo,Nanaimo,1350,Nanaimo,BC Transit,,2.5,67.5
+5921008,Nanaimo,Lantzville,15,Nanaimo,BC Transit,,2.5,67.5
+5921010,Nanaimo,Nanaimo A,20,Nanaimo,BC Transit,,2.5,67.5
+5921014,Nanaimo,Nanaimo B,145,Nanaimo,BC Transit,,2.5,67.5
+5921016,Nanaimo,Nanaimo C,10,Nanaimo,BC Transit,,2.5,67.5
+5921018,Nanaimo,Parksville,40,Nanaimo,BC Transit,,2.5,67.5
+5921023,Nanaimo,Qualicum Beach,35,Nanaimo,BC Transit,,2.5,67.5
+5921030,Nanaimo,Nanaimo E,15,Nanaimo,BC Transit,,2.5,67.5
+5921034,Nanaimo,Nanaimo G,45,Nanaimo,BC Transit,,2.5,67.5
+5923008,Alberni-Clayoquot,Port Alberni,200,Port Alberni,BC Transit,,2,48
+5923816,Alberni-Clayoquot,Tsahaheh 1,10,Port Alberni,BC Transit,,2,48
+5924034,Strathcona,Campbell River,880,Campbell River,BC Transit,,2,52
+5924042,Strathcona,Strathcona D (Oyster Bay - Buttle Lake),20,Campbell River,BC Transit,,2,52
+5924054,Strathcona,Strathcona C,65,Campbell River,BC Transit,,2,52
+5924804,Strathcona,Campbell River 11,10,Campbell River,BC Transit,,2,52
+5926005,Comox Valley,Comox,80,Comox Valley,BC Transit,,2,52
+5926010,Comox Valley,Courtenay,205,Comox Valley,BC Transit,,2,52
+5926014,Comox Valley,Cumberland,30,Comox Valley,BC Transit,,2,52
+5926021,Comox Valley,Comox Valley A,30,Comox Valley,BC Transit,,2,52
+5926022,Comox Valley,Comox Valley B (Lazo North),70,Comox Valley,BC Transit,,2,52
+5926024,Comox Valley,Comox Valley C (Puntledge - Black Creek),55,Comox Valley,BC Transit,,2,52
+5927008,Powell River,Powell River,140,Powell River,BC Transit,,2,45
+5929005,Sunshine Coast,Gibsons,155,Sunshine Coast,BC Transit,,2,60
+5929011,Sunshine Coast,Sechelt,260,Sunshine Coast,BC Transit,,2,60
+5929022,Sunshine Coast,Sunshine Coast B,35,Sunshine Coast,BC Transit,,2,60
+5929024,Sunshine Coast,Sunshine Coast D,70,Sunshine Coast,BC Transit,,2,60
+5929026,Sunshine Coast,Sunshine Coast E,115,Sunshine Coast,BC Transit,,2,60
+5929028,Sunshine Coast,Sunshine Coast F,95,Sunshine Coast,BC Transit,,2,60
+5929803,Sunshine Coast,Sechelt (Part),10,Sunshine Coast,BC Transit,,2,60
+5931006,Squamish-Lillooet,Squamish,320,Squamish,BC Transit,,1.75,39
+5931020,Squamish-Lillooet,Whistler,730,Whistler,BC Transit,,2.5,65
+5931843,Squamish-Lillooet,Mount Currie,20,Pemberton Valley,BC Transit,,2.5,65
+5933006,Thompson-Nicola,Merritt,15,Merritt,BC Transit,,1.5,42
+5933042,Thompson-Nicola,Kamloops,1795,Kamloops,BC Transit,,2,53
+5935010,Central Okanagan,Kelowna,2170,Kelowna,BC Transit,,2.5,70
+5935016,Central Okanagan,Lake Country,80,Kelowna,BC Transit,,2.5,70
+5935018,Central Okanagan,Peachland,30,Kelowna,BC Transit,,2.5,70
+5935029,Central Okanagan,West Kelowna,395,Kelowna,BC Transit,,2.5,70
+5935802,Central Okanagan,Tsinstikeptum  9,50,Kelowna,BC Transit,,2.5,70
+5937010,North Okanagan,Coldstream,60,Vernon,BC Transit,,2,50
+5937014,North Okanagan,Vernon,340,Vernon,BC Transit,,2,50
+5937017,North Okanagan,North Okanagan B,35,Vernon,BC Transit,,2,50
+5937021,North Okanagan,North Okanagan C,50,Vernon,BC Transit,,2,50
+5937028,North Okanagan,Armstrong,20,Vernon,BC Transit,,2,50
+5939019,Columbia-Shuswap,Revelstoke,40,Revelstoke,BC Transit,,2,45
+5939032,Columbia-Shuswap,Salmon Arm,75,Shuswap,BC Transit,,1.5,45
+5941009,Cariboo,Williams Lake,155,Williams Lake,BC Transit,,1.75,43
+5941013,Cariboo,Quesnel,70,Quesnel,BC Transit,,1.75,35
+5947012,Skeena-Queen Charlotte,Prince Rupert,200,Prince Rupert,BC Transit,,2,48
+5949005,Kitimat-Stikine,Kitimat,40,Terrace,BC Transit,,2,44
+5949011,Kitimat-Stikine,Terrace,65,Terrace,BC Transit,,2,44
+5949018,Kitimat-Stikine,Kitimat-Stikine E,50,Terrace,BC Transit,,2,44
+5951043,Bulkley-Nechako,Smithers,10,Smithers,BC Transit,,2.25,50
+5953023,Fraser-Fort George,Prince George,925,Prince George,BC Transit,,2.5,57.5
+5955014,Peace River,Dawson Creek,55,Dawson Creek,BC Transit,,1.75,50
+5955034,Peace River,Fort St. John,35,Fort St. John,BC Transit,,2,40

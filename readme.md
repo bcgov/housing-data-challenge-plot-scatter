@@ -32,6 +32,9 @@ View the app at http://localhost:3000 in your browser.
     tippecanoe -o ./vector-tiles/municipalities.mbtiles ./geo-json/Municipalities_geo.json --no-polygon-splitting
     tippecanoe -o ./vector-tiles/econregions.mbtiles ./geo-json/EconRegions_geo.json --no-polygon-splitting
     tippecanoe -o ./vector-tiles/regdistricts.mbtiles ./geo-json/RegDistricts_geo.json --no-polygon-splitting
+    tippecanoe -o ./vector-tiles/census-dissemination-areas.mbtiles ./geo-json/DisseminationAreas_geo.json --no-polygon-splitting
+    tippecanoe -o ./vector-tiles/census-dissemination-blocks.mbtiles ./geo-json/DisseminationBlocks_geo.json --no-polygon-splitting
+    tippecanoe -o ./vector-tiles/census-tracts.mbtiles ./geo-json/CensusTracts_geo.json --no-polygon-splitting
     ```
 
 #### Serve vector tiles 
@@ -55,17 +58,20 @@ View the app at http://localhost:3000 in your browser.
 6. Right click on layer again and click on “…save as”.
 7. Save the layer as a ESRI Shapefile and select “WGS 84/ EPSG 4326” as the projection.
 
-#### To convert .shp file to .geojson (Based on this tutorial: https://bost.ocks.org/mike/map/):
-* ogr2ogr command is:
-	```ogr2ogr -f GeoJSON new-file-name old-shapefile-name```
-	(e.g. “ogr2ogr f GeoJSON boundaries_geojson.json boundaries.shp”)
-* Note: Change into directory with the shapefile first
+#### To convert .shp file to .geojson (Based on this tutorial: https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c#.6eorauhne):
+
+*Install shp2json : ```npm install -g shapefile```
+* shp2json command is:
+	```shp2json shapefile-name -o new-file-name.json```
+	(e.g. “shp2json parks_vancouver.shp -o parks_vancouver.json
+”)
+* Note: Change into directory with the shapefile first, then move .json file to /src/data/appropriate_file
 
 ### Setting up the app in a Docker container
 
 Adapted from https://nodejs.org/en/docs/guides/nodejs-docker-webapp/.
 
-1. Make sure Docker is isntalled on your computer(https://www.docker.com/products/docker)
+1. Make sure Docker is installed on your computer(https://www.docker.com/products/docker)
 2. In Terminal, navigate to the root of this project
 3. Build Docker image: `docker build -t plotandscatter/ps-bcic-data-viz .`
 4. Run Docker image: `docker run -p 3001:3000 -d plotandscatter/ps-bcic-data-viz`
@@ -77,6 +83,8 @@ You should now be able to access the Docker server at http://localhost:3001.
 1. `docker ps`
 2. Find the container ID
 3. `docker kill <container-id>`
+
+### For list of data sources see the README.md in src/data/
 
 ## README TODOs
 

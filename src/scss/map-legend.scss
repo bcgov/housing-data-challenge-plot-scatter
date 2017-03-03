@@ -1,0 +1,52 @@
+#map-legend {
+
+    $map-background-grey: rgb(246, 246, 244);
+    $scale-width: 50px;
+    $color-width: 50px;
+    $font-size: 0.7rem;
+    $div-height: 1.1rem;
+    $text-margin: 5px;
+
+    font-size: $font-size;
+    line-height: $div-height;
+    color: black;
+    margin-right: 0px;
+    width: $color-width;
+    position: absolute;
+    top: calc(15px + (#{$div-height}/2));
+    right: 30px + $color-width;
+    z-index: 10000;
+    background-color: $map-background-grey;
+    opacity: 1.0;
+    text-align: right;
+    
+    // border: solid $map-background-grey 1px;
+    .colors,
+    .values {
+        > div {
+            height: $div-height;
+        }
+    }
+    .colors {
+        > div {
+            opacity: 0.5;
+            border-top: solid black 1px;
+            // border-left: solid black 1px;
+            &:last-child {
+                border-bottom: solid black 1px;
+            }
+        }
+    }
+    .values {
+        > div {
+            width: $color-width;
+            text-align: left;
+            height: $div-height;
+            background-color: rgba(246, 246, 244, 0.9);
+            padding-left: $text-margin;
+        }
+        position: absolute;
+        top: -($div-height/2);
+        left: $color-width;
+    }
+}

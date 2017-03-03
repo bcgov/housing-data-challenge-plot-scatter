@@ -1,5 +1,9 @@
 import React from 'react';
-import VectorGrid from 'leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.min.js';
+import Constants from '../constants';
+import MapLegend from './map-legend.js';
+require('leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.min.js');
+require('drmonty-leaflet-awesome-markers/js/leaflet.awesome-markers.min.js');
+require('drmonty-leaflet-awesome-markers/css/leaflet.awesome-markers.css');
 
 class MapViz extends React.Component {
 
@@ -7,116 +11,231 @@ class MapViz extends React.Component {
         super(props);
 
         this.state = {
-            data: props.data
+            activeBoundaryLayer: null,
+            activeLayers: {},
+            highlightedName: '',
+            highlightedId: '',
+            highlightedValue: ''
+        };
+    }
+
+    // NB. the below will NOT work with vector tiles as currently
+    // constituted! Why not? Because with vector tiles, we don't
+    // load all the features in advance. The user might want to pan
+    // to a feature that hasn't been loaded as a vector tile yet.
+    // panToFeatureByFeatureId(featureIdToPan) {
+    //     let latlng;
+    //     console.log('featureId', featureIdToPan);
+    //     this.map.eachLayer((layer) => {
+    //         if (layer.setFeatureStyle) {
+    //             for (let tileId in layer._vectorTiles) {
+    //                 let tile = layer._vectorTiles[tileId];
+    //                 for (let featureId in tile._features) {
+    //                     let feature = tile._features[featureId];
+    //                     let id = feature.feature.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
+    //                     console.log('id', id);
+    //                     if (id === featureIdToPan) {
+    //                         console.log(tile);
+    //                         console.log('clicking', feature.feature._pxBounds.getCenter());
+    //                         tile.fire('click');
+    //                         return;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     });
+    // }
+
+    panToClickedLatLng(event) {
+        this.map.panTo([event.latlng.lat, event.latlng.lng]);
+    }
+
+    getFeatureId(feature) {
+        return feature.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
+    }
+
+    getTileStyles(properties, zoom) {
+        const id = properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
+        let styles = Object.assign({}, Constants.MAP_BASE_FEATURE_STYLES);
+
+        if (this.props.boundaryData.dataDictionary && this.props.boundaryData.dataDictionary[id]) {
+            styles.fillColor = this.props.boundaryData.dataDictionary[id].color;
         }
-        console.log('MapViz component data: ', this.state.data);
+
+        if (zoom < 12) {
+            styles.weight = 0;
+        }
+
+        return styles;
+    }
+
+    buildBoundaryLayer(boundaryInfo) {
+        let vectorTileOptions = {
+            bounds: Constants.MAP_INITIAL_BOUNDS,
+            vectorTileLayerStyles: {},
+            getFeatureId: this.getFeatureId.bind(this),
+            interactive: true
+        };
+        vectorTileOptions.vectorTileLayerStyles[boundaryInfo.layerName] = this.getTileStyles.bind(this);
+
+        function highlightFeature(event) {
+
+            const name = event.layer.properties[this.state.activeBoundaryLayer.boundaryInfo.featureNameProperty];
+            const id = event.layer.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
+            const value = this.props.boundaryData.dataDictionary[id] ? this.props.boundaryData.dataDictionary[id].value : '???';
+
+            let style = this.getTileStyles.bind(this)(event.layer.properties);
+            style.fillOpacity = 0.9;
+            style.weight = 2;
+            event.target.setFeatureStyle(id, style);
+
+            this.setState({ highlightedName: name, highlightedId: id, highlightedValue: value });
+        }
+
+        function resetHighlight(event) {
+            let id = event.layer.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
+            event.target.resetFeatureStyle(id);
+            this.setState({ highlightedName: '', highlightedId: '', highlightedValue: '' });
+        }
+
+        const boundaryLayer = L.vectorGrid.protobuf(
+            boundaryInfo.url,
+            vectorTileOptions
+        );
+
+        boundaryLayer.on('mouseover', highlightFeature.bind(this));
+        boundaryLayer.on('mouseout', resetHighlight.bind(this));
+        boundaryLayer.on('click', this.panToClickedLatLng.bind(this));
+        boundaryLayer.boundaryInfo = boundaryInfo;
+
+        return boundaryLayer;
     }
 
     componentDidMount() {
 
-        const bounds = new L.LatLngBounds(
-            new L.LatLng(48.308916, -139.052201),
-            new L.LatLng(60.000062, -114.054221)
-        );
+        this.map = L.map(this.mapDiv, { minZoom: Constants.MAP_MIN_ZOOM, maxZoom: Constants.MAP_MAX_ZOOM });
+        this.map.setView(Constants.MAP_INITIAL_CENTER, Constants.MAP_INITIAL_ZOOM);
 
-        const censusLayerUrls = {
-            municipalities: 'http://plotandscatter.com:8080/data/municipalities/{z}/{x}/{y}.pbf',
-            econregions: 'http://plotandscatter.com:8080/data/econregions/{z}/{x}/{y}.pbf',
-            regdistricts: 'http://plotandscatter.com:8080/data/regdistricts/{z}/{x}/{y}.pbf'
+        this.baseLayer = L.tileLayer(
+            Constants.MAP_BASE_LAYER_URL, {
+                attribution: Constants.MAP_BASE_LAYER_ATTRIBUTION,
+                bounds: Constants.MAP_INITIAL_BOUNDS
+            }
+        );
+        this.baseLayer.addTo(this.map);
+
+        this.boundaryLayers = {};
+        this.layerGroups = {};
+        let labeledBoundaryLayers = {};
+
+        Object.keys(Constants.MAP_BOUNDARY_INFO).forEach(function (key) {
+            const boundaryInfo = Constants.MAP_BOUNDARY_INFO[key];
+            const boundaryLayer = this.buildBoundaryLayer.bind(this)(boundaryInfo);
+            this.boundaryLayers[key] = boundaryLayer;
+            labeledBoundaryLayers[boundaryInfo.label] = boundaryLayer;
+        }, this);
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.boundaryData != this.props.boundaryData) {
+            // console.log('--> here');
+            this.updateBoundaries(prevProps, prevState);
+        }
+        if (prevProps.layerData != this.props.layerData) {
+            // console.log('--> there');
+            this.updateLayers(prevProps, prevState);
+        }
+    }
+
+    updateBoundaries(prevProps, prevState) {
+        const previousBoundaryLayer = prevState.activeBoundaryLayer;
+
+        const boundaryLayerType = this.props.boundaryData.dataSource.geographyType;
+        const boundaryLayer = this.boundaryLayers[boundaryLayerType];
+
+        this.setState({ activeBoundaryLayer: boundaryLayer });
+
+        // Load a new layer
+        if (previousBoundaryLayer && previousBoundaryLayer.boundaryInfo.layerName != boundaryLayer.boundaryInfo.layerName) {
+            this.map.removeLayer(previousBoundaryLayer);
+            this.map.addLayer(boundaryLayer);
+        } else if (!previousBoundaryLayer) {
+            this.map.addLayer(boundaryLayer);
         }
 
-        const baseCensusLayerStyles = {
-            weight: 1,
-            fillOpacity: 0.75
-        };
+        // Refresh all the feature styles after receiving feature data.
 
-        const econRegionStyles = Object.assign({}, baseCensusLayerStyles);
-        econRegionStyles.color = 'black';
-
-        const municipalitiesStyles = Object.assign({}, baseCensusLayerStyles);
-        municipalitiesStyles.color = 'black';
-
-        const regDistrictsStyles = Object.assign({}, baseCensusLayerStyles);
-        regDistrictsStyles.color = 'black';
-
-        function getMedianTaxQuartileByCSDName(csdName) {
-            for (var item of this.state.data) {
-                if (item.Municipality === csdName) {
-                    return item.quartile;
+        // Find all affected feature IDs
+        let ids = [];
+        this.map.eachLayer(function (layer) {
+            if (layer.setFeatureStyle) {
+                for (let tileId in layer._vectorTiles) {
+                    let tile = layer._vectorTiles[tileId];
+                    for (let featureId in tile._features) {
+                        let feature = tile._features[featureId];
+                        let id = feature.feature.properties[boundaryLayer.boundaryInfo.featureIdProperty];
+                        ids.push(id);
+                    }
                 }
             }
-            return null;
+        }.bind(this));
+
+        // Get unique IDs
+        let uniqueIds = Constants.getUniqueValues(ids);
+
+        // Reset the feature style for all the unique IDs
+        for (let id of uniqueIds) {
+            boundaryLayer.resetFeatureStyle(id);
+        }
+    }
+
+    updateLayers(prevProps, prevState) {
+
+        // First, remove local layers that no longer appear in the props
+        for (let layerGroupKey in this.layerGroups) {
+            if (!this.props.layerData[layerGroupKey]) {
+                this.map.removeLayer(this.layerGroups[layerGroupKey]);
+                delete(this.layerGroups[layerGroupKey]);
+            }
         }
 
-        function getMunicipalityStyles(properties, zoom) {
-
-            var styles = Object.assign({}, municipalitiesStyles);
-            styles.fill = true;
-            styles.fillColor = 'grey';
-
-            var quartile = getMedianTaxQuartileByCSDName.bind(this)(properties.CSDNAME);
-
-            switch (quartile) {
-                case '1':
-                    styles.fillColor = 'green';
-                    break;
-                
-                case '2':
-                    styles.fillColor = 'yellow';
-                    break;
-
-                case '3':
-                    styles.fillColor = 'orange';
-                    break;
-                
-                case '4':
-                    styles.fillColor = 'red';
-                    break;
+        // Next, add layers that are in the props and not in the local layers
+        for (let key in this.props.layerData) {
+            let layerData = this.props.layerData[key];
+            if (this.layerGroups[key]) {
+                continue;
+            } else {
+                var geographyType = layerData.dataSource.geographyType;
+                var layerGroupArray = [];
+                var markerIcon = L.AwesomeMarkers.icon({
+                    prefix: 'fa',
+                    icon: layerData.dataSource.icon,
+                    markerColor: layerData.dataSource.iconColor
+                });
+                const geoJSONStyle = {
+                    color: 'red',
+                    weight: 5,
+                    opacity: 1
+                };
+                layerData.data.forEach(layerItem => {
+                    switch (geographyType) {
+                        case 'latlon': {
+                            let marker = L.marker(layerItem.geography, { icon: markerIcon }).bindPopup(layerItem.value);
+                            layerGroupArray.push(marker);
+                            break;
+                        }
+                        case 'feature': {
+                            let geoJSON = L.geoJSON(layerItem.geography, geoJSONStyle);
+                            layerGroupArray.push(geoJSON);
+                            break;
+                        }
+                    }
+                });
+                const layerGroup = L.layerGroup(layerGroupArray);
+                this.layerGroups[key] = layerGroup;
+                this.map.addLayer(layerGroup);
             }
-
-            
-            return styles;
-        };
-
-        function getRegionalDistrictStyles(properties, zoom) {
-            var styles = Object.assign({}, regDistrictsStyles)
-            if (properties.CDNAME === 'Greater Vancouver') {
-                styles.fillColor = 'red';
-                styles.fill = true;
-            }
-            return styles;
-        };
-
-        const vectorTileOptions = {
-            vectorTileLayerStyles: {
-                'EconRegions_geo': Object.assign({}, econRegionStyles),
-                'Municipalities_geo': getMunicipalityStyles.bind(this),
-                'RegDistricts_geo': getRegionalDistrictStyles
-            },
-            bounds: bounds
         }
-
-        const initialMapViewCoordinates = [49.2, -122.9];
-        const initialMapViewZoom = 10;
-
-        var map = this.map = L.map(this.mapDiv);
-
-        map.setView(initialMapViewCoordinates, initialMapViewZoom);
-
-        var baseLayer = L.tileLayer(
-            'https://api.mapbox.com/styles/v1/heatherarmstrong/ciy214g28005j2smno0nj2kyx/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGVhdGhlcmFybXN0cm9uZyIsImEiOiJjaXR4djd6dW0wMnZuMnRxbm44bWo3ankwIn0.9WZTjmVn07UmQ9EwI3awtg',
-            {
-                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-                bounds: bounds
-            }
-        );
-
-        baseLayer.addTo(map);
-
-        // L.vectorGrid.protobuf(censusLayerUrls.econregions, vectorTileOptions).addTo(map);
-        L.vectorGrid.protobuf(censusLayerUrls.municipalities, vectorTileOptions).addTo(map);
-        // L.vectorGrid.protobuf(censusLayerUrls.regdistricts, vectorTileOptions).addTo(map);
-
     }
 
     componentWillUnmount() {
@@ -124,12 +243,48 @@ class MapViz extends React.Component {
     }
 
     render() {
+        let scaleColors = [];
+        let scaleQuantiles = [];
+
+        if (this.props.boundaryData) {
+            scaleColors = this.props.boundaryData.scaleColors;
+            scaleQuantiles = this.props.boundaryData.scaleQuantiles;
+        }
+
+        const highlightedValue = Constants.formatNumber(this.state.highlightedValue);
 
         return (
-            <div id='my-map' ref={(div) => this.mapDiv = div}>
+            <div className="row">
+                {/*<ul className="col-md-4 nav">
+                    <li role="presentation" className="active"><a href="#">Graphs</a></li>
+                </ul>*/}
+                <div className="col-sm-12">
+                    <div id="my-map" ref={(div) => this.mapDiv = div}></div>
+                    <MapLegend
+                        scaleColors={scaleColors}
+                        scaleQuantiles={scaleQuantiles} />
+                </div>
+                <div className="col-md-12">
+                    <h3>{this.state.highlightedName} [{this.state.highlightedId}]: { highlightedValue }</h3>
+                </div>
             </div>
-        )
+        );
     }
 }
+
+MapViz.propTypes = {
+    boundaryData: React.PropTypes.shape({
+        dataSource: React.PropTypes.object.isRequired,
+        dataDictionary: React.PropTypes.object.isRequired,
+        scaleColors: React.PropTypes.array.isRequired,
+        scaleQuantiles: React.PropTypes.array.isRequired
+    }).isRequired,
+    layerData: React.PropTypes.objectOf(
+        React.PropTypes.shape({
+            dataSource: React.PropTypes.object.isRequired,
+            data: React.PropTypes.array.isRequired
+        })
+    ).isRequired
+};
 
 module.exports = MapViz;

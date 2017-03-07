@@ -1,8 +1,8 @@
 #map-legend {
 
     $map-background-grey: rgb(246, 246, 244);
+    $color-width: 25px;
     $scale-width: 50px;
-    $color-width: 50px;
     $font-size: 0.7rem;
     $div-height: 1.1rem;
     $text-margin: 5px;
@@ -13,14 +13,13 @@
     margin-right: 0px;
     width: $color-width;
     position: absolute;
-    top: calc(15px + (#{$div-height}/2));
-    right: 30px + $color-width;
+    bottom: 16px + 10px;
+    right: $scale-width + $color-width;
     z-index: 10000;
     background-color: $map-background-grey;
     opacity: 1.0;
     text-align: right;
     
-    // border: solid $map-background-grey 1px;
     .colors,
     .values {
         > div {
@@ -31,7 +30,19 @@
         > div {
             opacity: 0.5;
             border-top: solid black 1px;
+            border-right: solid black 1px;
             // border-left: solid black 1px;
+            &:first-child {
+                border-top: none;
+            }
+        }
+        > div.half-height {
+            height: $div-height/2;
+            border-left: solid black 1px;
+            border-right: none;
+            &:first-child {
+                border-top: solid black 1px;
+            }
             &:last-child {
                 border-bottom: solid black 1px;
             }
@@ -39,14 +50,20 @@
     }
     .values {
         > div {
-            width: $color-width;
+            width: $scale-width;
             text-align: left;
-            height: $div-height;
-            background-color: rgba(246, 246, 244, 0.9);
+            background-color: rgb(246, 246, 244);
             padding-left: $text-margin;
+            border-right: solid rgba(0, 0, 0, 0.5) 1px;
+            &:first-child {
+                border-top: solid rgba(0, 0, 0, 0.5) 1px;
+            }
+            &:last-child {
+                border-bottom: solid rgba(0, 0, 0, 0.5) 1px;
+            }
         }
         position: absolute;
-        top: -($div-height/2);
+        top: 0;
         left: $color-width;
     }
 }

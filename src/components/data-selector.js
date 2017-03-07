@@ -49,62 +49,8 @@ class DataSelector extends React.Component {
         }.bind(this));
     }
 
-    processBoundaryData(data) {
-
-        const accessorFunction = (d => {
-            const isNull = d => {
-                return d.value === 'Null' || d.value === null || d.value === undefined;
-            };
-            return isNull(d) ? null : +d.value;
-        });
-
-        let min = d3.min(data.data, accessorFunction);
-        let max = d3.max(data.data, accessorFunction);
-        let median = d3.median(data.data, accessorFunction);
-        let domain = data.data.map(accessorFunction).sort((a, b) => a - b);
-
-        let quantileCount = Constants.NUM_QUANTILES;
-
-        const quantileRange = Array.from(new Array(quantileCount), (value, index) => index);
-
-        // Get the top and bottom quantile values
-        const quantiles = d3.scaleQuantile().domain(domain).range(quantileRange).quantiles();
-        const lowQuantile = quantiles[0];
-        const highQuantile = quantiles[quantiles.length-1];
-        const ticks = d3.ticks(lowQuantile, highQuantile, quantileCount);
-
-        const numTicks = ticks.length + 1;
-
-        const scaleValues = Array.from(new Array(numTicks), (value, index) => index/numTicks);
-        const scaleColors = scaleValues.map((value) => d3.interpolatePlasma(value));
-
-        let colorScale = d3.scaleThreshold()
-                .domain(ticks)
-                .range(scaleColors);
-
-        // Add min and max to the quantiles list
-        // const scaleQuantiles = [min, ...colorScale.quantiles(), max];
-        const scaleQuantiles = [min, ...ticks, max];
-        let dataDictionary = {};
-
-        data.data.forEach(d => {
-            d.color = colorScale(accessorFunction(d));
-            dataDictionary[d.geography] = d;
-        });
-
-        return {
-            minValue: min,
-            maxValue: max,
-            medianValue: median,
-            scaleQuantiles: scaleQuantiles,
-            scaleColors: scaleColors,
-            dataSource: data.dataSource,
-            dataDictionary: dataDictionary
-        };
-    }
-
     handleBoundaryDataUpdate(data) {
-        const boundaryData = this.processBoundaryData(data);
+        const boundaryData = Constants.processBoundaryData(data);
         this.props.changeBoundaryData(boundaryData);
     }
 

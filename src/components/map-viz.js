@@ -1,6 +1,9 @@
 import React from 'react';
 import Constants from '../constants';
 import MapLegend from './map-legend.js';
+
+import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
+
 require('leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.min.js');
 require('drmonty-leaflet-awesome-markers/js/leaflet.awesome-markers.min.js');
 require('drmonty-leaflet-awesome-markers/css/leaflet.awesome-markers.css');
@@ -13,9 +16,10 @@ class MapViz extends React.Component {
         this.state = {
             activeBoundaryLayer: null,
             activeLayers: {},
-            highlightedName: '',
-            highlightedId: '',
-            highlightedValue: ''
+            highlightedItem: {
+                name: '',
+                id: ''
+            }
         };
     }
 
@@ -46,12 +50,12 @@ class MapViz extends React.Component {
     //     });
     // }
 
-    panToClickedLatLng(event) {
-        this.map.panTo([event.latlng.lat, event.latlng.lng]);
-    }
-
     getFeatureId(feature) {
         return feature.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
+    }
+
+    invalidateSize() {
+        this.map.invalidateSize();
     }
 
     getTileStyles(properties, zoom) {
@@ -80,22 +84,28 @@ class MapViz extends React.Component {
 
         function highlightFeature(event) {
 
-            const name = event.layer.properties[this.state.activeBoundaryLayer.boundaryInfo.featureNameProperty];
-            const id = event.layer.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
-            const value = this.props.boundaryData.dataDictionary[id] ? this.props.boundaryData.dataDictionary[id].value : '???';
+            const activeBoundaryLayerInfo = this.state.activeBoundaryLayer.boundaryInfo;
+
+            const name = event.layer.properties[activeBoundaryLayerInfo.featureNameProperty];
+            const id = event.layer.properties[activeBoundaryLayerInfo.featureIdProperty];
 
             let style = this.getTileStyles.bind(this)(event.layer.properties);
             style.fillOpacity = 0.9;
             style.weight = 2;
             event.target.setFeatureStyle(id, style);
 
-            this.setState({ highlightedName: name, highlightedId: id, highlightedValue: value });
+            this.props.highlightedItemCallback({ name: name, id: id });
         }
 
         function resetHighlight(event) {
             let id = event.layer.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
             event.target.resetFeatureStyle(id);
-            this.setState({ highlightedName: '', highlightedId: '', highlightedValue: '' });
+            // this.props.highlightedItemCallback({ name: '', id: '', });
+        }
+
+        function clickFeature(event) {
+            // this.highlightFeature(event);
+            this.map.panTo([event.latlng.lat, event.latlng.lng]);
         }
 
         const boundaryLayer = L.vectorGrid.protobuf(
@@ -105,24 +115,58 @@ class MapViz extends React.Component {
 
         boundaryLayer.on('mouseover', highlightFeature.bind(this));
         boundaryLayer.on('mouseout', resetHighlight.bind(this));
-        boundaryLayer.on('click', this.panToClickedLatLng.bind(this));
+        boundaryLayer.on('click', clickFeature.bind(this));
         boundaryLayer.boundaryInfo = boundaryInfo;
 
         return boundaryLayer;
     }
 
     componentDidMount() {
+        // Listen for the 'shown' event, fired by the TabInterface
+        window.addEventListener('shown', this.invalidateSize.bind(this));
 
         this.map = L.map(this.mapDiv, { minZoom: Constants.MAP_MIN_ZOOM, maxZoom: Constants.MAP_MAX_ZOOM });
         this.map.setView(Constants.MAP_INITIAL_CENTER, Constants.MAP_INITIAL_ZOOM);
 
         this.baseLayer = L.tileLayer(
             Constants.MAP_BASE_LAYER_URL, {
-                attribution: Constants.MAP_BASE_LAYER_ATTRIBUTION,
-                bounds: Constants.MAP_INITIAL_BOUNDS
+                attribution: Constants.MAP_BASE_LAYER_ATTRIBUTION
             }
         );
         this.baseLayer.addTo(this.map);
+
+        const osmProvider = new OpenStreetMapProvider({
+            params: {
+                countrycodes: 'ca',
+                viewbox: ['-139.052201', '60.000062', '-114.054221', '48.308916'],
+                bounded: 1
+            }
+        });
+
+        this.searchControl = new GeoSearchControl({
+            provider: osmProvider,
+            position: 'topleft',
+            style: 'bar',
+            autoComplete: false,
+            showMarker: false,
+        }).addTo(this.map);
+
+        (function () {
+            var control = new L.Control({ position: 'bottomleft' });
+            control.onAdd = function (map) {
+                var resetButton = L.DomUtil.create('a', 'resetzoom');
+                resetButton.innerHTML =
+                    `<button id="btn-reset" class="btn btn-default btn-sm">
+                        <i class="fa fa-undo"></i>
+                        Reset
+                    </button>`;
+                L.DomEvent.addListener(resetButton, 'click', function () {
+                    map.setView(Constants.MAP_INITIAL_CENTER, Constants.MAP_INITIAL_ZOOM);
+                }, resetButton);
+                return resetButton;
+            };
+            return control;
+        }()).addTo(this.map);
 
         this.boundaryLayers = {};
         this.layerGroups = {};
@@ -138,11 +182,9 @@ class MapViz extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         if (prevProps.boundaryData != this.props.boundaryData) {
-            // console.log('--> here');
             this.updateBoundaries(prevProps, prevState);
         }
         if (prevProps.layerData != this.props.layerData) {
-            // console.log('--> there');
             this.updateLayers(prevProps, prevState);
         }
     }
@@ -153,7 +195,7 @@ class MapViz extends React.Component {
         const boundaryLayerType = this.props.boundaryData.dataSource.geographyType;
         const boundaryLayer = this.boundaryLayers[boundaryLayerType];
 
-        this.setState({ activeBoundaryLayer: boundaryLayer });
+        this.setState({activeBoundaryLayer: boundaryLayer });
 
         // Load a new layer
         if (previousBoundaryLayer && previousBoundaryLayer.boundaryInfo.layerName != boundaryLayer.boundaryInfo.layerName) {
@@ -164,7 +206,6 @@ class MapViz extends React.Component {
         }
 
         // Refresh all the feature styles after receiving feature data.
-
         // Find all affected feature IDs
         let ids = [];
         this.map.eachLayer(function (layer) {
@@ -184,6 +225,9 @@ class MapViz extends React.Component {
         let uniqueIds = Constants.getUniqueValues(ids);
 
         // Reset the feature style for all the unique IDs
+        for (var id of uniqueIds) {
+            boundaryLayer.resetFeatureStyle(id);
+        }
         for (let id of uniqueIds) {
             boundaryLayer.resetFeatureStyle(id);
         }
@@ -192,22 +236,22 @@ class MapViz extends React.Component {
     updateLayers(prevProps, prevState) {
 
         // First, remove local layers that no longer appear in the props
-        for (let layerGroupKey in this.layerGroups) {
+        for (var layerGroupKey in this.layerGroups) {
             if (!this.props.layerData[layerGroupKey]) {
                 this.map.removeLayer(this.layerGroups[layerGroupKey]);
-                delete(this.layerGroups[layerGroupKey]);
+                delete (this.layerGroups[layerGroupKey]);
             }
         }
 
         // Next, add layers that are in the props and not in the local layers
-        for (let key in this.props.layerData) {
-            let layerData = this.props.layerData[key];
+        for (var key in this.props.layerData) {
+            var layerData = this.props.layerData[key];
             if (this.layerGroups[key]) {
                 continue;
             } else {
-                var geographyType = layerData.dataSource.geographyType;
-                var layerGroupArray = [];
-                var markerIcon = L.AwesomeMarkers.icon({
+                const geographyType = layerData.dataSource.geographyType;
+                const layerGroupArray = [];
+                const markerIcon = L.AwesomeMarkers.icon({
                     prefix: 'fa',
                     icon: layerData.dataSource.icon,
                     markerColor: layerData.dataSource.iconColor
@@ -219,16 +263,14 @@ class MapViz extends React.Component {
                 };
                 layerData.data.forEach(layerItem => {
                     switch (geographyType) {
-                        case 'latlon': {
-                            let marker = L.marker(layerItem.geography, { icon: markerIcon }).bindPopup(layerItem.value);
+                        case 'latlon':
+                            var marker = L.marker(layerItem.geography, {icon: markerIcon }).bindPopup(layerItem.value);
                             layerGroupArray.push(marker);
                             break;
-                        }
-                        case 'feature': {
-                            let geoJSON = L.geoJSON(layerItem.geography, geoJSONStyle);
+                        case 'feature':
+                            var geoJSON = L.geoJSON(layerItem.geography, geoJSONStyle);
                             layerGroupArray.push(geoJSON);
                             break;
-                        }
                     }
                 });
                 const layerGroup = L.layerGroup(layerGroupArray);
@@ -251,28 +293,22 @@ class MapViz extends React.Component {
             scaleQuantiles = this.props.boundaryData.scaleQuantiles;
         }
 
-        const highlightedValue = Constants.formatNumber(this.state.highlightedValue);
-
         return (
-            <div className="row">
-                {/*<ul className="col-md-4 nav">
-                    <li role="presentation" className="active"><a href="#">Graphs</a></li>
-                </ul>*/}
-                <div className="col-sm-12">
-                    <div id="my-map" ref={(div) => this.mapDiv = div}></div>
-                    <MapLegend
-                        scaleColors={scaleColors}
-                        scaleQuantiles={scaleQuantiles} />
+            <div>
+                <div
+                    id="my-map"
+                    ref={(div) => this.mapDiv = div} >
                 </div>
-                <div className="col-md-12">
-                    <h3>{this.state.highlightedName} [{this.state.highlightedId}]: { highlightedValue }</h3>
-                </div>
+                <MapLegend
+                    scaleColors={scaleColors}
+                    scaleQuantiles={scaleQuantiles} />
             </div>
         );
     }
 }
 
 MapViz.propTypes = {
+    highlightedItemCallback: React.PropTypes.func,
     boundaryData: React.PropTypes.shape({
         dataSource: React.PropTypes.object.isRequired,
         dataDictionary: React.PropTypes.object.isRequired,
@@ -286,5 +322,4 @@ MapViz.propTypes = {
         })
     ).isRequired
 };
-
 module.exports = MapViz;

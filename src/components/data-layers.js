@@ -79,7 +79,7 @@ class DataLayers extends React.Component {
             <div>
             <div className="row">
                 <div className="col-md-12">
-                    <h3>Select and add additional layers</h3>
+                    <h3>Add additional layers</h3>
                 </div>
                 <div className="col-md-12">
                     <DataSelect
@@ -96,11 +96,11 @@ class DataLayers extends React.Component {
                         <i className="fa fa-plus"></i>Add layer
                     </button>
                 </div>
-            </div>
-            <div className="col-md-12">
-            <ul id="data-layers">
-                { activeLayerListItems }
-            </ul>
+                <div className="col-md-12">
+                    <ul id="data-layers">
+                        { activeLayerListItems }
+                    </ul>
+                </div>
             </div>
          </div>
         );

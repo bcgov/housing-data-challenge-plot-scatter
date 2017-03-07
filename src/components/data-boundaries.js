@@ -18,33 +18,41 @@ class DataBoundaries extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        // console.log('Component updated', this.state, this.state.variable1, this.state.variable2);
         if (prevState.variable1 !== this.state.variable1 || prevState.variable2 !== this.state.variable2) {
             this.buildConstructedVariable();
         }
     }
 
     buildConstructedVariable() {
+
         const variable1 = this.state.variable1;
+        const variable1Name = variable1.dataSource['column-name-map'][variable1.variableName];
         const variable2 = this.state.variable2;
+        const variable2Name = variable2.dataSource['column-name-map'][variable2.variableName];
 
         if (variable1 === null) { return; }
 
         // Deep copy the data array
         const constructedData = Array.from(variable1.data, (item) =>
-            ({ value: item.value, geography: item.geography })
+            ({ [variable1Name]: item.value, value: item.value, geography: item.geography })
         );
 
         // Only apply transformation if variable2 exists
         if (variable2 !== null) {
             constructedData.forEach((item, index) => {
+                item[variable2Name] = variable2.data[index].value;
                 item.value = item.value / variable2.data[index].value;
             });
         }
 
         const constructedVariable = {
             dataSource: variable1.dataSource,
-            data: constructedData
+            data: constructedData,
+            dataKeyMapping: {
+                [variable1Name]: variable1Name,
+                [variable2Name]: variable2Name,
+                value: variable1Name + (variable2Name ? ' ÷ ' + variable2Name : '')
+            }
         };
 
         this.props.dataUpdateCallback(constructedVariable);
@@ -67,7 +75,7 @@ class DataBoundaries extends React.Component {
         return (
             <div>
                 <h3>Map colouring</h3>
-                <p>You can choose a variable to use to colour the map. The variable can be a single variable, or a constructed variable built out of two variables that are either multiplied or divided with each other.</p>
+                <p>You can choose a variable to use to colour the map. The variable can be a single variable, or a constructed variable built out of two variables, one divided by the other.</p>
 
                 <div className="row">
 
@@ -78,6 +86,7 @@ class DataBoundaries extends React.Component {
 
                     <DataBoundarySelect
                         variableOrder={2}
+                        includeIdentity={true}
                         dataSources={this.props.dataSources}
                         dataAddedCallback={this.handleDataAdded} />
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import DataSelector from './data-selector';
-import MapViz from './map-viz';
-import SupplementalGraph from './supplemental-graph';
+import TabInterface from './tab-interface';
+import Tab from './tab';
+import MapGraphDisplay from './map-graph-display';
 
 class MainDisplay extends React.Component {
     constructor(props) {
@@ -51,24 +51,14 @@ class MainDisplay extends React.Component {
 
     render() {
         return (
-            <div className="row">
-                <div className="col-md-12">
-                    <DataSelector
-                        changeBoundaryData={this.changeBoundaryData}
-                        addLayerData={this.addLayerData}
-                        removeLayerData={this.removeLayerData} />
-                </div>
-                <div className="col-md-6">
-                    <MapViz
-                        ref={(mapViz) => this.mapViz = mapViz}
-                        boundaryData={this.state.boundaryData}
-                        layerData={this.state.layerData} />
-                </div>
-                <div className="col-md-6">
-                    <SupplementalGraph
-                        data={this.state.boundaryData} />
-                </div>
-            </div>
+            <TabInterface>
+                <Tab name="Housing index" icon="fa-home">
+                    <MapGraphDisplay type="housing-index" />
+                </Tab>
+                <Tab name="Map other data" icon="fa-map">
+                    <MapGraphDisplay type="variables" />
+                </Tab>
+            </TabInterface>
         );
     }
 }

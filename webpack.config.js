@@ -37,7 +37,8 @@ module.exports = {
             { from: 'src/data/layers/Parks/parks_vancouver.json', to: 'data/layer/parks_vancouver.json' },
             { from: 'src/data/layers/Parks/parks_victoria.json', to: 'data/layer/parks_victoria.json' },
             { from: 'src/data/layers/Education/school_locations.csv', to: 'data/layer/education-school-locations.csv' },
-            { from: 'src/data/layers/Education/postsecondary_locations.csv', to: 'data/layer/education-postsecondary-locations.csv' }
+            { from: 'src/data/layers/Education/postsecondary_locations.csv', to: 'data/layer/education-postsecondary-locations.csv' },
+            { from: 'src/data/boundary_linked/NHS_Profile_2011/UseCase_Sample.csv', to: 'data/boundary-linked/household-index.csv' }
         ])
     ],
     module: {

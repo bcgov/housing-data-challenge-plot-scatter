@@ -33,8 +33,17 @@ class DataBoundarySelect extends React.Component {
 
             this.data = data;
 
-            // Get list of variable names from first item
-            var variables = Object.keys(data[0]);
+            // Get list of column names from first item
+            var columnNames = Object.keys(data[0]);
+            const columnNameMap = dataSource['column-name-map'];
+
+            // Now use the dataSource map to retain variables and rename them as appropriate
+            var variables = [];
+            columnNames.forEach((item) => {
+                if (columnNameMap[item]) {
+                    variables.push({ columnName: item, displayName: columnNameMap[item] });
+                }
+            });
 
             this.setState({
                 currentDataSource: dataSource,
@@ -75,7 +84,16 @@ class DataBoundarySelect extends React.Component {
         const dataSources = this.props.dataSources;
         const dataSourceArray = Object.keys(dataSources).map((key) => dataSources[key]);
 
-        const variableArray = [...this.state.variables, '1 [Identity]'];
+        let variableArray = this.state.variables;
+        variableArray.sort((a, b) => {
+            // From http://stackoverflow.com/a/8900824
+            var textA = a.displayName.toUpperCase();
+            var textB = b.displayName.toUpperCase();
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
+        if (this.props.includeIdentity) {
+            variableArray = [{ columnName: '1', displayName: '1' }, ...variableArray];
+        }
 
         const ordinalNumber = this.props.variableOrder === 1 ? 'First' : 'Second';
 
@@ -93,23 +111,18 @@ class DataBoundarySelect extends React.Component {
                 <h4>Select a variable</h4>
                 <DataSelect
                     ref={(variableSelect) => { this.variableSelect = variableSelect; }}
-                    options={variableArray.sort()}
-                    nameAccessor={(variable) => variable}
-                    valueAccessor={(variable) => variable}
+                    options={variableArray}
+                    nameAccessor={(variable) => variable.displayName}
+                    valueAccessor={(variable) => variable.columnName}
                     onChangeCallback={this.handleVariableChange}
                     truncate={true} />
-
-                {/*<button
-                    className="btn btn-default"
-                    onClick={this.handleVariableChange} >
-                    <i className="fa fa-plus"></i>Add variable
-                </button>*/}
             </div>
         );
     }
 }
 
 DataBoundarySelect.propTypes = {
+    includeIdentity: React.PropTypes.bool,
     variableOrder: React.PropTypes.number.isRequired,
     dataSources: React.PropTypes.object.isRequired,
     dataAddedCallback: React.PropTypes.func.isRequired

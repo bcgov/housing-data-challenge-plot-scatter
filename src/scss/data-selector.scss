@@ -1,15 +1,16 @@
 #data-selector {
 
-    .add-layer {
-        margin-left: 10px;
-    }
-    #data-layers {
-    display: inline;
-    list-style: none;
-    }
-
     margin-top: 1rem;
-    font-size: 0.8rem;
+
+    #data-layers {
+        padding-left: 0;
+        margin-left: 0;
+        list-style: none;
+        li {
+            padding-left: 0.5rem;
+            margin-left: 0;
+        }
+    }
 
     input.form-control {
         min-width: 350px;
@@ -20,13 +21,19 @@
         width: auto; // May show up as an issue in scss style checker, but necessary
         margin-right: 0.5rem;
     }
+
     .select-wrapper {
-        line-height: 2.4rem;
         margin: 0;
     }
+
     .select-wrapper.inline {
         display: inline-block;
     }
+
+    .select-wrapper.inline.left-margin {
+        margin-left: 0.5rem;
+    }
+
     select {
         font-size: 0.9rem;
         height: 2.2rem;
@@ -36,30 +43,22 @@
         padding-right: 25px;
         border: solid 1px lighten($button-green, 30%);
         border-bottom: solid 2px $button-green;
-        
         box-shadow: none;
         &:hover {
             background-color: lighten($button-green, 40%);
             cursor: pointer;
         }
     }
-    button {
-        border-bottom: solid 2px darken($button-green, 10%);
-        i {
-            margin-right: 0.5rem;
-        }
-        &:hover {
-            border-color: $button-green;
-            background-color: lighten($button-green, 40%);
-        }
-    }
+
     button.full-width {
         width: 100%;
     }
+
     i.big-icon {
         margin-right: 0.5rem;
         font-size: 1.2rem;
     }
+
     button.inline {
         padding: 0;
         margin: 0;
@@ -78,32 +77,14 @@
             font-size: 1.2rem;
         }
     }
+
     label.select-arrow {
         margin-left: -30px;
         margin-right: 15px;
         font-size: 1rem;
         color: $button-green;
-    }
-
-    h2 {
-        margin-top: 2rem;
-        font-size: 1.2rem;
-        i {
-            margin-right: 0.5rem;
-        }
-        &:first-child {
-            margin-top: 1rem;
-        }
-    }
-
-    h3 {
-        margin-top: 1rem;
-        font-size: 1.0rem;
-    }
-
-    h4 {
-        font-size: 0.9rem;
-        margin-bottom: 0;
+        // Required to let user click 'through' label on select underneath
+        pointer-events: none;
     }
 
     p.operation {
@@ -114,6 +95,20 @@
 
     .right {
         float: right;
+    }
+
+    #top-locations {
+        margin: 15px 0;
+        ul {
+            padding: 0;
+            display: inline-block;
+            list-style: none;
+            li {
+                margin-right: 15px;
+                padding: 0;
+                display: inline-block;
+            }
+        }
     }
 
 }

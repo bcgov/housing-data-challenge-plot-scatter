@@ -108,10 +108,10 @@ Northwest Community College,NWCC Prince Rupert Campus,B.C. Public,North Coast,Pr
 Northwest Community College,NWCC Queen Charlotte City Campus,B.C. Public,North Coast,Queen Charlotte City,138 Bay Street,Campus,53.254688,-132.081628
 Northwest Community College,NWCC Smithers Campus,B.C. Public,Nechako,Smithers,3966 - 2nd Avenue,Campus,54.781719,-127.172713
 Okanagan College,OKAN Aircraft Maintenance Centre,B.C. Public,Thompson Okanagan,Vernon,6225 Okanagan Landing Road,Regional Centre,50.246903,-119.323325
-Okanagan College,OKAN Kalamalka Campus,B.C. Public,Thompson Okanagan,Vernon,7000†College†Way,Campus,50.23495,-119.282341
-Okanagan College,OKAN Main Campus,B.C. Public,Thompson Okanagan,Kelowna,1000†KLO†Road,Campus,49.86113,-119.47928
+Okanagan College,OKAN Kalamalka Campus,B.C. Public,Thompson Okanagan,Vernon,7000 College Way,Campus,50.23495,-119.282341
+Okanagan College,OKAN Main Campus,B.C. Public,Thompson Okanagan,Kelowna,1000 KLO Road,Campus,49.86113,-119.47928
 Okanagan College,OKAN Oliver Centre,B.C. Public,Thompson Okanagan,Oliver,339 Fairview Road,Regional Centre,49.182363,-119.550798
-Okanagan College,OKAN Penticton Campus,B.C. Public,Thompson Okanagan,Penticton,583†Duncan†Avenue†West,Campus,49.48742,-119.60485
+Okanagan College,OKAN Penticton Campus,B.C. Public,Thompson Okanagan,Penticton,583 Duncan Avenue West,Campus,49.48742,-119.60485
 Okanagan College,OKAN Revelstoke Centre,B.C. Public,Thompson Okanagan,Revelstoke,1401 West 1st Street,Regional Centre,51.007598,-118.210509
 Okanagan College,OKAN Salmon Arm Campus,B.C. Public,Thompson Okanagan,Salmon Arm,2552 Trans-Canada Highway North-East,Campus,50.703525,-119.255691
 Okanagan College,OKAN Salmon Arm Trades Centre,B.C. Public,Thompson Okanagan,Salmon Arm,5450 - 48th Avenue,Regional Centre,50.664234,-119.222603
@@ -169,7 +169,7 @@ Vancouver Island University,VIU Main Campus,B.C. Public,Vancouver Island/Coast,N
 Vancouver Island University,VIU Parksville Qualicum Centre,B.C. Public,Vancouver Island/Coast,Parksville,100 Jensen Avenue East,Campus,49.318227,-124.311976
 Vancouver Island University,VIU Powell River Campus,B.C. Public,Vancouver Island/Coast,Powell River,7085 Nootka Street,Campus,49.822764,-124.517144
 Athabasca University,ATHABASCA Vancouver Art Therapy Institute Campus,Non-B.C. Degree Granting,Mainland/Southwest,Vancouver,1575 Johnston Street,Campus,49.272043,-123.135066
-Queenís University ,QUEENS Vancouver Campus,Non-B.C. Degree Granting,Mainland/Southwest,Vancouver,1185 - 555 Burrard Street,Campus,49.286287,-123.118281
+Queen’s University ,QUEENS Vancouver Campus,Non-B.C. Degree Granting,Mainland/Southwest,Vancouver,1185 - 555 Burrard Street,Campus,49.286287,-123.118281
 University of Oregon,University of Oregon Scott Creek Middle School Campus,Non-B.C. Degree Granting,Mainland/Southwest,Coquitlam,1240 Lansdowne Drive,Campus,49.285279,-122.813142
 Acsenda School of Management,Vancouver Campus,B.C. Private Degree Granting,Mainland/Southwest,Vancouver,1090 W. Pender St,Campus,49.287161,-123.120213
 Adler School of Professional Psychology,Adler Vancouver Campus,B.C. Private Degree Granting,Mainland/Southwest,Vancouver,1200 - 1090 West Georgia Street,Campus,49.2853638,-123.1232802
@@ -203,24 +203,20 @@ Vancouver School of Theology,Vancouver School of Theology Campus,B.C. Private De
 Yorkville University,Yorkville Campus,B.C. Private Degree Granting,Mainland/Southwest,Burnaby,"Metrotower II - 4720 Kingsway, Suite 2600",Campus,49.226713,-122.994192
 ,,,,,,,,
 ,,,,,,,,
-"Locations of B.C. Public, B.C. Private Degree Granting and Non-B.C. Degree Granting Post-Secondary Institutions",,,,,,,,
-"B.C. Public, B.C. Private Degree Granting and Non-B.C. Degree Granting Post-Secondary Institutions",,,,,,,,
-Published Date:  March 2016,,,,,,,,
 ,,,,,,,,
 ,,,,,,,,
-Sources:,,,,,,,,
-"1. B.C. has 25 public post-secondary institutions. Locations listed in this file include campuses, learning centres, and satellites listed on institution websites. Campuses, learning centres and satellites may open or close on an ongoing basis, so the locations listed may vary from year to year.",,,,,,,,
-2. For private and non-B.C. institutions authorized to grant degrees in B.C.: ,,,,,,,,
-http://www.aved.gov.bc.ca/privatepsed/institutions.htm#private ,,,,,,,,
-"Some private institutions have multiple locations, and each is listed.",,,,,,,,
-Gonzaga University is excluded because locations vary depending on student demand.,,,,,,,,
 ,,,,,,,,
 ,,,,,,,,
-Notes:,,,,,,,,
-1. Data exclude private designated non-degree granting post-secondary institutions.,,,,,,,,
-"2. The Great Northern Way Trust is jointly owned by the British Columbia Institute of Technology, Emily Carr University of Art and Design, Simon Fraser University and the University of British Columbia.  As a result, data includes a Great Northern Way campus for each institution.",,,,,,,,
-"3. The Annacis Island campus is jointly operated by BCIT and VCC and is listed under each institution.",,,,,,,,
-4. Private theological institutions limited to theological degrees have been included in the list of private degree-granting institutions.,,,,,,,,
 ,,,,,,,,
-Methodology:,,,,,,,,
-"This file was originally assembled from information on institutionsí websites. For each update of the file the existing list is checked to confirm that the listed locations are still open; as well, new locations are identified from institution websites and added to the list. Longitude and latitude are collected from the address bar of the Google Maps search result for a locationís address.",,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,

@@ -1,0 +1,21 @@
+header {
+    background-color: $yellow;
+    color: $secondary-blue;
+    border: 1px solid $yellow;
+    border-bottom: solid 3px $yellow !important;
+    border-radius: 0px;
+    .brand {
+        padding-top: 15px;
+        font-size: 15px;
+        a {
+            color: bisque;
+        }
+    }
+    .title {
+        font-size: 20px;
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}

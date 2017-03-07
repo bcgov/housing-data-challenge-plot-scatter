@@ -17,16 +17,28 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            showDataSelector: true
+        };
+
+        this.toggleDataSelectorCallback = this.toggleDataSelectorCallback.bind(this);
+    }
+
+    toggleDataSelectorCallback() {
+        this.setState((prevState) => ({
+            showDataSelector: !prevState.showDataSelector
+        }));
     }
 
     render() {
 
         return (
             <div>
-                <Header />
+                <Header toggleDataSelectorCallback={ this.toggleDataSelectorCallback } />
                 <div className="container-fluid">
                     {/* <SideNav /> */}
-                    <MainDisplay />
+                    <MainDisplay showDataSelector={ this.state.showDataSelector } />
                 </div>
             </div>
         );

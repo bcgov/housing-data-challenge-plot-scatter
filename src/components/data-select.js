@@ -23,7 +23,7 @@ class DataSelect extends React.Component {
         }
 
         return (
-            <p className={'select-wrapper' + (this.props.classNames ? ' ' + this.props.classNames : '')}>
+            <div className={'select-wrapper' + (this.props.classNames ? ' ' + this.props.classNames : '')}>
                 <select
                     ref={(select) => this.select = select}
                     className="form-control"
@@ -31,8 +31,8 @@ class DataSelect extends React.Component {
                     {variableOptions}
                 </select>
                 <label className="select-arrow">▼</label>
-                <i className="fa  fa-2x fa-info-circle button-green"></i>
-            </p>
+                {/*<i className="fa  fa-2x fa-info-circle button-green"></i>*/}
+            </div>
         );
     }
 }

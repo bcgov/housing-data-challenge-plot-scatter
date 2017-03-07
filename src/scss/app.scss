@@ -1,141 +1,72 @@
-// Add application styles here.
-
 @import 'colors';
 @import 'normalize';
-//@import 'reset';
 
-html {
-  margin: 0;
-  padding: 0;
+h1, h2, h3, h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    i {
+        margin-right: 0.5rem;
+    }
 }
 
-h1 {
-    color: $header-blue;
-}
-
-h2 {
-    color: $purple;
-}
+h1 { color: $header-blue; }
+h2 { font-size: 1.2rem; color: $purple; }
+h3 { font-size: 1.0rem; }
+h4 { font-size: 0.9rem; }
 
 body {
     color: $body-black;
     font-weight: 300;
 }
 
-.mg-barplot rect.mg-bar.default-bar {
-  fill: $button-green;
-}
-
-.mg-barplot rect.mg-bar.default-bar.active {
-  fill: lighten($button-green, 20%);
-}
-
 .btn-default {
-  background-color: $button-green;
-  color: white;
-  border: 1px solid $button-green;
-  border-radius: 0;
-}
-
-.button-green {
-  color: $button-green;
+    background-color: $button-green;
+    color: white;
+    border: 1px solid $button-green;
+    border-radius: 0;
 }
 
 .form-control {
-  border-radius: 0px;
-}
-
-.viewing {
-  margin: 3rem 0rem 2rem;
-}
-
-.comment-field {
-  margin: 1rem 0rem;
-  background-color: #f2f2f2;
-  > textarea {
-    min-height: 10rem;
-    min-width: 100%;
-  }
-}
-
-.explanation {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: grey;
+    border-radius: 0px;
 }
 
 .margin-top {
-  margin-top: 1rem;
-}
-
-.navbar {
-    margin: 0;
-}
-
-span.navbar-brand.title {
-      font-size: 20px;
-      color: white;
-}
-
-.navbar-default {
-    background-color: $yellow;
-    color: $secondary-blue;
-    border: 1px solid $yellow;
-    border-bottom: solid 3px $yellow !important;
-    border-radius: 0px;
-    .navbar-brand {
-      color: bisque;
-    }
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus  {
-  color: white;
-}
-
-nav {
-   min-height: 100% - #{$nav-height};
-}
-
-.navbar-collapse {
-  padding: 0;
+    margin-top: 1rem;
 }
 
 .noborder {
-  padding: 0;
-  border: 0 !important;
-  //border-bottom: 0 !important;
-}
-
-
-/* make sidebar nav vertical */ 
-@media (min-width: 768px) {
-  .sidebar-nav {
-    min-height: 100%;
-    background-color: $yellow;
     padding: 0;
-  }
-  .sidebar-nav .navbar ul {
-    float: none;
-  }
-  .sidebar-nav .navbar ul:not {
-    display: block;
-  }
-  .sidebar-nav .navbar li {
-    float: none;
-    display: block;
-  }
-  .sidebar-nav .navbar li a {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    color: $secondary-blue;
-    :focus {
-      color: white;
-    }
-  }
+    border: 0 !important;
+    //border-bottom: 0 !important;
 }
 
+.hide {
+    display: none;
+}
+
+button {
+    margin-bottom: 2px;
+    border-bottom: solid 2px darken($button-green, 10%);
+    i {
+        margin-right: 0.5rem;
+    }
+    &:hover {
+        border-color: $button-green;
+        background-color: lighten($button-green, 40%);
+    }
+}
+
+button.btn-sm {
+    i {
+        margin-right: 0.25rem;
+    }
+}
+
+@import 'header';
 @import 'map';
 @import 'data-selector';
 @import 'supplemental-graph';
 @import 'map-legend';
+@import 'map-detail';
+@import 'tab-interface';
+@import 'rank-graph';

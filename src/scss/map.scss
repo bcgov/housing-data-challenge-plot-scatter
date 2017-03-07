@@ -2,3 +2,33 @@
     width: 100%;
     height: 450px;
 }
+
+.leaflet-control-zoom {
+    box-shadow: none;
+    a {
+        border: solid rgba(0, 0, 0, 0.5) 1px !important;
+        border-radius: 0px !important;
+        &:first-child {
+            border-bottom: none !important;
+        }
+    }
+}
+
+.leaflet-control-geosearch.bar {
+    border: solid rgba(0, 0, 0, 0.5) 1px;
+    form {
+        margin: 0;
+        padding: 0;
+        border: 0 !important;
+        input {
+            border-radius: 0px;
+        }
+    }
+    width: 50%;
+}
+
+#btn-reset {
+    border: solid rgba(0, 0, 0, 0.5) 1px !important;
+    background-color: white;
+    color: black;
+}

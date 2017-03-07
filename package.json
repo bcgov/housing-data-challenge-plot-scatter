@@ -36,7 +36,9 @@
     "eslint": "^3.16.0",
     "express": "^4.14.1",
     "leaflet": "^1.0.3",
+    "leaflet-geosearch": "^2.0.3",
     "leaflet.vectorgrid": "^1.2.0",
+    "nodent-runtime": "^3.0.4",
     "react": "~15.4.2",
     "react-dom": "~15.4.2",
     "whatwg-fetch": "^2.0.2"

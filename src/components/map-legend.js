@@ -18,8 +18,6 @@ class MapLegend extends React.Component {
     render() {
         const legendValues = this.props.scaleQuantiles.reverse().map((quantile, index) =>
             <div key={index}>
-                {/*{ index === 0 ? 'min ' : '' }*/}
-                {/*{ index === this.props.scaleQuantiles.length-1 ? 'max ': '' }*/}
                 { Constants.formatNumber(quantile) }
             </div>
         );
@@ -30,7 +28,9 @@ class MapLegend extends React.Component {
         return (
             <div id="map-legend">
                 <div className="colors">
+                    <div className="half-height"></div>
                     {legendColors}
+                    <div className="half-height"></div>
                 </div>
                 <div className="values">
                     {legendValues}

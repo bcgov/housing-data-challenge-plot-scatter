@@ -4,6 +4,8 @@ header {
     border: 1px solid $yellow;
     border-bottom: solid 3px $yellow !important;
     border-radius: 0px;
+    max-height: 50px;
+    max-width: 100%;
     .brand {
         padding-top: 15px;
         font-size: 15px;
@@ -18,4 +20,20 @@ header {
         margin-bottom: 10px;
         text-align: center;
     }
+
+    @media only screen and (max-width:374px) {
+    header {
+       .col-xs-8 {
+           width: 75%;
+       }     
+    }
+ }
+
+@media only screen and (max-width:320px) {
+    header {
+       .col-xs-8 {
+           width: 83.33333%;
+       }     
+    }
+ }
 }

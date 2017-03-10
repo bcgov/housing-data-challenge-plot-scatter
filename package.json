@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "serve-vector-tiles": "docker run -v $(pwd):/data -p 8080:80 klokantech/tileserver-gl --config ./src/data/boundaries/vector-tiles/tileserver-gl-config.json",
-    "webpack-compile-vendors": "./node_modules/webpack/bin/webpack.js --config=webpack.dll.js",
+    "compile-vendors": "./node_modules/webpack/bin/webpack.js --config=webpack.dll.js",
     "webpack-watch": "./node_modules/webpack/bin/webpack.js -w",
     "express-server": "node ./server",
+    "production-build": "rimraf ./public/data && npm run compile-vendors && ./node_modules/webpack/bin/webpack.js --config=webpack.production.config.js",
+    "prod": "NODE_ENV=production npm run production-build && NODE_ENV=production npm run express-server",
     "dev": "concurrently --kill-others \"npm run webpack-watch\" \"npm run express-server\"",
     "docker": "concurrently --kill-others \"npm run serve-vector-tiles\" \"npm run webpack-watch\" \"npm run express-server\"",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,6 +35,7 @@
     "babel-register": "~6.22.0",
     "babel-runtime": "^6.22.0",
     "bootstrap": "^3.3.7",
+    "compression": "^1.6.2",
     "eslint": "^3.16.0",
     "express": "^4.14.1",
     "leaflet": "^1.0.3",

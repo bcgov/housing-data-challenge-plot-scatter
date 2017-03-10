@@ -25,10 +25,12 @@ class TabInterface extends React.Component {
         const tabButtons = this.props.children.map((child, index) => {
             const isActiveClass = (index === this.state.activeTabIndex) ? ' active': '';
             return (
-                <div key={ child.props.name } className={ 'tab-button' + isActiveClass}>
-                    <a onClick={ () => this.tabClick(index) }>
-                        { child.props.icon && <i className={ 'fa ' + child.props.icon}></i> }
-                        { child.props.name }
+                <div key={ child.props.name } className={ 'tab-button' + isActiveClass} aria-label={ 'Map Selector Tab' }>
+                    <a onClick={ () => this.tabClick(index) } role={ 'button' } tabIndex={ '0' }>
+                        { child.props.icon && <i className={  'fa '  + child.props.icon + ' fa-lg'}></i> }
+                        <span className={ this.props.hideTextWhenSmall && 'hidden-xs'}>
+                            { child.props.name }
+                        </span>
                     </a>
                 </div>
             );
@@ -57,6 +59,7 @@ class TabInterface extends React.Component {
 }
 
 TabInterface.propTypes = {
+    hideTextWhenSmall: React.PropTypes.bool,
     children: function (props, propName, componentName) {
         const prop = props[propName];
 

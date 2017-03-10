@@ -21,49 +21,39 @@ class MapViz extends React.Component {
                 id: ''
             }
         };
-    }
 
-    // NB. the below will NOT work with vector tiles as currently
-    // constituted! Why not? Because with vector tiles, we don't
-    // load all the features in advance. The user might want to pan
-    // to a feature that hasn't been loaded as a vector tile yet.
-    // panToFeatureByFeatureId(featureIdToPan) {
-    //     let latlng;
-    //     console.log('featureId', featureIdToPan);
-    //     this.map.eachLayer((layer) => {
-    //         if (layer.setFeatureStyle) {
-    //             for (let tileId in layer._vectorTiles) {
-    //                 let tile = layer._vectorTiles[tileId];
-    //                 for (let featureId in tile._features) {
-    //                     let feature = tile._features[featureId];
-    //                     let id = feature.feature.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
-    //                     console.log('id', id);
-    //                     if (id === featureIdToPan) {
-    //                         console.log(tile);
-    //                         console.log('clicking', feature.feature._pxBounds.getCenter());
-    //                         tile.fire('click');
-    //                         return;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     });
-    // }
-
-    getFeatureId(feature) {
-        return feature.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
+        this.highlightFeature = this.highlightFeature.bind(this);
+        this.resetHighlight = this.resetHighlight.bind(this);
+        this.clickFeature = this.clickFeature.bind(this);
+        // this.getCurrentlyVisibleFeatureById = this.getCurrentlyVisibleFeatureById.bind(this);
     }
 
     invalidateSize() {
         this.map.invalidateSize();
     }
 
-    getTileStyles(properties, zoom) {
-        const id = properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
+    panToLatLng(lat, lng, zoomLevel, featureId) {
+        if (zoomLevel) {
+            this.map.setView([lat, lng], zoomLevel);
+        } else {
+            this.map.panTo([lat, lng]);
+        }
+        setTimeout(this.getCurrentlyVisibleFeatureById, 1000, featureId);
+
+        // TODO: the animation is nice, but tile loading makes it ugly :-(
+        // this.map.flyTo([lat, lng], zoomLevel);
+    }
+
+    getFeatureId(feature) {
+        return feature.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
+    }
+
+    getTileStyles(properties, zoom, id) {
+        const featureId = id || properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
         let styles = Object.assign({}, Constants.MAP_BASE_FEATURE_STYLES);
 
-        if (this.props.boundaryData.dataDictionary && this.props.boundaryData.dataDictionary[id]) {
-            styles.fillColor = this.props.boundaryData.dataDictionary[id].color;
+        if (this.props.boundaryData.dataDictionary && this.props.boundaryData.dataDictionary[featureId]) {
+            styles.fillColor = this.props.boundaryData.dataDictionary[featureId].color;
         }
 
         if (zoom < 12) {
@@ -71,6 +61,32 @@ class MapViz extends React.Component {
         }
 
         return styles;
+    }
+
+    highlightFeature(event, id, name) {
+
+        const activeBoundaryLayerInfo = this.state.activeBoundaryLayer.boundaryInfo;
+
+        const featureId = id || event.layer.properties[activeBoundaryLayerInfo.featureIdProperty];
+        const featureName = name || event.layer.properties[activeBoundaryLayerInfo.featureNameProperty];
+
+        let style = this.getTileStyles(null, null, featureId);
+        style.fillOpacity = 0.9;
+        style.weight = 2;
+        this.state.activeBoundaryLayer.setFeatureStyle(featureId, style);
+
+        this.props.highlightedItemCallback({ name: featureName, id: featureId });
+    }
+
+    resetHighlight(event) {
+        let id = event.layer.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
+        event.target.resetFeatureStyle(id);
+        // this.props.highlightedItemCallback({ name: '', id: '', });
+    }
+
+    clickFeature(event) {
+        this.highlightFeature(event);
+        this.panToLatLng(event.latlng.lat, event.latlng.lng);
     }
 
     buildBoundaryLayer(boundaryInfo) {
@@ -82,40 +98,14 @@ class MapViz extends React.Component {
         };
         vectorTileOptions.vectorTileLayerStyles[boundaryInfo.layerName] = this.getTileStyles.bind(this);
 
-        function highlightFeature(event) {
-
-            const activeBoundaryLayerInfo = this.state.activeBoundaryLayer.boundaryInfo;
-
-            const name = event.layer.properties[activeBoundaryLayerInfo.featureNameProperty];
-            const id = event.layer.properties[activeBoundaryLayerInfo.featureIdProperty];
-
-            let style = this.getTileStyles.bind(this)(event.layer.properties);
-            style.fillOpacity = 0.9;
-            style.weight = 2;
-            event.target.setFeatureStyle(id, style);
-
-            this.props.highlightedItemCallback({ name: name, id: id });
-        }
-
-        function resetHighlight(event) {
-            let id = event.layer.properties[this.state.activeBoundaryLayer.boundaryInfo.featureIdProperty];
-            event.target.resetFeatureStyle(id);
-            // this.props.highlightedItemCallback({ name: '', id: '', });
-        }
-
-        function clickFeature(event) {
-            // this.highlightFeature(event);
-            this.map.panTo([event.latlng.lat, event.latlng.lng]);
-        }
-
         const boundaryLayer = L.vectorGrid.protobuf(
             boundaryInfo.url,
             vectorTileOptions
         );
 
-        boundaryLayer.on('mouseover', highlightFeature.bind(this));
-        boundaryLayer.on('mouseout', resetHighlight.bind(this));
-        boundaryLayer.on('click', clickFeature.bind(this));
+        boundaryLayer.on('mouseover', this.highlightFeature);
+        boundaryLayer.on('mouseout', this.resetHighlight);
+        boundaryLayer.on('click', this.clickFeature);
         boundaryLayer.boundaryInfo = boundaryInfo;
 
         return boundaryLayer;
@@ -152,13 +142,12 @@ class MapViz extends React.Component {
         }).addTo(this.map);
 
         (function () {
-            var control = new L.Control({ position: 'bottomleft' });
+            var control = new L.Control({ position: 'topleft' });
             control.onAdd = function (map) {
-                var resetButton = L.DomUtil.create('a', 'resetzoom');
+                var resetButton = L.DomUtil.create('div', 'leaflet-control-zoom');
                 resetButton.innerHTML =
-                    `<button id="btn-reset" class="btn btn-default btn-sm">
+                    `<button id="btn-reset" class="btn btn-default btn-xs" style="width: 25px; height: 25px;" aria-label="Reset">
                         <i class="fa fa-undo"></i>
-                        Reset
                     </button>`;
                 L.DomEvent.addListener(resetButton, 'click', function () {
                     map.setView(Constants.MAP_INITIAL_CENTER, Constants.MAP_INITIAL_ZOOM);
@@ -225,9 +214,6 @@ class MapViz extends React.Component {
         let uniqueIds = Constants.getUniqueValues(ids);
 
         // Reset the feature style for all the unique IDs
-        for (var id of uniqueIds) {
-            boundaryLayer.resetFeatureStyle(id);
-        }
         for (let id of uniqueIds) {
             boundaryLayer.resetFeatureStyle(id);
         }
@@ -257,8 +243,8 @@ class MapViz extends React.Component {
                     markerColor: layerData.dataSource.iconColor
                 });
                 const geoJSONStyle = {
-                    color: 'red',
-                    weight: 5,
+                    color: '#00CAD6',
+                    weight: 2,
                     opacity: 1
                 };
                 layerData.data.forEach(layerItem => {

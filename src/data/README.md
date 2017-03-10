@@ -1,5 +1,29 @@
 # BCIC Challenge Datasets Sources
 
+# Shapefile transformation
+
+### Boundary transformation instructions
+
+#### To change the projection:
+
+1. Download boundaries from source. (These come in a zipped folder with shapefile)
+2. Open the .prj file that comes in folder downloaded. Look for the projection. (Usually “BC-Environment-Albers” if from BC)
+3. Open the .shp file in QGIS.
+4. Right click on the layer and click on “Set layer CRS”.
+5. Set CRS to the original projection of the layer. (e.g. BC Albers)
+6. Right click on layer again and click on “…save as”.
+7. Save the layer as a ESRI Shapefile and select “WGS 84/ EPSG 4326” as the projection.
+
+#### To convert .shp file to .geojson (Based on this tutorial: https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c#.6eorauhne):
+
+*Install shp2json : ```npm install -g shapefile```
+* shp2json command is:
+	```shp2json shapefile-name -o new-file-name.json```
+	(e.g. “shp2json parks_vancouver.shp -o parks_vancouver.json
+”)
+* Note: Change into directory with the shapefile first, then move .json file to /src/data/appropriate_file
+
+
 # Federal Data (NHS)
 
 ## Complete_Municipalities.csv (in NHS_Profile_2011)

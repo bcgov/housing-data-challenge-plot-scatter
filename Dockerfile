@@ -13,4 +13,4 @@ RUN npm install
 COPY . /usr/src/app
 
 # Run server
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "prod"]

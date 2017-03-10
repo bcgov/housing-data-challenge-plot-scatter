@@ -1,6 +1,7 @@
 import React from 'react';
 import DataSelect from './data-select';
 import Constants from '../constants';
+import MetadataPopup from './metadata-popup';
 
 class DataLayers extends React.Component {
     constructor(props) {
@@ -67,10 +68,17 @@ class DataLayers extends React.Component {
             return (<li key={dataSource.file}>
                 <i className={'big-icon fa fa-' + dataSource.icon} style={{color: dataSource.iconColor}}></i>
                 {dataSource.name}
+                &nbsp;
+                <MetadataPopup
+                    description={dataSource.description}
+                    sourceUrl={dataSource['source-url']}
+                    sourceText={dataSource.source}
+                    direction='bottom' />
+                &nbsp;
                 <button
                     className="btn btn-default inline"
                     onClick={() => this.handleDeleteLayerButtonClick(dataSource)} >
-                    <i className="fa fa-times-circle"></i>
+                    <i className="fa fa-times-circle" aria-label="remove"></i>
                 </button>
             </li>);
         });
@@ -79,7 +87,7 @@ class DataLayers extends React.Component {
             <div>
             <div className="row">
                 <div className="col-md-12">
-                    <h3>Add additional layers</h3>
+                    <h4>Add additional layers</h4>
                 </div>
                 <div className="col-md-12">
                     <DataSelect

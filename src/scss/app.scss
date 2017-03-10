@@ -34,6 +34,10 @@ body {
     margin-top: 1rem;
 }
 
+.margin-bottom {
+    margin-bottom: 1rem;
+}
+
 .noborder {
     padding: 0;
     border: 0 !important;
@@ -42,6 +46,15 @@ body {
 
 .hide {
     display: none;
+}
+
+.header-color {
+    color: $purple;
+}
+
+.popover {
+    font-family: $base-font-family !important;
+    font-size: 0.8rem !important;
 }
 
 button {
@@ -62,6 +75,22 @@ button.btn-sm {
     }
 }
 
+@media only screen and (max-width:374px) {
+    header {
+       .col-xs-8 {
+           width: 75%;
+       }     
+    }
+}
+
+@media only screen and (max-width:320px) {
+    header {
+       .col-xs-8 {
+           width: 83.33333%;
+       }     
+    }
+}
+
 @import 'header';
 @import 'map';
 @import 'data-selector';
@@ -70,3 +99,4 @@ button.btn-sm {
 @import 'map-detail';
 @import 'tab-interface';
 @import 'rank-graph';
+@import 'methodology';

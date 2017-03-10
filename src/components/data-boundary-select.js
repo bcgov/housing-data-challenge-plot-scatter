@@ -98,13 +98,18 @@ class DataBoundarySelect extends React.Component {
         const ordinalNumber = this.props.variableOrder === 1 ? 'First' : 'Second';
 
         return (
-            <div className="col-md-6">
+            <div className="col-md-6 col-sm-6">
                 <h3>{ordinalNumber} variable</h3>
                 <h4>Data source</h4>
                 <DataSelect
                     options={dataSourceArray}
                     nameAccessor={(dataSource) => dataSource.name}
                     valueAccessor={(dataSource) => dataSource.file}
+                    metadataAccessor={(dataSource) => ({
+                        description: dataSource.description,
+                        sourceUrl: dataSource['source-url'],
+                        sourceText: dataSource.source
+                    })}
                     onChangeCallback={this.handleDataSourceChange}
                     truncate={true} />
 

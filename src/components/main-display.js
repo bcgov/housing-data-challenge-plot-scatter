@@ -2,6 +2,7 @@ import React from 'react';
 import TabInterface from './tab-interface';
 import Tab from './tab';
 import MapGraphDisplay from './map-graph-display';
+import Methodology from './methodology';
 
 class MainDisplay extends React.Component {
     constructor(props) {
@@ -51,7 +52,7 @@ class MainDisplay extends React.Component {
 
     render() {
         return (
-            <TabInterface>
+            <TabInterface hideTextWhenSmall={true}>
                 <Tab name="Housing index" icon="fa-home">
                     <MapGraphDisplay type="housing-index" />
                 </Tab>

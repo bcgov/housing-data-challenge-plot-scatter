@@ -4,6 +4,7 @@ import HousingIndexSelector from './housing-index-selector';
 import MapViz from './map-viz';
 import RankGraph from './rank-graph.js';
 import MapDetail from './map-detail.js';
+import Constants from '../constants';
 
 class MapGraphDisplay extends React.Component {
     constructor(props) {
@@ -30,6 +31,7 @@ class MapGraphDisplay extends React.Component {
         this.addLayerData = this.addLayerData.bind(this);
         this.removeLayerData = this.removeLayerData.bind(this);
         this.highlightedItemCallback = this.highlightedItemCallback.bind(this);
+        this.panToFeatureCallback = this.panToFeatureCallback.bind(this);
     }
 
     changeBoundaryData(data) {
@@ -62,6 +64,11 @@ class MapGraphDisplay extends React.Component {
         item.displayItems = matchedItem;
         item.dataKeyMapping = this.state.boundaryData.dataKeyMapping;
         this.setState({ highlightedItem: item });
+    }
+
+    panToFeatureCallback(lat, lng, zoomLevel, featureId, featureName) {
+        this.mapViz.panToLatLng(lat, lng, zoomLevel, featureId);
+        this.mapViz.highlightFeature(null, featureId, featureName);
     }
 
     render() {
@@ -98,7 +105,8 @@ class MapGraphDisplay extends React.Component {
                                 <HousingIndexSelector
                                     changeBoundaryData={this.changeBoundaryData}
                                     addLayerData={this.addLayerData}
-                                    removeLayerData={this.removeLayerData} />
+                                    removeLayerData={this.removeLayerData}
+                                    panToFeatureCallback={this.panToFeatureCallback} />
                             </div>
                         </div>
                     </div>
@@ -113,39 +121,99 @@ class MapGraphDisplay extends React.Component {
                         <div className="col-xs-12 col-sm-3">
                             <MapDetail highlightedItem={this.state.highlightedItem} />
                             <div className="row">
+                                {this.state.highlightedItem.displayItems &&
+                                    <div className="col-xs-12">
+                                        <h4>Households
+                                            <small>
+                                                &nbsp;
+                                                {Constants.formatNumber(this.state.highlightedItem.displayItems.households, 0, true)}
+                                            </small>
+                                        </h4>
+                                    </div>
+                                }
                                 <div className="col-xs-12">
                                     <RankGraph
                                         title="Total score"
                                         data={values}
-                                        highlightedId={highlightedItemId} />
+                                        highlightedId={highlightedItemId}
+                                        metadataPopupContent={`
+                                        <div><p>We have created a simple housing-area suitability index based on four inputs:</p>
+                                            <ul>
+                                            <li>Home size</li>
+                                            <li>Ownership</li>
+                                            <li>Commute</li>
+                                            <li>Pre-tax household income</li>
+                                            </ul>
+                                            <p>Each municipality is given an aggregated score for all four components,
+                                    which is scaled to give the final score provided. Note that the legend intervals
+                                    adjust dynamically depending on the housing criteria selected.</p>
+                                            <p>You may find how each variable has been transformed to make up the index in the info buttons for each score below. The model is
+                                    imperfect, and for now is mainly for illustrative purposes &mdash; there are
+                                    many more variables (and better transformations of existing variables!) that
+                                    could be included.</p><h5>Data source:</h5>
+                <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/download-telecharger/comprehensive/comp-csv-tab-nhs-enm.cfm?Lang=E" target="_blank">NHS: Household 2011 (dwelling and household/occupants characteristics)</a></p>
+                <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/help-aide/aboutdata-aproposdonnees.cfm?Lang=E"target="_blank">Notes and considerations</a></p></div>`} />
                                 </div>
                                 <div className="col-xs-12">
                                     <RankGraph
                                         title="Home size score"
                                         grayscale={true}
                                         data={bedroomCountScores}
-                                        highlightedId={highlightedItemId} />
+                                        highlightedId={highlightedItemId}
+                                        metadataPopupContent={`<div><h3>Home size</h3>
+                <p>First, we look at which desired home size (1 to 4+ bedrooms) has been selected.
+                    Next, we identify the municipalities with the highest proportion of total homes
+                    of the selected size. These municipalities are then ranked the highest. For
+                    example, if a user selects '1 bedroom', municipalities with the highest
+                    proportion of one bedroom homes will rank first.</p><h5>Data source:</h5>
+                <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/download-telecharger/comprehensive/comp-csv-tab-nhs-enm.cfm?Lang=E" target="_blank">NHS: Household 2011 (dwelling and household/occupants characteristics)</a></p>
+                <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/help-aide/aboutdata-aproposdonnees.cfm?Lang=E"target="_blank">Notes and considerations</a></p></div>`} />
                                 </div>
                                 <div className="col-xs-12">
                                     <RankGraph
                                         title="Ownership score"
                                         grayscale={true}
                                         data={ownershipScores}
-                                        highlightedId={highlightedItemId} />
+                                        highlightedId={highlightedItemId}
+                                        metadataPopupContent={`<div><h3>Ownership</h3>
+                <p>Based on the user's selection of either 'rent' or 'own', we identify the
+                    proportion of households with that ownership status for each municipality.
+                    Municipalities with the highest proportion of the selected ownership status are
+                    then ranked highest.</p><h5>Data source:</h5>
+                <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/download-telecharger/comprehensive/comp-csv-tab-nhs-enm.cfm?Lang=E" target="_blank">NHS: Household 2011 (dwelling and household/occupants characteristics)</a></p>
+                <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/help-aide/aboutdata-aproposdonnees.cfm?Lang=E"target="_blank">Notes and considerations</a></p></div>`} />
                                 </div>
                                 <div className="col-xs-12">
                                     <RankGraph
                                         title="Commute score"
                                         grayscale={true}
                                         data={commuteTimeScores}
-                                        highlightedId={highlightedItemId} />
+                                        highlightedId={highlightedItemId}
+                                        metadataPopupContent={`<div><h3>Commute</h3>
+                <p>For this input, every municipality initially gets a score of 100. Then, based on
+                    the desired commute time selected, if the median commute time of a municipality
+                    is less the commute time specified, the score remains at 100. However, 1 point
+                    is subtracted for every minute that a municipality's median commute time is
+                    greater than the specified commute time.</p><h5>Data source:</h5>
+                <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/download-telecharger/comprehensive/comp-csv-tab-nhs-enm.cfm?Lang=E" target="_blank">NHS: Household 2011 (dwelling and household/occupants characteristics)</a></p>
+                <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/help-aide/aboutdata-aproposdonnees.cfm?Lang=E"target="_blank">Notes and considerations</a></p></div>`} />
                                 </div>
                                 <div className="col-xs-12">
                                     <RankGraph
                                         title="Income score"
                                         grayscale={true}
                                         data={householdIncomeScores}
-                                        highlightedId={highlightedItemId} />
+                                        highlightedId={highlightedItemId}
+                                        metadataPopupContent={`<div><h3>Pre-tax household income</h3>
+                <p>When the user selects an income band, the average of the band's end-points is
+                    taken. Then, the median income for every municipality is scaled to create a
+                    range from 0 to 100. The municipality with the the lowest median income is 0 and
+                    the highest is 100. From there, the selected income bracket gets a scaled value.
+                    The absolute difference between the municipality's scaled value and selected
+                    income band is calculated to create a score. This income score is then double
+                    weighted due to its perceived importance.</p><h5>Data source:</h5>
+                <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/download-telecharger/comprehensive/comp-csv-tab-nhs-enm.cfm?Lang=E" target="_blank">NHS: Household 2011 (dwelling and household/occupants characteristics)</a></p>
+                <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/help-aide/aboutdata-aproposdonnees.cfm?Lang=E"target="_blank">Notes and considerations</a></p></div>`} />
                                 </div>
                             </div>
                         </div>

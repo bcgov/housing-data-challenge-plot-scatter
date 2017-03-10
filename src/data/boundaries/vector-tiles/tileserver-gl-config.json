@@ -15,14 +15,14 @@
     "regdistricts": {
       "mbtiles": "regdistricts.mbtiles"
     },
-    "census-dissemination-areas": {
-      "mbtiles": "census-dissemination-areas.mbtiles"
-    },
     "census-dissemination-blocks": {
       "mbtiles": "census-dissemination-blocks.mbtiles"
     },
     "census-tracts": {
       "mbtiles": "census-tracts.mbtiles"
+    },
+    "census-dissemination-areas": {
+      "mbtiles": "census-dissemination-areas.mbtiles"
     }
   }
 }

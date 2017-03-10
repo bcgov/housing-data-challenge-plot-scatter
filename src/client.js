@@ -9,8 +9,6 @@ import MainDisplay from './components/main-display';
 // fetch polyfill for e.g. Safari, see http://stackoverflow.com/a/35830329/715870
 import 'whatwg-fetch';
 
-// Application CSS
-require('bootstrap/dist/css/bootstrap.css');
 require('./scss/app.scss');
 
 class App extends React.Component {

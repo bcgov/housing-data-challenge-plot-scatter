@@ -17,8 +17,8 @@ Constants.MAP_INITIAL_BOUNDS = new L.LatLngBounds(
     new L.LatLng(48.308916, -139.052201),
     new L.LatLng(60.000062, -114.054221)
 );
-Constants.MAP_INITIAL_CENTER = [49.2827, -123.1207];
-Constants.MAP_INITIAL_ZOOM = 12;
+Constants.MAP_INITIAL_CENTER = [54.5827, -123.1207];
+Constants.MAP_INITIAL_ZOOM = 5.2;
 Constants.MAP_MIN_ZOOM = 4;
 Constants.MAP_MAX_ZOOM = 14;
 
@@ -70,7 +70,7 @@ Constants.MAP_BOUNDARY_INFO = {
     //     url: 'http://plotandscatter.com:8080/data/census-dissemination-blocks/{z}/{x}/{y}.pbf',
     //     featureIdProperty: 'OBJECTID', // TODO: update with better ID
     //     featureNameProperty: 'OBJECTID // TODO: update with better ID',
-    //     layerName: 'DisseminationBlocks_geo',
+    //     layerName: 'DisseminationBlocks_clipped',
     //     label: 'Census Blocks'
     // },
     census_areas: {

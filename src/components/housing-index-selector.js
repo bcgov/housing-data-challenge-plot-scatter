@@ -57,6 +57,8 @@ class HousingIndexSelector extends React.Component {
             let householdIndexData = data.map((datum) => {
                 const geography = +datum['Geo_Code'];
                 const geographyName = datum['CSD_Name'];
+                const lat = +datum['Lat'];
+                const lng = +datum['Lon'];
                 const households = +datum['Owner'] + +datum['Renter'];
                 const medianIncome = +datum['Private households Median household total income'];
                 const medianMonthlyOwnerCosts = +datum['Median monthly shelter costs for owned dwellings ($)'];
@@ -70,7 +72,7 @@ class HousingIndexSelector extends React.Component {
                 const commuteTime = +datum['Median commuting duration'];
 
                 const result = {
-                    geography, geographyName, households, medianIncome, medianMonthlyOwnerCosts, medianMonthlyRenterCosts,
+                    geography, geographyName, lat, lng, households, medianIncome, medianMonthlyOwnerCosts, medianMonthlyRenterCosts,
                     ownerProportion, renterProportion, bedroomCount1Proportion, bedroomCount2Proportion,
                     bedroomCount3Proportion, bedroomCount4Proportion, commuteTime
                 };
@@ -211,22 +213,34 @@ class HousingIndexSelector extends React.Component {
 
         const renterOwnerOptions = [{ name: 'Rent', value: 'renter' }, { name: 'Own', value: 'owner' }];
 
+        const defaultZoomLevel = 11;
         const topLocationsList = this.state.topLocations.map((item) =>
-            <li key={item.geography}>{item.geographyName}</li>
+            <li className="matches" key={item.geography} tabIndex="0" aria-label="Top 5 matches">
+                <a onClick={(event) => this.props.panToFeatureCallback(item.lat,
+                                        item.lng,
+                                        defaultZoomLevel,
+                                        item.geography,
+                                        item.geographyName)} tabIndex="0">
+                    {item.geographyName}
+                </a>
+            </li>
         );
 
         return (
             <div id="data-selector">
                 <div className="row">
                     <div className="col-xs-12">
-                        <h2><i className="fa fa-home"></i> Show municipalities best matching...</h2>
+                        <h2><i className="fa fa-home"></i> Select housing criteria</h2>
+                        <h5>Select your housing criteria from the four dropdowns below to see which areas are most suitable to your needs. </h5>
+                        <p>Then hover over the map or search for a location to see how those areas match.
+                        Add additional layers to the map to see services in that area.</p>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-8 col-sm-7">
+                    <div className="col-md-8 col-sm-12">
                         <div className="row">
                             <div className="col-xs-6 col-sm-3">
-                                <h3>Home size</h3>
+                                <h4>Home size</h4>
                                 <DataSelect
                                     options={bedroomCountOptions}
                                     nameAccessor={(option) => option.name}
@@ -234,23 +248,25 @@ class HousingIndexSelector extends React.Component {
                                     onChangeCallback={this.handleBedroomCountChange} />
                             </div>
                             <div className="col-xs-6 col-sm-2">
-                                <h3>Ownership</h3>
+                                <h4>Ownership</h4>
                                 <DataSelect
                                     options={renterOwnerOptions}
                                     nameAccessor={(option) => option.name}
                                     valueAccessor={(option) => option.value}
                                     onChangeCallback={this.handleRenterOwnerChange} />
                             </div>
-                            <div className="col-xs-6 col-sm-2">
-                                <h3>Commute</h3>
+
+                            <div className="col-xs-6 col-sm-3">
+                                <h4>Work Commute</h4>
+
                                 <DataSelect
                                     options={commuteTimeOptions}
                                     nameAccessor={(option) => option.name}
                                     valueAccessor={(option) => option.value}
                                     onChangeCallback={this.handleCommuteTimeChange} />
                             </div>
-                            <div className="col-xs-12 col-sm-5">
-                                <h3>Pre-tax household income</h3>
+                            <div className="col-xs-6 col-sm-4">
+                                <h4>Pre-tax household income</h4>
                                 <DataSelect
                                     options={householdIncomeOptions}
                                     nameAccessor={(option) => option.name}
@@ -258,14 +274,14 @@ class HousingIndexSelector extends React.Component {
                                     onChangeCallback={this.handleHouseholdIncomeChange} />
                             </div>
                             <div id="top-locations" className="col-xs-12">
-                                <h3>Most desirable locations</h3>
+                                <h2 className="header-color">Top 5 matches</h2>
                                 <ul>
                                     { topLocationsList }
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4 col-sm-5">
+                    <div className="col-lg-4 col-md-6 col-sm-6">
                         <DataLayers
                             dataSources={this.state.layerDataSources}
                             addDataLayer={this.addDataLayer}
@@ -280,7 +296,8 @@ class HousingIndexSelector extends React.Component {
 HousingIndexSelector.propTypes = {
     changeBoundaryData: React.PropTypes.func.isRequired,
     addLayerData: React.PropTypes.func.isRequired,
-    removeLayerData: React.PropTypes.func.isRequired
+    removeLayerData: React.PropTypes.func.isRequired,
+    panToFeatureCallback: React.PropTypes.func.isRequired
 };
 
 module.exports = HousingIndexSelector;

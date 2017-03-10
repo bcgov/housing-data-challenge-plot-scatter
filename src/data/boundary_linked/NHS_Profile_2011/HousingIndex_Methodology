@@ -1,0 +1,32 @@
+Housing Index Methodology
+
+We have created a simple housing-area suitability index based on four inputs: Home size, Ownership, Commute, and Pre-tax household income. 
+
+*NB. Please note that this is currently for illustrative purposes only, and is by no means a perfect model. 
+
+Here is how each variable has been transformed to make up the index.
+
+Home size:
+First, we look at which desired home size (1 to 4+ bedrooms) has been selected. Next, we identify the municipalities with the highest proportion of total homes of the selected size.
+These municipalities are then ranked the highest.
+For example, if a user selects '1 bedroom', municipalities with the highest proportion of one bedrooms will rank first.
+
+Ownership:
+Based on the user's selection of either "rent" or "own", we identify the proportion of households with that ownership status for each municipality.
+Municipalities with the highest proportion of the selected ownership status is then ranked highest.
+
+Commute:
+For this input, every municipality initially gets a score of 100.
+Then, based on the desired commute time selected, if the median commute time of a municipality is less the commute time specified, the score remains at 100.
+However, 1 point is subtracted for every minute that a municipality's median commute time is greater than the specified commute time.
+
+Pre-tax household income:
+When the user selects an income band, the average of the band's end-points is taken. Then, the median income for every municipality is scaled to create a range from 0 to 100.
+The municipality with the the lowest median income is 0 and the highest is 100. From there, the selected income bracket gets a scaled value.
+The absolute difference between the municipality's scaled value and selected income band is calculated to create a score. This income score is then double weighted due to its importance.
+
+Finally, each municipality is given an aggregated score for all four components, which is scaled to give the final score provided.
+
+The legend intervals adjust dynamically depending on the housing criteria selected, and therefore change accordingly.
+
+

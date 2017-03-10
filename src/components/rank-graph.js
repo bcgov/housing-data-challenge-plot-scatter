@@ -55,20 +55,20 @@ class RankGraph extends React.Component {
             let y = d3.scaleLinear().range([this.HEIGHT, 0]);
 
             x.domain(data.map((d) => d.id));
-            y.domain([0, d3.max(data, (d) => d.value )]);
+            y.domain([0, d3.max(data, (d) => d.value)]);
 
             g.selectAll('.bar').remove();
 
             let bars = g.selectAll('.bar')
-                    .data(data)
+                .data(data)
                 .enter().append('rect')
-                    .attr('class', (d) => 'bar data-' + d.id)
-                    .attr('x', (d) => x(d.id))
-                    .attr('width', x.bandwidth())
-                    .attr('y', (d) => y(d.value))
-                    .attr('height', (d) => this.HEIGHT - y(d.value))
-                    .attr('fill', this.props.grayscale ? 'grey': (d) => d.color)
-                    .attr('opacity', 0.5);
+                .attr('class', (d) => 'bar data-' + d.id)
+                .attr('x', (d) => x(d.id))
+                .attr('width', x.bandwidth())
+                .attr('y', (d) => y(d.value))
+                .attr('height', (d) => this.HEIGHT - y(d.value))
+                .attr('fill', this.props.grayscale ? 'grey' : (d) => d.color)
+                .attr('opacity', 0.5);
         }
     }
 
@@ -76,13 +76,14 @@ class RankGraph extends React.Component {
         let g = d3.select(this.rankGraph).select('g.parent');
 
         g.selectAll('rect.bar')
-            .attr('fill', this.props.grayscale ? 'grey': (d) => d.color)
+            .attr('fill', this.props.grayscale ? 'grey' : (d) => d.color)
             .attr('opacity', 0.5);
 
         g.selectAll('rect.bar.data-' + this.props.highlightedId)
-                .attr('fill', 'black')
-                .attr('opacity', 1.0);
+            .attr('fill', 'black')
+            .attr('opacity', 1.0);
     }
+
 
     render() {
         let highlightedValue = '';
@@ -95,9 +96,26 @@ class RankGraph extends React.Component {
 
         return (
             <div className="rank-graph">
-                <h4>{this.props.title} <small>{Constants.formatNumber(highlightedValue)}</small></h4>
+                <h4>{this.props.title}
+                    <small> {Constants.formatNumber(highlightedValue)}</small>
+                    &nbsp;
+                    {this.props.metadataPopupContent &&
+                        <a tabIndex="0"
+                            aria-label="Info"
+                            aria-expanded="true"
+                            role="button"
+                            data-toggle="popover"
+                            title="Scoring info"
+                            data-trigger="focus"
+                            data-html="true"
+                            data-placement="bottom"
+                            data-content={this.props.metadataPopupContent} >
+                            <i className="fa fa-md fa-info-circle"></i>
+                        </a>
+                    }
+                </h4>
                 <svg
-                    ref={(rankGraph) => { this.rankGraph = rankGraph; }}>
+                    ref={(rankGraph) => { this.rankGraph = rankGraph; } }>
                 </svg>
             </div>
         );
@@ -111,7 +129,8 @@ RankGraph.propTypes = {
         id: React.PropTypes.any,
         value: React.PropTypes.number
     })).isRequired,
-    highlightedId: React.PropTypes.any
+    highlightedId: React.PropTypes.any,
+    metadataPopupContent: React.PropTypes.string
 };
 
 module.exports = RankGraph;

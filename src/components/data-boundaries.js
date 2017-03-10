@@ -65,17 +65,9 @@ class DataBoundaries extends React.Component {
     }
 
     render() {
-
-        const variable1Name = (this.state.variable1 === null)
-            ? '' : `${this.state.variable1.dataSource.name}': ${this.state.variable1.variableName}`;
-
-        const variable2Name = (this.state.variable2 === null)
-            ? '' : `${this.state.variable2.dataSource.name}': ${this.state.variable2.variableName}`;
-
         return (
-            <div>
-                <h3>Map colouring</h3>
-                <p>You can choose a variable to use to colour the map. The variable can be a single variable, or a constructed variable built out of two variables, one divided by the other.</p>
+            <div className="margin-bottom">
+                <h5>Choose a single variable to map. Or select two variables to construct a new one (mapped variable = variable 1 / variable 2).</h5><p> Then hover over the map or search for a specific location on the map to see results at the municipal level. You can also select and add additional layers to the map to visualize more data.</p>
 
                 <div className="row">
 
@@ -91,22 +83,6 @@ class DataBoundaries extends React.Component {
                         dataAddedCallback={this.handleDataAdded} />
 
                 </div>
-
-                <div className="row margin-top">
-                    {/*<div className="col-md-5">
-                        <p>{ variable1Name }</p>
-                    </div>
-                    <div className="col-md-2">
-                        <p>{ this.state.operator }</p>
-                    </div>
-                    <div className="col-md-5">
-                        <p>{ variable2Name }</p>
-                    </div>*/}
-                    <div className="col-md-12">
-                        <p>{ variable1Name } { this.state.operator } { variable2Name }</p>
-                    </div>
-                </div>
-
             </div>
         );
     }

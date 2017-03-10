@@ -79,14 +79,14 @@ class DataSelector extends React.Component {
         return (
             <div className="row" id="data-selector">
                 <div className="col-md-12">
-                    <h2><i className="fa fa-map-o"></i> Variables to map</h2>
+                    <h2><i className="fa fa-map-o"></i>Select variables</h2>
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-10 col-lg-8">
                     <DataBoundaries
                         dataSources={this.state.boundaryDataSources}
                         dataUpdateCallback={this.handleBoundaryDataUpdate} />
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-6 col-lg-4">
                     <DataLayers
                         dataSources={this.state.layerDataSources}
                         addDataLayer={this.addDataLayer}

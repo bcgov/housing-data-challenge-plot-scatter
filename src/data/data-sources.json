@@ -16,7 +16,7 @@
         },
         "source": "Statistics Canada",
         "date": "2016",
-        "source-url": "Population and Dwelling Count Highlight Tables, 2016 Census:http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/hlt-fst/pd-pl/index-eng.cfm",
+        "source-url": "http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/hlt-fst/pd-pl/index-eng.cfm",
         "description": "These tables provide 2016 Census population counts, 2011 Census population counts (where applicable) and 2016 Census dwelling counts.",
         "data-transformations": "None",
         "data-notes": "See notes and considerations for the data here: http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/hlt-fst/pd-pl/About.cfm"
@@ -210,39 +210,6 @@
         "description": "A population projection is a forecast of future population growth. BC Stats applies the Component/Cohort-Survival method to project the population. This method \"grows\" the population from the latest base year estimate by forecasting births, deaths and migration by age. These forecasts are based on past trends modified to account for possible future changes and, consequently, should be viewed as only one possible scenario of future population. B.C. level projections are usually updated in May each year, with sub-provincial projections following a few months after. All population estimates and projections are as of July 1st.",
         "data-transformations": "None",
         "data-notes": "Click on the \"BC Level Population Projection Technical Assumptions\" link on this page:http://www.bcstats.gov.bc.ca/StatisticsBySubject/Demography/PopulationProjections.aspx"
-    },
-    "ptt_municipal_0616.csv": {
-        "file": "ptt_municipal_0616.csv",
-        "fileType": "csv",
-        "dataType": "boundary-linked",
-        "name": "Property Transfer Tax (June 2016)",
-        "geographyKey": "CSDUID",
-        "geographyType": "census_subdivisions",
-        "column-name-map": {
-            "trans_period": "Transaction month",
-            "no_mkt_trans": "Total market transactions",
-            "no_resid_trans": "Total residential transactions",
-            "no_resid_fam": "Total multi-family transactions",
-            "no_resid_1fam": "Total single-family transactions",
-            "sum_FMV": "Total fair market value",
-            "md_FMV": "Median fair market value",
-            "sum_PTT_paid": "Total PTT paid",
-            "md_PTT_paid": "Median PTT paid",
-            "no_foreign": "Total foreign transactions",
-            "no_foreign_res": "Total foreign residential transactions",
-            "sum_FMV_foreign": "Total foreign fair market value",
-            "md_FMV_foreign": "Median foreign fair market value",
-            "no_lt1M_foreign ": "Total foreign transactions under 1M",
-            "no_gt1M_foreign": "Total foreign transactions between 1-3M",
-            "no_gt3M_foreign": "Total foreign transactions over 3M",
-            "add_tax_paid": "Total additional PTT paid"
-        },
-        "source": "BC Ministy of Finance - Property Taxation",
-        "date": "June 2016",
-        "source-url": "https://catalogue.data.gov.bc.ca/dataset/property-transfer-tax-data",
-        "description": "Property transfer tax data relating to market transactions within the province.",
-        "data-transformations": "Data was mapped against the Canadian Census Sub-divisions. It only includes Municipal Monthly data. ",
-        "data-notes": "For all notes and considerations for the data visit:https://catalogue.data.gov.bc.ca/dataset/property-transfer-tax-data"
     },
     "ptt_municipal_months_aggregated.csv": {
         "file": "ptt_municipal_months_aggregated.csv",

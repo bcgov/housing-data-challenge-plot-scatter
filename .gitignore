@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+public/bundle.js
+*.mbtiles
+.DS_Store
+DisseminationBlocks_geo.json
+.vscode
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+public/data/*

@@ -13,6 +13,11 @@ selectors used in a `MapGraphDisplay` component, and requires props (described
 in propTypes below) representing callback functions to communicate with that
 component.
 
+`DataSelector` will automatically load appropriate data sources from the data
+source file specified in Constants.DATA_SOURCE_FILE. To add layer data, create
+an appropriate entry in the Constants.DATA_SOURCE_FILE, and ensure that the
+.csv or .json data is locally available to the app.
+
 */
 class DataSelector extends React.Component {
 

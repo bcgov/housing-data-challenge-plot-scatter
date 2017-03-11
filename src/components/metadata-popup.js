@@ -1,5 +1,15 @@
 import React from 'react';
 
+/*
+
+MetadataPopup component
+=======================
+
+A functional component that essentially wraps a Bootstrap popover (see
+http://getbootstrap.com/javascript/#popovers) to enable the display of
+metadata on a data source.
+
+*/
 function MetadataPopup(props) {
     return(
         <a tabIndex="0"

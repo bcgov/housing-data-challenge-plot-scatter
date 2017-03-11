@@ -2,6 +2,17 @@ import React from 'react';
 import DataBoundarySelect from './data-boundary-select';
 import Constants from '../constants';
 
+/*
+
+DataBoundaries component
+========================
+
+A component that wraps the two `DataBoundarySelect`s that are used to select
+each of the two variables on the 'Map other data' tab. This component is also
+responsible for keeping track of the two variables selected and building the
+constructed variable (e.g. variable1/variable2) to pass to its parent.
+
+*/
 class DataBoundaries extends React.Component {
     constructor(props) {
         super(props);

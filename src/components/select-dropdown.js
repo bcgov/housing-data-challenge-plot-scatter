@@ -1,12 +1,30 @@
 import React from 'react';
 import MetadataPopup from './metadata-popup';
 
+/*
+
+SelectDropdown component
+========================
+
+A component wrapping a <select>, styling it in a browser-agnostic way. Requires
+an array of `options`, each of which must have a `name` and `value` retrievable
+via the functions passed in as `nameAccessor` and `valueAccessor`, respectively.
+(In other words, each object in the array need not have a literal `name` and
+`value` key; instead, the `nameAccessor` and `valueAccessor` functions will
+be called on each object to retrieve the appropriate value.)
+
+Optionally, also display a `MetadataPopup` component alongside the select box,
+offering information on the dataset used to populate the box.
+
+*/
 class SelectDropdown extends React.Component {
     constructor(props) {
         super(props);
     }
 
     componentDidUpdate() {
+        // Activate any popovers in the app. TODO: this shouldn't really be
+        // in this component... maybe in its parent?
         $(function () {
             $('[data-toggle="popover"]').popover({ container: 'body' });
         });
@@ -22,6 +40,7 @@ class SelectDropdown extends React.Component {
             variableOptions = this.props.options.map(variable => {
                 const value = this.props.valueAccessor(variable);
                 let name = this.props.nameAccessor(variable);
+                // If truncate is set, truncate the contents after 40 chars
                 name = (this.props.truncate && name.length > 40) ? (name.substring(0, 40) + '...') : name;
                 return (<option key={value} value={value}>{name}</option>);
             });

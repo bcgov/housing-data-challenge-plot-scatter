@@ -1,6 +1,18 @@
 import React from 'react';
 import Constants from '../constants';
 
+/*
+
+RankGraph component
+===================
+
+Wraps a small D3 bar chart that displays all the `value`s of the objects in the
+`data` property. Optionally, will also highlight a single bar in the chart
+whose `id` matches the `highlightedId` passed in. Will also optionally
+include a Bootstrap popover (see http://getbootstrap.com/javascript/#popovers)
+with content passed in as a `metadataContent` prop.
+
+*/
 class RankGraph extends React.Component {
 
     constructor(props) {

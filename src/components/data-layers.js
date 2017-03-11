@@ -3,6 +3,16 @@ import SelectDropdown from './select-dropdown';
 import Constants from '../constants';
 import MetadataPopup from './metadata-popup';
 
+/*
+
+DataLayers component
+====================
+
+Allows the user to select layers to add to the map -- typically either point
+data or shapes (e.g. bike lanes, parks). Responsible for loading the data
+that the user selects to add to the map.
+
+*/
 class DataLayers extends React.Component {
     constructor(props) {
         super(props);

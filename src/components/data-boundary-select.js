@@ -2,6 +2,17 @@ import React from 'react';
 import SelectDropdown from './select-dropdown';
 import Constants from '../constants';
 
+/*
+
+DataBoundarySelect component
+============================
+
+A component wrapping two `SelectDropdown`s, one allowing the user to select a
+data source, the other allowing the user to select a variable (column) in the
+currently-selected data source. Includes code to dynamically load the data
+source and its variable values.
+
+*/
 class DataBoundarySelect extends React.Component {
     constructor(props) {
         super(props);
@@ -63,6 +74,7 @@ class DataBoundarySelect extends React.Component {
         let columnName = this.variableSelect.getValue();
 
         var values = this.data.map((item) => {
+            // If the column name isn't found, just return 1 as a value
             return {
                 geography: item[dataSource.geographyKey],
                 value: item[columnName] || 1
@@ -86,7 +98,7 @@ class DataBoundarySelect extends React.Component {
 
         let variableArray = this.state.variables;
         variableArray.sort((a, b) => {
-            // From http://stackoverflow.com/a/8900824
+            // Sort alphabetically; from http://stackoverflow.com/a/8900824
             var textA = a.displayName.toUpperCase();
             var textB = b.displayName.toUpperCase();
             return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;

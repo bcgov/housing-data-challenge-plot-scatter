@@ -6,6 +6,25 @@ import RankGraph from './rank-graph.js';
 import MapDetail from './map-detail.js';
 import Constants from '../constants';
 
+/*
+
+MapGraphDisplay component
+=========================
+
+A component that displays a variable selector (either a `DataSelector` or
+`HousingIndexSelector`) and manages the boundary- and layer-based data that
+the user selects. It passes this data to `MapViz`, `MapDetail`, and, optionally,
+`RankGraph` components.
+
+This component is a good candidate for refactoring, to enable a greater variety
+of combinations of  variable selector and visualization.
+
+Currently, the `MapGraphDisplay` component requires a `type` prop. If this prop
+is set to `housingIndex`, the `HousingIndexSelector` and `RankGraph` components
+are displayed; if not, we assume the `MapGraphDisplay` is being used to 'map
+other data'.
+
+*/
 class MapGraphDisplay extends React.Component {
     constructor(props) {
         super(props);
@@ -18,9 +37,6 @@ class MapGraphDisplay extends React.Component {
                 scaleColors: []
             },
             layerData: {},
-            minValue: null,
-            maxValue: null,
-            medianValue: null,
             highlightedItem: {
                 id: '',
                 name: 'British Columbia'
@@ -147,10 +163,7 @@ class MapGraphDisplay extends React.Component {
                                             <p>Each municipality is given an aggregated score for all four components,
                                     which is scaled to give the final score provided. Note that the legend intervals
                                     adjust dynamically depending on the housing criteria selected.</p>
-                                            <p>You may find how each variable has been transformed to make up the index in the info buttons for each score below. The model is
-                                    imperfect, and for now is mainly for illustrative purposes &mdash; there are
-                                    many more variables (and better transformations of existing variables!) that
-                                    could be included.</p><h5>Data source:</h5>
+                                    <strong>Data source:</strong>
                 <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/download-telecharger/comprehensive/comp-csv-tab-nhs-enm.cfm?Lang=E" target="_blank">NHS: Household 2011 (dwelling and household/occupants characteristics)</a></p>
                 <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/help-aide/aboutdata-aproposdonnees.cfm?Lang=E"target="_blank">Notes and considerations</a></p></div>`} />
                                 </div>
@@ -165,7 +178,7 @@ class MapGraphDisplay extends React.Component {
                     Next, we identify the municipalities with the highest proportion of total homes
                     of the selected size. These municipalities are then ranked the highest. For
                     example, if a user selects '1 bedroom', municipalities with the highest
-                    proportion of one bedroom homes will rank first.</p><h5>Data source:</h5>
+                    proportion of one bedroom homes will rank first.</p><strong>Data source:</strong>
                 <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/download-telecharger/comprehensive/comp-csv-tab-nhs-enm.cfm?Lang=E" target="_blank">NHS: Household 2011 (dwelling and household/occupants characteristics)</a></p>
                 <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/help-aide/aboutdata-aproposdonnees.cfm?Lang=E"target="_blank">Notes and considerations</a></p></div>`} />
                                 </div>
@@ -179,7 +192,7 @@ class MapGraphDisplay extends React.Component {
                 <p>Based on the user's selection of either 'rent' or 'own', we identify the
                     proportion of households with that ownership status for each municipality.
                     Municipalities with the highest proportion of the selected ownership status are
-                    then ranked highest.</p><h5>Data source:</h5>
+                    then ranked highest.</p><strong>Data source:</strong>
                 <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/download-telecharger/comprehensive/comp-csv-tab-nhs-enm.cfm?Lang=E" target="_blank">NHS: Household 2011 (dwelling and household/occupants characteristics)</a></p>
                 <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/help-aide/aboutdata-aproposdonnees.cfm?Lang=E"target="_blank">Notes and considerations</a></p></div>`} />
                                 </div>
@@ -194,7 +207,7 @@ class MapGraphDisplay extends React.Component {
                     the desired commute time selected, if the median commute time of a municipality
                     is less the commute time specified, the score remains at 100. However, 1 point
                     is subtracted for every minute that a municipality's median commute time is
-                    greater than the specified commute time.</p><h5>Data source:</h5>
+                    greater than the specified commute time.</p><strong>Data source:</strong>
                 <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/download-telecharger/comprehensive/comp-csv-tab-nhs-enm.cfm?Lang=E" target="_blank">NHS: Household 2011 (dwelling and household/occupants characteristics)</a></p>
                 <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/help-aide/aboutdata-aproposdonnees.cfm?Lang=E"target="_blank">Notes and considerations</a></p></div>`} />
                                 </div>
@@ -211,7 +224,7 @@ class MapGraphDisplay extends React.Component {
                     the highest is 100. From there, the selected income bracket gets a scaled value.
                     The absolute difference between the municipality's scaled value and selected
                     income band is calculated to create a score. This income score is then double
-                    weighted due to its perceived importance.</p><h5>Data source:</h5>
+                    weighted due to its perceived importance.</p><strong>Data source:</strong>
                 <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/details/download-telecharger/comprehensive/comp-csv-tab-nhs-enm.cfm?Lang=E" target="_blank">NHS: Household 2011 (dwelling and household/occupants characteristics)</a></p>
                 <p><a href="https://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/prof/help-aide/aboutdata-aproposdonnees.cfm?Lang=E"target="_blank">Notes and considerations</a></p></div>`} />
                                 </div>
@@ -223,7 +236,6 @@ class MapGraphDisplay extends React.Component {
         } else {
 
             return (
-
                 <div>
                     <div className="row">
                         <div className="col-xs-12">

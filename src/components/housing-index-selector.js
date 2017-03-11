@@ -1,8 +1,19 @@
 import React from 'react';
 import DataLayers from './data-layers';
-import DataSelect from './data-select';
+import SelectDropdown from './select-dropdown';
 import Constants from '../constants';
 
+/*
+
+HousingIndexSelector component
+==============================
+
+Permits a user to select variables used in constructing a housing index. One of
+the two possible data selectors used in a `MapGraphDisplay` component, and
+requires props (described in propTypes below) representing callback functions to
+communicate with that component.
+
+*/
 class HousingIndexSelector extends React.Component {
 
     constructor(props) {
@@ -52,6 +63,7 @@ class HousingIndexSelector extends React.Component {
         }.bind(this));
     }
 
+    // Custom data for the household index; not in data-sources.json
     loadHouseholdIndexData() {
         d3.csv(Constants.HOUSEHOLD_INDEX_FILE, (error, data) => {
             let householdIndexData = data.map((datum) => {
@@ -91,6 +103,7 @@ class HousingIndexSelector extends React.Component {
     updateIndex() {
         const data = Array.from(this.state.householdIndexData);
 
+        // The variables we want to build scales for
         const scaleKeys = ['medianIncome', 'ownerProportion', 'renterProportion', 'bedroomCount1Proportion',
             'bedroomCount2Proportion', 'bedroomCount3Proportion', 'bedroomCount4Proportion', 'commuteTime'];
 
@@ -100,32 +113,34 @@ class HousingIndexSelector extends React.Component {
         let scaleDictionary = {};
 
         const buildScale = (items) => {
+            // Given a data set, calculate the min, max, and build a linear scale
             const min = d3.min(items);
             const max = d3.max(items);
             const scale = d3.scaleLinear().domain([min, max]).range([0, scaleMax]);
             return { min, max, scale };
         };
 
+        // Build a scale for each of the keys defined above
         scaleKeys.forEach(key => {
             const items = data.map(item => item[key]);
             scaleDictionary[key] = buildScale(items);
         });
 
-        // Calculate the desired indicators
+        // Obtain the desired indicators
         const desiredIncomeScaled = scaleDictionary['medianIncome'].scale(this.state.householdIncome);
         const desiredBRCountAttr = 'bedroomCount' + this.state.bedroomCount + 'Proportion';
         const desiredOwnershipAttr = this.state.renterOwner + 'Proportion';
         const desiredCommuteTime = this.state.commuteTime;
 
-        // Now scale each of the data items according to the user's desired settings
+        // Now scale each of the data items according to the user's desired settings.
+        // For info on how the scores are calculated, see the info buttons in-app.
         data.forEach(item => {
             item.householdIncomeScore = scaleMax - Math.abs(desiredIncomeScaled - scaleDictionary['medianIncome'].scale(item.medianIncome));
             item.bedroomCountScore = scaleDictionary[desiredBRCountAttr].scale(item[desiredBRCountAttr]);
             item.ownershipScore = scaleDictionary[desiredOwnershipAttr].scale(item[desiredOwnershipAttr]);
-            item.commuteTimeScore = scaleMax
-                - Math.max(0, item.commuteTime - desiredCommuteTime);
+            item.commuteTimeScore = scaleMax - Math.max(0, item.commuteTime - desiredCommuteTime);
 
-            // Generate a total score
+            // Generate a total score; note income is double-weighted
             item.totalScore = 2*item.householdIncomeScore + item.bedroomCountScore + item.ownershipScore + item.commuteTimeScore;
         });
 
@@ -190,12 +205,17 @@ class HousingIndexSelector extends React.Component {
 
         const bedroomCountArray = [1, 2, 3, 4];
         const bedroomCountOptions = bedroomCountArray.map((item, index) => {
+            // Build the bedroom count names. The last item just gets a +
+            // appended, e.g. '4+'
             const name = item + ((index < bedroomCountArray.length-1) ? '' : '+') + ' bedroom';
             return { name: name, value: item };
         });
 
         const householdIncomeArray = [0, 20000, 40000, 60000, 80000, 100000, 120000, 140000, 160000];
         const householdIncomeOptions = householdIncomeArray.map((item, index) => {
+            // Build the income range names, which are item[index] through
+            // item[index+1]-1, i.e. $0-$19,999, $20,000-$39,999, etc. The last item
+            // just gets a + appended, e.g. $160,000+
             const name = '$' + Constants.formatNumber(item, 0, true)
                             + ((index < householdIncomeArray.length-1)
                                 ? '–' + Constants.formatNumber(householdIncomeArray[index+1]-1, 0, true)
@@ -206,13 +226,19 @@ class HousingIndexSelector extends React.Component {
             return { name: name, value: value };
         });
 
+        // Commute time thresholds; they are maximums, so their mapping is
+        // straightforward
         const commuteTimeArray = [5, 10, 15, 20, 25, 30, 40, 50, 60, 90];
         const commuteTimeOptions = commuteTimeArray.map((item, index) => ({
             name: item + ' min.', value: item
         }));
 
-        const renterOwnerOptions = [{ name: 'Rent', value: 'renter' }, { name: 'Own', value: 'owner' }];
+        const renterOwnerOptions = [
+            { name: 'Rent', value: 'renter' },
+            { name: 'Own', value: 'owner' }
+        ];
 
+        // When a top item is clicked, pan to it on the map
         const defaultZoomLevel = 11;
         const topLocationsList = this.state.topLocations.map((item) =>
             <li className="matches" key={item.geography} tabIndex="0" aria-label="Top 5 matches">
@@ -229,11 +255,24 @@ class HousingIndexSelector extends React.Component {
         return (
             <div id="data-selector">
                 <div className="row">
-                    <div className="col-xs-12">
-                        <h2><i className="fa fa-home"></i> Select housing criteria</h2>
-                        <h5>Select your housing criteria from the four dropdowns below to see which areas are most suitable to your needs. </h5>
-                        <p>Then hover over the map or search for a location to see how those areas match.
-                        Add additional layers to the map to see services in that area.</p>
+                    <div className="col-xs-12 col-md-12">
+                        <h2><i className="fa fa-home"></i> Select housing criteria &nbsp;
+                        <a tabIndex="0"
+                            aria-label="Info"
+                            aria-expanded="true"
+                            role="button"
+                            data-toggle="popover"
+                            title="Housing index info"
+                            data-trigger="focus"
+                            data-html="true"
+                            data-placement="bottom"
+                            data-content={`<p>We have created a simple housing-area suitability index based on four inputs: <strong className=''>Home size, Ownership, Work commute and Pre-tax household income.</strong> Read how each variable has been transformed to create the index by clicking on each information icon for each score below. The model is
+                            imperfect, and for now is mainly for illustrative purposes &mdash; there are many more variables (and better transformations of existing variables!) that could be included.</p>`} >
+                            <i className="fa fa-md fa-info-circle"></i>
+                        </a>
+                        </h2>
+                        <strong>Select your housing criteria from the four dropdowns below to see which areas are most suitable to your needs. </strong> <p>Then hover over the map or search for a location to see how those areas match your criteria.
+                        Add additional layers to the map to see public services and spaces in that area.</p>
                     </div>
                 </div>
                 <div className="row">
@@ -241,7 +280,7 @@ class HousingIndexSelector extends React.Component {
                         <div className="row">
                             <div className="col-xs-6 col-sm-3">
                                 <h4>Home size</h4>
-                                <DataSelect
+                                <SelectDropdown
                                     options={bedroomCountOptions}
                                     nameAccessor={(option) => option.name}
                                     valueAccessor={(option) => option.value}
@@ -249,7 +288,7 @@ class HousingIndexSelector extends React.Component {
                             </div>
                             <div className="col-xs-6 col-sm-2">
                                 <h4>Ownership</h4>
-                                <DataSelect
+                                <SelectDropdown
                                     options={renterOwnerOptions}
                                     nameAccessor={(option) => option.name}
                                     valueAccessor={(option) => option.value}
@@ -259,7 +298,7 @@ class HousingIndexSelector extends React.Component {
                             <div className="col-xs-6 col-sm-3">
                                 <h4>Work Commute</h4>
 
-                                <DataSelect
+                                <SelectDropdown
                                     options={commuteTimeOptions}
                                     nameAccessor={(option) => option.name}
                                     valueAccessor={(option) => option.value}
@@ -267,7 +306,7 @@ class HousingIndexSelector extends React.Component {
                             </div>
                             <div className="col-xs-6 col-sm-4">
                                 <h4>Pre-tax household income</h4>
-                                <DataSelect
+                                <SelectDropdown
                                     options={householdIncomeOptions}
                                     nameAccessor={(option) => option.name}
                                     valueAccessor={(option) => option.value}

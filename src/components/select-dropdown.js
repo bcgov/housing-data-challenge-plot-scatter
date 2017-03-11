@@ -1,7 +1,7 @@
 import React from 'react';
 import MetadataPopup from './metadata-popup';
 
-class DataSelect extends React.Component {
+class SelectDropdown extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -59,7 +59,7 @@ class DataSelect extends React.Component {
     }
 }
 
-DataSelect.propTypes = {
+SelectDropdown.propTypes = {
     onChangeCallback: React.PropTypes.func,
     options: React.PropTypes.array.isRequired,
     nameAccessor: React.PropTypes.func.isRequired,
@@ -70,4 +70,4 @@ DataSelect.propTypes = {
     selectedValue: React.PropTypes.object
 };
 
-module.exports = DataSelect;
+module.exports = SelectDropdown;

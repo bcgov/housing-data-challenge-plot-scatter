@@ -1,12 +1,19 @@
 import React from 'react';
-// import DataSelect from './data-select';
 import DataBoundaries from './data-boundaries';
 import DataLayers from './data-layers';
-// import DataFilters from './data-filters';
-// import DataGrouping from './data-grouping';
-// import DataSummary from './data-summary';
 import Constants from '../constants';
 
+/*
+
+DataSelector component
+======================
+
+Permits a user to select two variables to map. One of the two possible data
+selectors used in a `MapGraphDisplay` component, and requires props (described
+in propTypes below) representing callback functions to communicate with that
+component.
+
+*/
 class DataSelector extends React.Component {
 
     constructor(props) {
@@ -75,13 +82,12 @@ class DataSelector extends React.Component {
     }
 
     render() {
-
         return (
             <div className="row" id="data-selector">
                 <div className="col-md-12">
                     <h2><i className="fa fa-map-o"></i>Select variables</h2>
                 </div>
-                <div className="col-md-10 col-lg-8">
+                <div className="col-md-9 col-xs-12">
                     <DataBoundaries
                         dataSources={this.state.boundaryDataSources}
                         dataUpdateCallback={this.handleBoundaryDataUpdate} />

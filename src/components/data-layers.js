@@ -1,5 +1,5 @@
 import React from 'react';
-import DataSelect from './data-select';
+import SelectDropdown from './select-dropdown';
 import Constants from '../constants';
 import MetadataPopup from './metadata-popup';
 
@@ -90,7 +90,7 @@ class DataLayers extends React.Component {
                     <h4>Add additional layers</h4>
                 </div>
                 <div className="col-md-12">
-                    <DataSelect
+                    <SelectDropdown
                         ref={(layerSelect) => this.layerSelect = layerSelect}
                         options={activeDataSourcesArray}
                         nameAccessor={(dataSource) => dataSource.name}

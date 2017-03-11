@@ -67,21 +67,17 @@ class DataBoundaries extends React.Component {
     render() {
         return (
             <div className="margin-bottom">
-                <h5>Choose a single variable to map. Or select two variables to construct a new one (mapped variable = variable 1 / variable 2).</h5><p> Then hover over the map or search for a specific location on the map to see results at the municipal level. You can also select and add additional layers to the map to visualize more data.</p>
-
+                <strong>Choose a single variable to map. Or select two variables to construct a new one (mapped variable = variable 1 / variable 2).</strong><p> Then hover over the map or search for a specific location on the map to see results at the municipal level. You can also select and add additional layers to the map to visualize more data.</p>
                 <div className="row">
-
                     <DataBoundarySelect
                         variableOrder={1}
                         dataSources={this.props.dataSources}
                         dataAddedCallback={this.handleDataAdded} />
-
                     <DataBoundarySelect
                         variableOrder={2}
                         includeIdentity={true}
                         dataSources={this.props.dataSources}
                         dataAddedCallback={this.handleDataAdded} />
-
                 </div>
             </div>
         );

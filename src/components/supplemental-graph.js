@@ -1,14 +1,22 @@
 import React from 'react';
 import Constants from '../constants';
 
+/*
+
+SupplementalGraph component
+===========================
+
+NB. Not currently used in the app.
+
+A component that will draw a horizontal bar graph given some data. The `data`
+must be an array of objects with `value` and `geography` keys, as described
+in PropTypes.
+
+*/
 class SupplementalGraph extends React.Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            sortAlphabetically: true
-        };
 
         this.handleBarClick = this.handleBarClick.bind(this);
     }
@@ -81,7 +89,6 @@ class SupplementalGraph extends React.Component {
 
             bars.on('mouseover', this.handleBarMouseover);
             bars.on('mouseout', this.handleBarMouseout);
-            bars.on('click', this.handleBarClick);
 
             let labels = g.selectAll('.label')
                     .data(data)
@@ -102,10 +109,6 @@ class SupplementalGraph extends React.Component {
         d3.select(this).attr('opacity', 0.5);
     }
 
-    handleBarClick(datum, index) {
-        // TODO
-    }
-
     render() {
         return (
             <div>
@@ -119,7 +122,12 @@ class SupplementalGraph extends React.Component {
 }
 
 SupplementalGraph.propTypes = {
-    data: React.PropTypes.any
+    data: React.PropTypes.arrayOf(
+        React.PropTypes.shape({
+            value: React.PropTypes.number,
+            geography: React.PropTypes.string
+        })
+    )
 };
 
 module.exports = SupplementalGraph;

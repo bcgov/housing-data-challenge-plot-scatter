@@ -1,5 +1,5 @@
 import React from 'react';
-import DataSelect from './data-select';
+import SelectDropdown from './select-dropdown';
 import Constants from '../constants';
 
 class DataBoundarySelect extends React.Component {
@@ -101,7 +101,7 @@ class DataBoundarySelect extends React.Component {
             <div className="col-md-6 col-sm-6">
                 <h3>{ordinalNumber} variable</h3>
                 <h4>Data source</h4>
-                <DataSelect
+                <SelectDropdown
                     options={dataSourceArray}
                     nameAccessor={(dataSource) => dataSource.name}
                     valueAccessor={(dataSource) => dataSource.file}
@@ -114,7 +114,7 @@ class DataBoundarySelect extends React.Component {
                     truncate={true} />
 
                 <h4>Select a variable</h4>
-                <DataSelect
+                <SelectDropdown
                     ref={(variableSelect) => { this.variableSelect = variableSelect; }}
                     options={variableArray}
                     nameAccessor={(variable) => variable.displayName}

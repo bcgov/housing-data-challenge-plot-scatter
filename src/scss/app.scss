@@ -16,7 +16,8 @@ h4 { font-size: 0.9rem; }
 
 body {
     color: $body-black;
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .btn-default {
@@ -24,37 +25,6 @@ body {
     color: white;
     border: 1px solid $button-green;
     border-radius: 0;
-}
-
-.form-control {
-    border-radius: 0px;
-}
-
-.margin-top {
-    margin-top: 1rem;
-}
-
-.margin-bottom {
-    margin-bottom: 1rem;
-}
-
-.noborder {
-    padding: 0;
-    border: 0 !important;
-    //border-bottom: 0 !important;
-}
-
-.hide {
-    display: none;
-}
-
-.header-color {
-    color: $purple;
-}
-
-.popover {
-    font-family: $base-font-family !important;
-    font-size: 0.8rem !important;
 }
 
 button {
@@ -73,6 +43,40 @@ button.btn-sm {
     i {
         margin-right: 0.25rem;
     }
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.fa-info-circle {
+    color:#337ab7;
+}
+
+.header-color {
+    color: $purple;
+}
+
+.hide {
+    display: none;
+}
+
+.margin-top {
+    margin-top: 1rem;
+}
+
+.margin-bottom {
+    margin-bottom: 1rem;
+}
+
+.noborder {
+    padding: 0;
+    border: 0 !important;
+    //border-bottom: 0 !important;
+}
+
+.purple {
+    color: $purple;
 }
 
 @media only screen and (max-width:374px) {
@@ -99,4 +103,3 @@ button.btn-sm {
 @import 'map-detail';
 @import 'tab-interface';
 @import 'rank-graph';
-@import 'methodology';

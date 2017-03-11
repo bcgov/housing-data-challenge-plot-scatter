@@ -2,9 +2,11 @@
 
 This application is built using Bootstrap, Leaflet, D3, and React.
 
-The deployed draft app can be viewed at http://plotandscatter.com:3001.
+The purpose of each component is described in the source files, but a basic familiarity with React is essential. [The Quick Start guide](https://facebook.github.io/react/docs/hello-world.html) is very good.
 
-*NB. These instructions have not been tested for Windows.*
+The deployed prototype app can be viewed at http://plotandscatter.com:3001.
+
+*NB. These instructions have not been tested on Windows.*
 
 ## To run the project locally
 
@@ -75,9 +77,22 @@ You should now be able to access the Docker server at `http://yourdomain.com:300
 2. Find the container ID for the image 'plotandscatter/ps-bcic-data-viz'
 3. `docker kill <container-id>`
 
-### For a list of data sources, see the README.md in src/data/
+#### To clean up old Docker containers
 
-## README TODOs
+Adapted from http://blog.yohanliyanage.com/2015/05/docker-clean-up-after-yourself/ and http://stackoverflow.com/questions/30604846/docker-error-no-space-left-on-device.
 
-* Build a production webpack configuration and explain its usage
-* More details around server deployment
+##### List all containers
+
+`docker ps -a`
+
+Then manually use `docker rm containerid` or `docker rmi image` as appropriate for stopped/dangling images.
+
+##### Delete exited containers
+
+`docker rmi $(docker images -f "dangling=true" -q)` (if using `sudo`, `sudo docker rmi $(sudo docker images -f "dangling=true" -q)`)
+
+##### Delete 'dangling' images
+
+`docker rmi $(docker images | grep "^<none>" | awk "{print $3}")`
+
+### For a list of data sources, see the README.md in `src/data/`.

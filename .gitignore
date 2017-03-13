@@ -1,6 +1,5 @@
 node_modules
 npm-debug.log
-public/bundle.js
 *.mbtiles
 .DS_Store
 DisseminationBlocks_geo.json
@@ -8,3 +7,5 @@ DisseminationBlocks_geo.json
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 public/data/*
+public/bundle.js
+public/dll/dll.vendor.js

@@ -100,6 +100,7 @@ class MapViz extends React.Component {
     }
 
     clickFeature(event) {
+        this.resetHighlight(event);
         this.highlightFeature(event);
         this.panToLatLng(event.latlng.lat, event.latlng.lng);
     }

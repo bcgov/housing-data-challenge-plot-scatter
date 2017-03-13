@@ -159,7 +159,7 @@ Constants.processBoundaryData = (data) => {
 
     // FOR "QUANTILE" SCALE
     const scaleValues = Array.from(new Array(quantileCount), (value, index) => index/quantileCount);
-    const scaleColors = scaleValues.map((value) => d3.interpolatePlasma(value));
+    const scaleColors = scaleValues.map((value) => d3.interpolatePlasma(value)).reverse();
 
     let colorScale = d3.scaleQuantile()
                 .domain(domain)

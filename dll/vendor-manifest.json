@@ -664,6 +664,10 @@
     "../node_modules/react/react.js": {
       "id": 165,
       "meta": {}
+    },
+    "../node_modules/webpack/buildin/global.js": {
+      "id": 166,
+      "meta": {}
     }
   }
 }

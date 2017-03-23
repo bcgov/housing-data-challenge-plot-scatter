@@ -12,7 +12,8 @@ The deployed prototype app can be viewed at http://plotandscatter.com:3001.
 
 1. Clone the repository.
 2. In the root project folder, run `npm install`.
-3. Once npm finishes, run `npm run dev`.
+3. Once npm finishes, run `npm run compile-vendors` to generate the DLL. The DLL contains dependencies that are static (e.g. `react` itself) and so don't need to be rebuilt every time the dev server starts. This improves local webpack performance. You don't need to build the DLL again unless you add additional static dependencies to `src/vendors.js`.
+4. Once the DLL has been built, run `npm run dev`.
 
 View the app at http://localhost:3000 in your browser. Note that this assumes that there is a production instance somewhere serving the regional vector tiles. If not, follow the instructions below under "Serving the regional vector tiles" to set up a tile server on your local machine.
 

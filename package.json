@@ -43,6 +43,7 @@
     "leaflet.vectorgrid": "^1.2.0",
     "nodent-runtime": "^3.0.4",
     "react": "~15.4.2",
+    "react-bootstrap": "^0.30.8",
     "react-dom": "~15.4.2",
     "whatwg-fetch": "^2.0.2"
   },

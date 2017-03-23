@@ -1,7 +1,7 @@
 import React from 'react';
+import LoadOverlay from './load-overlay.js';
 
 /*
-
 Header component
 ================
 
@@ -15,6 +15,7 @@ function Header(props) {
                 <div className="row">
                     <div className="col-md-3 col-sm-3 hidden-xs brand">
                         <a href="http://plotandscatter.com">Plot + Scatter</a>
+                        <LoadOverlay />
                     </div>
                     <div className="col-xs-2 visible-xs-block brand">
                         <a href="http://plotandscatter.com">P+S</a>

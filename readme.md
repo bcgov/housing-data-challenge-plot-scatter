@@ -4,7 +4,7 @@ This application is built using Bootstrap, Leaflet, D3, and React.
 
 The purpose of each component is described in the source files, but a basic familiarity with React is essential. [The Quick Start guide](https://facebook.github.io/react/docs/hello-world.html) is very good.
 
-The deployed prototype app can be viewed at http://plotandscatter.com:3001.
+The deployed prototype app can be viewed at http://plotandscatter.com/bcic-data-challenge/.
 
 *NB. These instructions have not been tested on Windows.*
 

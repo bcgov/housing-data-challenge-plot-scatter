@@ -12,7 +12,9 @@
     "prod": "NODE_ENV=production npm run production-build && NODE_ENV=production npm run express-server",
     "dev": "concurrently --kill-others \"npm run webpack-watch\" \"npm run express-server\"",
     "docker": "concurrently --kill-others \"npm run serve-vector-tiles\" \"npm run webpack-watch\" \"npm run express-server\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -45,7 +47,8 @@
     "react": "~15.4.2",
     "react-bootstrap": "^0.30.8",
     "react-dom": "~15.4.2",
-    "whatwg-fetch": "^2.0.2"
+    "whatwg-fetch": "^2.0.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "concurrently": "^3.1.0",
@@ -60,5 +63,6 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "2.2.1"
-  }
+  },
+  "snyk": true
 }

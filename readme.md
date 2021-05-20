@@ -1,3 +1,5 @@
+[![Lifecycle:Retired](https://img.shields.io/badge/Lifecycle-Retired-d45500)](<Redirect-URL>)
+
 # BCIC-BC Stats Data Viz Challenge - Plot and Scatter Submission
 
 This application is built using Bootstrap, Leaflet, D3, and React.

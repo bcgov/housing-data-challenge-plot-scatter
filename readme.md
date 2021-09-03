@@ -1,4 +1,5 @@
 [![Lifecycle:Retired](https://img.shields.io/badge/Lifecycle-Retired-d45500)](<Redirect-URL>)
+[![status: archive](https://github.com/GIScience/badges/raw/master/status/archive.svg)](https://github.com/GIScience/badges#archive)
 
 # BCIC-BC Stats Data Viz Challenge - Plot and Scatter Submission
 
